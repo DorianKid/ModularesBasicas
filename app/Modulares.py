@@ -163,7 +163,7 @@ with col1:
         "blanca.aguilar@academicos.udg.mx",
         "Fenómenos Químicos AHDV",
         "Ayuda Comunitaria"
-        "Microbiologia Industrial)
+        "Microbiologia Industrial")
 
 
 
