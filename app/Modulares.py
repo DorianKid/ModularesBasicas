@@ -53,7 +53,7 @@ if img_base64:
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.7); /* Ajusta el último valor (0.7) para cambiar la opacidad */
+            background-color: rgba(255, 255, 255, 0.4); /* Ajusta el último valor (0.7) para cambiar la opacidad */
             z-index: -1;
         }}
         </style>
