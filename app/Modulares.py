@@ -156,7 +156,7 @@ mostrar_profesor(
     "blanca.aguilar@academicos.udg.mx",
     "Fenómenos químicos AHDV")
 
-st.image("Fotos_QFB/uscanga.jpg")
+st.image(foto_path)
     
 
 
