@@ -44,6 +44,7 @@ if img_base64:
             background-position: center; /* Hay top right, center, top left, bottom right, bottom, etc  */
             background-repeat: repeat;
             background-attachment: fixed;
+            overflow-y: auto;
             
             /* Posicionamiento para cubrir todo */
             position: absolute;
