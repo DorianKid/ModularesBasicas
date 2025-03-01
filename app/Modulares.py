@@ -155,6 +155,8 @@ mostrar_profesor(
     "Profesor Investigador Titular B",
     "blanca.aguilar@academicos.udg.mx",
     "Fenómenos químicos AHDV")
+
+st.image("Fotos_QFB/uscanga.jpg")
     
 
 
