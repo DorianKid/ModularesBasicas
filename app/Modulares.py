@@ -43,19 +43,7 @@ if img_base64:
         [data-testid="stAppViewContainer"] {{
             background-image: url("data:image/jpg;base64,{img_base64}");
             background-size: cover;
-        }}
-        
-        /* Capa superpuesta con opacidad */
-        [data-testid="stAppViewContainer"]::before {{
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 95%;
-            height: 50%;
-            background-color: rgba(255, 255, 0, 0.4); 
-            z-index: -1;
-        }}
+        }
         </style>
         """,
         unsafe_allow_html=True
