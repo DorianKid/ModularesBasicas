@@ -148,9 +148,9 @@ def mostrar_profesor(imagen, nombre, puesto, correo, linea):
 st.title("Profesores para modulares")
 st.header("Licenciatura en Químico Farmacéutico Biólogo")
 
-
+foto_path = Path(__file__).parent / "Fotos_QFB" / "uscanga.jpg"
 mostrar_profesor(
-    "mount/src/ModularesBasicas/app/Fotos_QFB/uscanga.jpg",
+    foto_path,
     "Dra. Aguilar Uscanga Blanca Rosa",
     "Profesor Investigador Titular B",
     "blanca.aguilar@academicos.udg.mx",
