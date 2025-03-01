@@ -150,7 +150,7 @@ st.header("Licenciatura en Químico Farmacéutico Biólogo")
 
 foto_path = Path(__file__).parent / "Fotos_QFB" / "uscanga.jpg"
 mostrar_profesor(
-    str(foto_path),
+    "https://raw.githubusercontent.com/usuario/repositorio/main/app/Fotos_QFB/uscanga.jpg",
     "Dra. Aguilar Uscanga Blanca Rosa",
     "Profesor Investigador Titular B",
     "blanca.aguilar@academicos.udg.mx",
