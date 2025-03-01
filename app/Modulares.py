@@ -154,6 +154,7 @@ st.header("Licenciatura en Químico Farmacéutico Biólogo")
 
 col1, col2 = st.columns(2)
 
+###################### Columna 1 ###################################
 with col1:
     foto_path = Path(__file__).parent / "Fotos_QFB" / "uscanga.jpg"
     foto_base64 = get_base64_from_file(foto_path)
@@ -202,7 +203,55 @@ with col1:
         "Ayuda Comunitaria",
         "Microbiologia Industrial")
 
+######################### Columna 2 #################################
 
+with col2:
+    foto_path = Path(__file__).parent / "Fotos_QFB" / "uscanga.jpg"
+    foto_base64 = get_base64_from_file(foto_path)
+    mostrar_profesor(
+        foto_base64,
+        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Profesor Investigador Titular B",
+        "blanca.aguilar@academicos.udg.mx",
+        "Fenómenos Químicos AHDV",
+        "Ayuda Comunitaria",
+        "Microbiologia Industrial")
+
+    mostrar_profesor(
+        foto_base64,
+        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Profesor Investigador Titular B",
+        "blanca.aguilar@academicos.udg.mx",
+        "Fenómenos Químicos AHDV",
+        "Ayuda Comunitaria",
+        "Microbiologia Industrial")
+
+    mostrar_profesor(
+        foto_base64,
+        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Profesor Investigador Titular B",
+        "blanca.aguilar@academicos.udg.mx",
+        "Fenómenos Químicos AHDV",
+        "Ayuda Comunitaria",
+        "Microbiologia Industrial")
+
+    mostrar_profesor(
+        foto_base64,
+        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Profesor Investigador Titular B",
+        "blanca.aguilar@academicos.udg.mx",
+        "Fenómenos Químicos AHDV",
+        "Ayuda Comunitaria",
+        "Microbiologia Industrial")
+
+    mostrar_profesor(
+        foto_base64,
+        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Profesor Investigador Titular B",
+        "blanca.aguilar@academicos.udg.mx",
+        "Fenómenos Químicos AHDV",
+        "Ayuda Comunitaria",
+        "Microbiologia Industrial")
 
 
 #    .sidebar .sidebar-content {{background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})}}
