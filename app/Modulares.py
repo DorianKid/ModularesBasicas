@@ -3,10 +3,10 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("url_goes_here")
+        background: url("maestors.avif")
     }
    .sidebar .sidebar-content {
-        background: url("url_goes_here")
+        background: url("maestros.avif")
     }
     </style>
     """,
