@@ -131,7 +131,7 @@ st.markdown("""
 def mostrar_profesor(imagen, nombre, puesto, correo, linea):
     html = f"""
     <div class="profesor-card">
-        <img src="{imagen}">
+        <img src="{imagen}" class="professr-imagen">
         <div class="profesor-info">
             <div class="profesor-nombre">{nombre}</div>
             <div class="profesor-grado">{puesto}</div>
@@ -149,8 +149,9 @@ st.title("Profesores para modulares")
 st.header("Licenciatura en Químico Farmacéutico Biólogo")
 
 foto_path = Path(__file__).parent / "Fotos_QFB" / "uscanga.jpg"
+foto_base64 = get_base64_from_file(foto_path)
 mostrar_profesor(
-    "https://raw.githubusercontent.com/usuario/repositorio/main/app/Fotos_QFB/uscanga.jpg",
+    foto_base64,
     "Dra. Aguilar Uscanga Blanca Rosa",
     "Profesor Investigador Titular B",
     "blanca.aguilar@academicos.udg.mx",
