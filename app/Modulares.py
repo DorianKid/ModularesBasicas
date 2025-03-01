@@ -127,7 +127,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Función para crear la tarjeta de un profesor
-def mostrar_profesor(imagen, nombre, puesto, correo, linea):
+def mostrar_profesor(imagen, nombre, puesto, correo, *lineas):
+    # Crear spans para cada línea
+    lineas_html = ''.join([f'<span class="profesor-linea">🔬 {linea}</span><br>' for linea in lineas])
+    
     html = f"""
     <div class="profesor-card">
         <img src="data:image/jpeg;base64,{imagen}" class="profesor-imagen">
@@ -136,7 +139,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, linea):
             <div class="profesor-grado">{puesto}</div>
             <div class="profesor-correo"><a href="mailto:{correo}">{correo}</a></div>
             <div>
-                <span class="profesor-linea">🔬 {linea}</span>
+                {lineas_html}
             </div>
         </div>
     </div>
@@ -158,7 +161,9 @@ with col1:
         "Dra. Aguilar Uscanga Blanca Rosa",
         "Profesor Investigador Titular B",
         "blanca.aguilar@academicos.udg.mx",
-        "Fenómenos químicos AHDV")
+        "Fenómenos Químicos AHDV",
+        "Ayuda Comunitaria"
+        "Microbiologia Industrial)
 
 
 
