@@ -51,9 +51,9 @@ if img_base64:
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 95%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.4); /* Ajusta el último valor (0.7) para cambiar la opacidad */
+            background-color: rgba(255, 255, 0, 0.4); 
             z-index: -1;
         }}
         </style>
