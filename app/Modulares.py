@@ -52,7 +52,7 @@ if img_base64:
             top: 0;
             left: 0;
             width: 95%;
-            height: 100%;
+            height: 50%;
             background-color: rgba(255, 255, 0, 0.4); 
             z-index: -1;
         }}
