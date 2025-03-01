@@ -50,7 +50,7 @@ if img_base64:
             bottom: 0;
             left: 0;
             opacity: 0.5;  /* De 0 a 1 siendo % de opacidad */ 
-            z-index: -1;  /* Coloca el fondo detrás del contenido */
+            z-index: -2;  /* Coloca el fondo detrás del contenido */
         }}
         
         /* Asegura que el contenedor principal tenga posición relativa */
