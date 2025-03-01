@@ -162,7 +162,7 @@ with col1:
         "Profesor Investigador Titular B",
         "blanca.aguilar@academicos.udg.mx",
         "Fenómenos Químicos AHDV",
-        "Ayuda Comunitaria"
+        "Ayuda Comunitaria",
         "Microbiologia Industrial")
 
 
