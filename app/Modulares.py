@@ -1,7 +1,6 @@
 import streamlit as st
 import base64
 from pathlib import Path
-import os
 
 st.set_page_config(
     page_title="Modulares",
@@ -27,52 +26,54 @@ def get_base64_from_file(file_path):
 # Intentar encontrar la imagen relativa al directorio del script
 file_path = Path(__file__).parent / "maestros.jpg"
 
-# Si no se encuentra, buscar relativo al directorio de trabajo actual
-if not file_path.exists():
-    file_path = Path.cwd() / "maestros.jpg"
-
 # Obtener la imagen en base64
 img_base64 = get_base64_from_file(file_path)
 
 if img_base64:
-    # Aplicar el fondo
+    # Aplicar un pseudo-elemento para el fondo
     st.markdown(
         f"""
         <style>
-        [data-testid="stAppViewContainer"] {{
+        /* Crear un pseudo-elemento para el fondo */
+        [data-testid="stAppViewContainer"]::before {{
+            content: "";
             background-image: url("data:image/jpg;base64,{img_base64}");
-            
-            /* Controla el tamaño de la imagen */
-            background-size: 50% auto;  /* Ancho: 50%, Alto: automático */
-            
-            /* Controla la posición de la imagen */
-            background-position: center;  /* Hay top right, center, top left, bottom right, bottom, etc  */
-            
-            /* Controla si la imagen se repite */
+            background-size: 50% auto;
+            background-position: center; /* Hay top right, center, top left, bottom right, bottom, etc  */
             background-repeat: repeat;
-            
-            /* Controla si la imagen se desplaza con el contenido */
             background-attachment: fixed;
-
-            /* Posicionamiento absoluto para cubrir todo el contenedor */
+            
+            /* Posicionamiento para cubrir todo */
             position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
-            
-            /* Control de opacidad - ajusta el valor entre 0.0 y 1.0 */
-            opacity: 0.5;  /* De 0 a 1 siendo % de opacidad */
-            
+            opacity: 0.5;  /* De 0 a 1 siendo % de opacidad */ 
+            z-index: -1;  /* Coloca el fondo detrás del contenido */
+        }}
+        
+        /* Asegura que el contenedor principal tenga posición relativa */
+        [data-testid="stAppViewContainer"] {{
+            position: relative;
+        }}
+        
+        /* Asegura que el texto tenga la opacidad completa */
+        [data-testid="stAppViewContainer"] > * {{
+            opacity: 1 !important;
         }}
         </style>
         """,
         unsafe_allow_html=True
-    )
+)
 else:
     st.warning("No se pudo cargar la imagen de fondo.")
 
 # Texto de la pagina web.
+# Aquí va el contenido de tu aplicación
+st.title("Mi aplicación con fondo personalizado")
+st.write("Este texto aparecerá completamente opaco sobre el fondo semi-transparente")
+      
 
 st.markdown("""
     # Lista de profesores
