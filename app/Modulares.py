@@ -147,14 +147,18 @@ def mostrar_profesor(imagen, nombre, puesto, correo, linea):
 st.title("Profesores para modulares")
 st.header("Licenciatura en Químico Farmacéutico Biólogo")
 
-foto_path = Path(__file__).parent / "Fotos_QFB" / "uscanga.jpg"
-foto_base64 = get_base64_from_file(foto_path)
-mostrar_profesor(
-    foto_base64,
-    "Dra. Aguilar Uscanga Blanca Rosa",
-    "Profesor Investigador Titular B",
-    "blanca.aguilar@academicos.udg.mx",
-    "Fenómenos químicos AHDV")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    foto_path = Path(__file__).parent / "Fotos_QFB" / "uscanga.jpg"
+    foto_base64 = get_base64_from_file(foto_path)
+    mostrar_profesor(
+        foto_base64,
+        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Profesor Investigador Titular B",
+        "blanca.aguilar@academicos.udg.mx",
+        "Fenómenos químicos AHDV")
 
 
 
