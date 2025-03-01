@@ -148,7 +148,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, linea):
 st.title("Profesores para modulares")
 st.header("Licenciatura en Químico Farmacéutico Biólogo")
 
-foto_path = Path(__file__).parent / "uscanga.jpg
+foto_path = Path(__file__).parent / "uscanga.jpg"
 st.write(foto_path)
 mostrar_profesor(
     foto_path,
