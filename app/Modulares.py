@@ -13,6 +13,8 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"}
 )
 
+
+############################ BACKGROUND ##############################################
 # Definir una función para cargar la imagen como base64
 def get_base64_from_file(file_path):
     try:
@@ -69,16 +71,83 @@ if img_base64:
 else:
     st.warning("No se pudo cargar la imagen de fondo.")
 
-# Texto de la pagina web.
-# Aquí va el contenido de tu aplicación
-st.title("Mi aplicación con fondo personalizado")
-st.write("Este texto aparecerá completamente opaco sobre el fondo semi-transparente")
-      
-
+################################# Estilos CSS ################################
+# Estilo para las tarjeta de profesores
 st.markdown("""
-    # Lista de profesores
+<style>
+.profesor-card {
+    display: flex;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.profesor-imagen {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profesor-info {
+    flex: 1;
+}
+
+.profesor-nombre {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1e3d59;
+    margin-bottom: 5px;
+}
+
+.profesor-grado {
+    font-size: 16px;
+    font-style: italic;
+    color: #5e6572;
+    margin-bottom: 10px;
+}
+
+.profesor-correo {
+    font-size: 14px;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.profesor-linea {
+    font-size: 15px;
+    color: #2c3e50;
+    padding: 8px 12px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    display: inline-block;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# Función para crear la tarjeta de un profesor
+def mostrar_profesor(imagen, nombre, grado, correo, linea):
+    html = f"""
+    <div class="profesor-card">
+        <img src="{imagen}" class="profesor-imagen">
+        <div class="profesor-info">
+            <div class="profesor-nombre">{nombre}</div>
+            <div class="profesor-grado">{grado}</div>
+            <div class="profesor-correo">✉️ {correo}</div>
+            <div>
+                <span class="profesor-linea">🔬 {linea}</span>
+            </div>
+        </div>
+    </div>
     """
-)
+    st.markdown(html, unsafe_allow_html=True)
+
+# Texto de la pagina web.
+st.title("Profesores para modulares")
+st.subtitle("Licenciatura en Químico Farmacéutico Biólogo")
+
 
 
 #    .sidebar .sidebar-content {{background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})}}
