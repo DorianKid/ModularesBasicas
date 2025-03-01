@@ -88,7 +88,6 @@ st.markdown("""
     width: 150px;
     height: 150px;
     border-radius: 10px;
-    object-fit: cover;
     margin-right: 20px;
 }
 
@@ -157,8 +156,7 @@ mostrar_profesor(
     "blanca.aguilar@academicos.udg.mx",
     "Fenómenos químicos AHDV")
 
-st.image(foto_path)
-    
+
 
 
 #    .sidebar .sidebar-content {{background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})}}
