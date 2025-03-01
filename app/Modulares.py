@@ -146,7 +146,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, linea):
 
 # Texto de la pagina web.
 st.title("Profesores para modulares")
-st.subtitle("Licenciatura en Químico Farmacéutico Biólogo")
+st.header("Licenciatura en Químico Farmacéutico Biólogo")
 
 mostrar_profesor(
     Path(__file__).parent / "uscanga.jpg",
