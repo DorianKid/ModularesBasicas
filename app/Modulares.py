@@ -3,17 +3,6 @@ import base64
 from pathlib import Path
 import os
 
-st.set_page_config(
-    page_title="Modulares",
-    page_icon=":microscope:",
-    layout="wide",    
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"}
-)
-
 # Definir una función para cargar la imagen como base64
 def get_base64_from_file(file_path):
     try:
@@ -26,7 +15,6 @@ def get_base64_from_file(file_path):
 
 # Intentar encontrar la imagen relativa al directorio del script
 file_path = Path(__file__).parent / "maestros.jpg"
-st.write(f"{file_path}")
 
 # Si no se encuentra, buscar relativo al directorio de trabajo actual
 if not file_path.exists():
@@ -63,7 +51,7 @@ if img_base64:
             left: 0;
             
             /* Control de opacidad - ajusta el valor entre 0.0 y 1.0 */
-            opacity: 0.2;  /* De 0 a 1 siendo % de opacidad */
+            opacity: 0.5;  /* De 0 a 1 siendo % de opacidad */
             
         }}
         </style>
@@ -72,6 +60,21 @@ if img_base64:
     )
 else:
     st.warning("No se pudo cargar la imagen de fondo.")
+
+# Texto de la pagina web.
+
+st.set_page_config(
+    page_title="Modulares",
+    page_icon=":microscope:",
+    layout="wide",    
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"}
+)
+
+st.
 
 
 #    .sidebar .sidebar-content {{background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})}}
