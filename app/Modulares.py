@@ -47,13 +47,26 @@ if img_base64:
             background-size: 50% auto;  /* Ancho: 50%, Alto: automático */
             
             /* Controla la posición de la imagen */
-            background-position: top right;  /* Posición en la esquina superior derecha */
+            background-position: center;  /* Hay top right, center, top left, bottom right, bottom, etc  */
             
             /* Controla si la imagen se repite */
-            background-repeat: repeat;
+            background-repeat: no-repeat;
             
             /* Controla si la imagen se desplaza con el contenido */
             background-attachment: fixed;
+
+            /* Posicionamiento absoluto para cubrir todo el contenedor */
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            
+            /* Control de opacidad - ajusta el valor entre 0.0 y 1.0 */
+            opacity: 0.3;  /* 30% opaco (70% transparente) */
+            
+            /* Asegura que el fondo esté detrás del contenido */
+            z-index: -1;
         }}
         </style>
         """,
