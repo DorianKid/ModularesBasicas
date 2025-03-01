@@ -37,13 +37,13 @@ if img_base64:
         f"""
         <style>
         /* Crear un pseudo-elemento para el fondo */
-        [data-testid="stAppViewContainer"]::before {{
+        [data-testid="stAppViewContainer"] {{
             content: "";
             background-image: url("data:image/jpg;base64,{img_base64}");
             background-size: 50% auto;
             background-position: center; /* Hay top right, center, top left, bottom right, bottom, etc  */
             background-repeat: repeat;
-            background-attachment: scroll;
+            background-attachment: fixed;
             
             /* Posicionamiento para cubrir todo */
             position: absolute;
