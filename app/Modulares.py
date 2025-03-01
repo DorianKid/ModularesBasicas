@@ -3,9 +3,6 @@ import base64
 from pathlib import Path
 import os
 
-main_bg = "maestros.jpg"
-main_bg_ext = "jpg"
-
 st.set_page_config(
     page_title="Modulares",
     page_icon=":microscope:",
@@ -29,6 +26,7 @@ def get_base64_from_file(file_path):
 
 # Intentar encontrar la imagen relativa al directorio del script
 file_path = Path(__file__).parent / "maestros.jpg"
+st.write(f"{filepath}"})
 
 # Si no se encuentra, buscar relativo al directorio de trabajo actual
 if not file_path.exists():
