@@ -1,4 +1,17 @@
 import streamlit as st
+ st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("url_goes_here")
+    }
+   .sidebar .sidebar-content {
+        background: url("url_goes_here")
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.set_page_config(
     page_title="Modulares",
@@ -11,7 +24,7 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"}
 )
 
-st.write("# ¡Bienvenido! ")
+st.write("# Profesores")
 
 st.markdown(
 """
