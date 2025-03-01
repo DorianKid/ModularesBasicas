@@ -165,6 +165,42 @@ with col1:
         "Ayuda Comunitaria",
         "Microbiologia Industrial")
 
+    mostrar_profesor(
+        foto_base64,
+        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Profesor Investigador Titular B",
+        "blanca.aguilar@academicos.udg.mx",
+        "Fenómenos Químicos AHDV",
+        "Ayuda Comunitaria",
+        "Microbiologia Industrial")
+
+    mostrar_profesor(
+        foto_base64,
+        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Profesor Investigador Titular B",
+        "blanca.aguilar@academicos.udg.mx",
+        "Fenómenos Químicos AHDV",
+        "Ayuda Comunitaria",
+        "Microbiologia Industrial")
+
+    mostrar_profesor(
+        foto_base64,
+        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Profesor Investigador Titular B",
+        "blanca.aguilar@academicos.udg.mx",
+        "Fenómenos Químicos AHDV",
+        "Ayuda Comunitaria",
+        "Microbiologia Industrial")
+
+    mostrar_profesor(
+        foto_base64,
+        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Profesor Investigador Titular B",
+        "blanca.aguilar@academicos.udg.mx",
+        "Fenómenos Químicos AHDV",
+        "Ayuda Comunitaria",
+        "Microbiologia Industrial")
+
 
 
 
