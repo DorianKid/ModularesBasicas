@@ -44,7 +44,7 @@ if img_base64:
             background-image: url("data:image/jpg;base64,{img_base64}");
             
             /* Controla el tamaño de la imagen */
-            background-size: 50% auto;  /* Ancho: 50%, Alto: automático */
+            background-size: auto auto;  /* Ancho: 50%, Alto: automático */
             
             /* Controla la posición de la imagen */
             background-position: center;  /* Hay top right, center, top left, bottom right, bottom, etc  */
