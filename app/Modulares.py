@@ -44,12 +44,10 @@ if img_base64:
             background-repeat: repeat;
             background-attachment: fixed;
             
-            /* Posicionamiento para cubrir todo */
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+            /* Cambia position por height */
+            height: 100vh;
+            width: 100%;
+          
             opacity: 0.5;  /* De 0 a 1 siendo % de opacidad */ 
             z-index: 0;  /* Coloca el fondo detrás del contenido */
         }}
