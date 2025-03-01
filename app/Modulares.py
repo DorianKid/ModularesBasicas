@@ -135,7 +135,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, linea):
         <div class="profesor-info">
             <div class="profesor-nombre">{nombre}</div>
             <div class="profesor-grado">{puesto}</div>
-            <div class="profesor-correo"><a href="mailto:{correo}"✉️ {correo}</div>
+            <div class="profesor-correo"><a href="mailto:{correo}"> ✉️ {correo}</a></div>
             <div>
                 <span class="profesor-linea">🔬 {linea}</span>
             </div>
