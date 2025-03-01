@@ -1,4 +1,8 @@
 import streamlit as st
+import base64
+
+main_bg = "modulares.avif"
+main_bg_ext = "avif"
 
 st.set_page_config(
     page_title="Modulares",
@@ -12,14 +16,12 @@ st.set_page_config(
 )
 
 st.markdown(
-    """
+    f"""
     <style>
-    .reportview-container {
-        background: url("https://img.freepik.com/vector-gratis/concepto-coleccion-maestros_52683-37592.jpg")
-    }
-   .sidebar .sidebar-content {
-        background: url("https://img.freepik.com/vector-gratis/concepto-coleccion-maestros_52683-37592.jpg")
-    }
+    .reportview-container {{
+        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+    }}
+
     </style>
     """,
     unsafe_allow_html=True
@@ -31,3 +33,8 @@ st.markdown(
 """
 """
 )
+
+
+#    .sidebar .sidebar-content {{
+        background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})
+    }}
