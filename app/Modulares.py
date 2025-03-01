@@ -65,8 +65,6 @@ if img_base64:
             /* Control de opacidad - ajusta el valor entre 0.0 y 1.0 */
             opacity: 0.3;  /* 30% opaco (70% transparente) */
             
-            /* Asegura que el fondo esté detrás del contenido */
-            z-index: -1;
         }}
         </style>
         """,
