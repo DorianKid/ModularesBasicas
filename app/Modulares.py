@@ -26,7 +26,7 @@ def get_base64_from_file(file_path):
         return None
 
 # Intentar encontrar la imagen relativa al directorio del script
-file_path = Path(__file__).parent / "maestros.jpg"
+file_path = Path(__file__).parent / "maestros_bg.jpg"
 
 # Obtener la imagen en base64
 img_base64 = get_base64_from_file(file_path)
@@ -128,13 +128,13 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Función para crear la tarjeta de un profesor
-def mostrar_profesor(imagen, nombre, grado, correo, linea):
+def mostrar_profesor(imagen, nombre, puesto, correo, linea):
     html = f"""
     <div class="profesor-card">
         <img src="{imagen}" class="profesor-imagen">
         <div class="profesor-info">
             <div class="profesor-nombre">{nombre}</div>
-            <div class="profesor-grado">{grado}</div>
+            <div class="profesor-grado">{puesto}</div>
             <div class="profesor-correo">✉️ {correo}</div>
             <div>
                 <span class="profesor-linea">🔬 {linea}</span>
@@ -148,6 +148,13 @@ def mostrar_profesor(imagen, nombre, grado, correo, linea):
 st.title("Profesores para modulares")
 st.subtitle("Licenciatura en Químico Farmacéutico Biólogo")
 
+mostrar_profesor(
+    Path(__file__).parent / "uscanga.jpg",
+    "Dra. Aguilar Uscanga Blanca Rosa",
+    "Profesor Investigador Titular B",
+    "blanca.aguilar@academicos.udg.mx",
+    "Fenómenos químicos AHDV")
+    
 
 
 #    .sidebar .sidebar-content {{background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})}}
