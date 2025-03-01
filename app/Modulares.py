@@ -1,8 +1,8 @@
 import streamlit as st
 import base64
 
-main_bg = "modulares.avif"
-main_bg_ext = "avif"
+main_bg = "maestros.jpg"
+main_bg_ext = "jpg"
 
 st.set_page_config(
     page_title="Modulares",
