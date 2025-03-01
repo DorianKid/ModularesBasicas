@@ -63,7 +63,7 @@ if img_base64:
             left: 0;
             
             /* Control de opacidad - ajusta el valor entre 0.0 y 1.0 */
-            opacity: 0.3;  /* 30% opaco (70% transparente) */
+            opacity: 0.2;  /* De 0 a 1 siendo % de opacidad */
             
         }}
         </style>
