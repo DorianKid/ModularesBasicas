@@ -135,7 +135,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, linea):
         <div class="profesor-info">
             <div class="profesor-nombre">{nombre}</div>
             <div class="profesor-grado">{puesto}</div>
-            <div class="profesor-correo">✉️ {correo}</div>
+            <div class="profesor-correo"><a href="mailto:{correo}"✉️ {correo}</div>
             <div>
                 <span class="profesor-linea">🔬 {linea}</span>
             </div>
@@ -148,8 +148,10 @@ def mostrar_profesor(imagen, nombre, puesto, correo, linea):
 st.title("Profesores para modulares")
 st.header("Licenciatura en Químico Farmacéutico Biólogo")
 
+foto_path = Path(__file__).parent / "uscanga.jpg
+st.write(foto_path)
 mostrar_profesor(
-    Path(__file__).parent / "uscanga.jpg",
+    foto_path,
     "Dra. Aguilar Uscanga Blanca Rosa",
     "Profesor Investigador Titular B",
     "blanca.aguilar@academicos.udg.mx",
