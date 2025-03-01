@@ -37,6 +37,7 @@ if img_base64:
         <style>
         /* Crear un pseudo-elemento para el fondo */
         [data-testid="stAppViewContainer"]::before {{
+            pointer-events: none;
             content: "";
             background-image: url("data:image/jpg;base64,{img_base64}");
             background-size: 50% auto;
