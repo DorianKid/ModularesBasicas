@@ -87,7 +87,7 @@ st.markdown("""
 .profesor-imagen {
     width: 150px;
     height: 150px;
-
+    border-radius: 10px
     object-fit: cover;
     margin-right: 20px;
 }
