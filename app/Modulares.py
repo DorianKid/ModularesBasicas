@@ -117,7 +117,12 @@ st.markdown("""
     }
 
     .profesor-linea {
-        font-size: 14px; /* Ajustar tamaño de fuente */
+        font-size: 15px;
+        color: #2c3e50;
+        padding: 8px 12px;
+        background-color: #e9ecef;
+        border-radius: 5px;
+        display: inline-block;
     }
 }
 </style>
