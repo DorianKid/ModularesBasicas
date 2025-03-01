@@ -43,7 +43,7 @@ if img_base64:
         [data-testid="stAppViewContainer"] {{
             background-image: url("data:image/jpg;base64,{img_base64}");
             background-size: cover;
-        }
+        }}
         </style>
         """,
         unsafe_allow_html=True
