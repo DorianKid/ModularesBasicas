@@ -44,13 +44,13 @@ if img_base64:
             background-image: url("data:image/jpg;base64,{img_base64}");
             
             /* Controla el tamaño de la imagen */
-            background-size: 80% auto;  /* Ancho: 50%, Alto: automático */
+            background-size: 50% auto;  /* Ancho: 50%, Alto: automático */
             
             /* Controla la posición de la imagen */
             background-position: center;  /* Hay top right, center, top left, bottom right, bottom, etc  */
             
             /* Controla si la imagen se repite */
-            background-repeat: no-repeat;
+            background-repeat: repeat;
             
             /* Controla si la imagen se desplaza con el contenido */
             background-attachment: fixed;
