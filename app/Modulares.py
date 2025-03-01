@@ -76,8 +76,10 @@ else:
 # Estilo para las tarjeta de profesores
 st.markdown("""
 <style>
+
 .profesor-card {
     display: flex;
+    flex-direction: row; /* Cambiar a columna en móviles */
     background-color: #f8f9fa;
     border-radius: 10px;
     padding: 20px;
@@ -86,10 +88,39 @@ st.markdown("""
 }
 
 .profesor-imagen {
-    width: 150px;
-    height: 150px;
+    width: 100px; /* Reducir tamaño para móviles */
+    height: 100px;
     border-radius: 10px;
     margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .profesor-card {
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: center; /* Centrar contenido */
+    }
+
+    .profesor-imagen {
+        margin-right: 0; /* Eliminar margen en móviles */
+        margin-bottom: 10px; /* Espacio entre imagen y texto */
+    }
+    
+    .profesor-nombre {
+        font-size: 20px; /* Ajustar tamaño de fuente */
+    }
+
+    .profesor-grado {
+        font-size: 14px; /* Ajustar tamaño de fuente */
+    }
+
+    .profesor-correo {
+        font-size: 12px; /* Ajustar tamaño de fuente */
+    }
+
+    .profesor-linea {
+        font-size: 14px; /* Ajustar tamaño de fuente */
+    }
+}
 }
 
 .profesor-info {
