@@ -26,7 +26,7 @@ def get_base64_from_file(file_path):
 
 # Intentar encontrar la imagen relativa al directorio del script
 file_path = Path(__file__).parent / "maestros.jpg"
-st.write(f"{filepath}"})
+st.write(f"{filepath}")
 
 # Si no se encuentra, buscar relativo al directorio de trabajo actual
 if not file_path.exists():
