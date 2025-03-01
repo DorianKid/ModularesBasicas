@@ -150,7 +150,7 @@ st.header("Licenciatura en Químico Farmacéutico Biólogo")
 
 
 mostrar_profesor(
-    "ModularesBasicas/app/Fotos_QFB/uscanga.jpg",
+    "mount/src/ModularesBasicas/app/Fotos_QFB/uscanga.jpg",
     "Dra. Aguilar Uscanga Blanca Rosa",
     "Profesor Investigador Titular B",
     "blanca.aguilar@academicos.udg.mx",
