@@ -43,8 +43,7 @@ if img_base64:
             background-size: 50% auto;
             background-position: center; /* Hay top right, center, top left, bottom right, bottom, etc  */
             background-repeat: repeat;
-            background-attachment: fixed;
-            overflow-y: auto;
+            background-attachment: scroll;
             
             /* Posicionamiento para cubrir todo */
             position: absolute;
@@ -58,7 +57,6 @@ if img_base64:
         
         /* Asegura que el contenedor principal tenga posición relativa */
         [data-testid="stAppViewContainer"] {{
-            overflow-y: auto;
             position: relative;
         }}
         
