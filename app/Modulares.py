@@ -131,7 +131,7 @@ st.markdown("""
 def mostrar_profesor(imagen, nombre, puesto, correo, linea):
     html = f"""
     <div class="profesor-card">
-        <img src="{imagen}" class="professr-imagen">
+        <img src="{imagen}" class="profesor-imagen">
         <div class="profesor-info">
             <div class="profesor-nombre">{nombre}</div>
             <div class="profesor-grado">{puesto}</div>
