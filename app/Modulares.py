@@ -42,7 +42,18 @@ if img_base64:
         <style>
         [data-testid="stAppViewContainer"] {{
             background-image: url("data:image/jpg;base64,{img_base64}");
-            background-size: cover;
+            
+            /* Controla el tamaño de la imagen */
+            background-size: 50% auto;  /* Ancho: 50%, Alto: automático */
+            
+            /* Controla la posición de la imagen */
+            background-position: top right;  /* Posición en la esquina superior derecha */
+            
+            /* Controla si la imagen se repite */
+            background-repeat: repeat;
+            
+            /* Controla si la imagen se desplaza con el contenido */
+            background-attachment: fixed;
         }}
         </style>
         """,
