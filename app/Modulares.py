@@ -3,6 +3,17 @@ import base64
 from pathlib import Path
 import os
 
+st.set_page_config(
+    page_title="Modulares",
+    page_icon=":microscope:",
+    layout="wide",    
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"}
+)
+
 # Definir una función para cargar la imagen como base64
 def get_base64_from_file(file_path):
     try:
@@ -62,17 +73,6 @@ else:
     st.warning("No se pudo cargar la imagen de fondo.")
 
 # Texto de la pagina web.
-
-st.set_page_config(
-    page_title="Modulares",
-    page_icon=":microscope:",
-    layout="wide",    
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"}
-)
 
 st.markdown("""
     # Lista de profesores
