@@ -13,7 +13,6 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"}
 )
 
-
 ############################ BACKGROUND ##############################################
 # Definir una función para cargar la imagen como base64
 def get_base64_from_file(file_path):
@@ -37,7 +36,7 @@ if img_base64:
         f"""
         <style>
         /* Crear un pseudo-elemento para el fondo */
-        [data-testid="stAppViewContainer"] {{
+        [data-testid="stAppViewContainer"]::before {{
             content: "";
             background-image: url("data:image/jpg;base64,{img_base64}");
             background-size: 50% auto;
