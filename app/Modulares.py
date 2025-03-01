@@ -57,6 +57,7 @@ if img_base64:
         
         /* Asegura que el contenedor principal tenga posición relativa */
         [data-testid="stAppViewContainer"] {{
+            overflow-y: auto;
             position: relative;
         }}
         
