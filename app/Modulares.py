@@ -15,10 +15,10 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("maestors.avif")
+        background: url("https://img.freepik.com/vector-gratis/concepto-coleccion-maestros_52683-37592.jpg")
     }
    .sidebar .sidebar-content {
-        background: url("maestros.avif")
+        background: url("https://img.freepik.com/vector-gratis/concepto-coleccion-maestros_52683-37592.jpg")
     }
     </style>
     """,
