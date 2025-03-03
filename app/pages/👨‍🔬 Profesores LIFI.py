@@ -251,7 +251,7 @@ with col1:
             "alejandro.espinosa@academicos.udg.mx",
             "Haber cursado la asignatura de Mecánica del Medio Contínuo",
             " ",
-            " ",
+            "",
             "Oceanografía y Modelación Numérica de Fluidos"
             )
 
