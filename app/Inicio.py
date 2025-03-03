@@ -13,11 +13,19 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"}
 )
 
+######################## FUNCIONES ##########################################
+# Función para crear un enlace de descarga
+def get_download_link(file_path):
+    with open(file_path, "rb") as f:
+        bytes_data = f.read()
+    b64 = base64.b64encode(bytes_data).decode()  # Codificar en base64
+    return f'<a href="data:file/txt;base64,{b64}" download="{file_path}">Descargar archivo</a>'
+
 ######################## ESTILOS CSS ########################################
 # Aplicar estilos CSS para cambiar el color del botón
 st.markdown("""
     <style>
-    .download-button {
+    .download-button > button {
         background-color: #4CAF50;  /* Color de fondo */
         color: white;  /* Color del texto */
         border: none;  /* Sin borde */
