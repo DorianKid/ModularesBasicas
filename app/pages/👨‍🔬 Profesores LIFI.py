@@ -134,69 +134,34 @@ st.markdown("""
     margin-bottom: 5px;
 }
 
-/* OPCIÓN 1: Estilo moderno con botón tipo badge */
 .requisitos-container {
     margin-top: 15px;
 }
-
 .requisitos-titulo {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 500;
-    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1e3d59;
     cursor: pointer;
-    background-color: #3498db;
-    padding: 7px 15px;
-    border-radius: 20px;
-    transition: background-color 0.3s;
-}
-
-.requisitos-titulo:hover {
-    background-color: #2980b9;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .requisitos-content {
     display: none;
-    margin-top: 12px;
-    padding: 15px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    border-left: 4px solid #3498db;
-    animation: fadeIn 0.3s ease-in-out;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f4f8;
+    border: 1px solid #d1e6f7;
+    border-radius: 5px;
 }
-
-/* OPCIÓN 2: Estilo Material Design */
-/*
-.requisitos-container {
-    margin-top: 15px;
+.requisitos-container input[type="checkbox"] {
+    display: none;
 }
-
-.requisitos-titulo {
-    display: inline-flex;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 500;
-    color: #1976d2;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    border: 1px solid #1976d2;
-}
-
-.requisitos-titulo:hover {
-    background-color: rgba(25, 118, 210, 0.08);
-}
-
-.requisitos-titulo::after {
-    content: "▼";
-    font-size: 10px;
-    margin-left: 6px;
-}
-
-.requisitos-container input[type="checkbox"]:checked ~ .requisitos-titulo::after {
+.requisitos-container input[type="checkbox"]:checked ~ .requisitos-content {
+    display: block;
+}.requisitos-container input[type="checkbox"]:checked ~ .requisitos-titulo::after {
     content: "▲";
 }
 
@@ -208,59 +173,6 @@ st.markdown("""
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     animation: slideDown 0.2s ease-out;
-}
-*/
-
-/* OPCIÓN 3: Estilo Minimalista */
-/*
-.requisitos-container {
-    margin-top: 15px;
-}
-
-.requisitos-titulo {
-    display: inline-block;
-    font-size: 14px;
-    color: #555;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 5px 0;
-    position: relative;
-    border-bottom: 1px dotted #888;
-}
-
-.requisitos-titulo:hover {
-    color: #000;
-}
-
-.requisitos-content {
-    display: none;
-    margin-top: 10px;
-    padding: 15px;
-    background-color: #fafafa;
-    border-radius: 0;
-    border: none;
-    border-left: 2px solid #ddd;
-}
-*/
-
-/* Animación para el contenido */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.requisitos-container input[type="checkbox"] {
-    display: none;
-}
-
-.requisitos-container input[type="checkbox"]:checked ~ .requisitos-content {
-    display: block;
-}
-
-/* Mejora para la visualización de aptitudes */
-.alumno-aptitudes {
-    line-height: 1.6;
-    color: #333;
 }
 </style>
 """, unsafe_allow_html=True)
