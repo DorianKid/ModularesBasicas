@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 
 st.set_page_config(
-    page_title="Profesores LQFB",
+    page_title="Profesores LIFI",
     page_icon=":telescope:",
     layout="wide",    
     initial_sidebar_state="collapsed",
@@ -173,7 +173,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, *lineas):
 
 # Texto de la pagina web.
 st.title("Profesores")
-st.header("Licenciatura en Químico Farmacéutico Biólogo")
+st.header("Licenciatura en Física")
 
 col1, col2 = st.columns(2)
 
