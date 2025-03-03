@@ -205,7 +205,7 @@ with st.expander("Ver Plantilla", expanded=True):
                 {
                 "page": 1,
                 "x": 0,
-                "y": 760,
+                "y": 785,
                 "height": .5,
                 "width": 595,
                 "color": "red"
