@@ -125,7 +125,7 @@ st.markdown("""
 }
 
 .requisitos-container {
-    margin-top: 15px;
+    margin-top: 13px;
 }
 .requisitos-titulo {
     font-size: 14px;
