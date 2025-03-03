@@ -137,20 +137,29 @@ st.markdown("""
 st.subheader("💊 Químico Farmacobiólogo")
 st.markdown("""
 Los proyectos modulares en QFB se enfocan en competencias intermedias y avanzadas:
+""")
+col1, col2 = st.columns(2)
 
-**Proyectos Modulares de Competencias Intermedias**
-- Determinación de parámetros físicos, químicos, biológicos y farmacéuticos
-- Análisis de componentes y factores en procesos biológicos e industriales
-- Aplicación de conocimientos para estrategias y productos innovadores
-- Análisis y procesamiento de datos con herramientas estadísticas
-- Comparación de referencias mediante uso adecuado de información
+with col1:
+    st.markdown("""
+    #### **Proyectos Modulares de Competencias Intermedias**
+    - Determinación de parámetros físicos, químicos, biológicos y farmacéuticos
+    - Análisis de componentes y factores en procesos biológicos e industriales
+    - Aplicación de conocimientos para estrategias y productos innovadores
+    - Análisis y procesamiento de datos con herramientas estadísticas
+    - Comparación de referencias mediante uso adecuado de información
+    """)
 
-**Proyectos Modulares de Competencias Avanzadas**
-- Desarrollo de habilidades avanzadas en investigación farmacéutica y biológica
-- Aplicación de conocimientos especializados en situaciones profesionales
-- Integración de fundamentos teóricos con aplicaciones prácticas
-
-**Modalidades disponibles:**
+with col2:
+    st.markdown("""
+    **Proyectos Modulares de Competencias Avanzadas**
+    - Desarrollo de habilidades avanzadas en investigación farmacéutica y biológica
+    - Aplicación de conocimientos especializados en situaciones profesionales
+    - Integración de fundamentos teóricos con aplicaciones prácticas
+    """)
+    
+st.markdown("""
+#### **Modalidades disponibles:**
 1. **Trabajo de Investigación:** Desarrollo de proyectos con método científico, hipótesis y resultados analíticos
 2. **Materiales Educativos:** Creación de recursos didácticos para el aprendizaje en ciencias farmacéuticas
 3. **Prototipo:** Desarrollo de modelos físicos o funcionales de productos farmacéuticos o biológicos
