@@ -14,36 +14,9 @@ st.set_page_config(
 )
 
 ######################## FUNCIONES ##########################################
-# Función para crear un enlace de descarga
-def get_download_link(file_path):
-    with open(file_path, "rb") as f:
-        bytes_data = f.read()
-    b64 = base64.b64encode(bytes_data).decode()  # Codificar en base64
-    return f'<a href="data:file/txt;base64,{b64}" download="{file_path}">Descargar archivo</a>'
 
 ######################## ESTILOS CSS ########################################
-# Estilo CSS para el botón de descarga
-st.markdown(
-    """
-    <style>
-    .download-button {
-        background-color: #4CAF50;  /* Color de fondo */
-        color: white;  /* Color del texto */
-        border: none;  /* Sin borde */
-        padding: 10px 20px;  /* Espaciado interno */
-        text-align: center;  /* Alinear texto */
-        text-decoration: none;  /* Sin subrayado */
-        display: inline-block;  /* Mostrar en línea */
-        font-size: 16px;  /* Tamaño de fuente */
-        margin: 4px 2px;  /* Margen */
-        cursor: pointer;  /* Cursor de puntero */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-# Aplicar estilos CSS para cambiar el color del botón de descarga
+# Aplicar estilos CSS para cambiar el color del botón normal
 st.markdown("""
     <style>
     .stButton>button {
@@ -223,12 +196,8 @@ with st.expander("Ver PDF", expanded=False):
         if st.session_state.current_page > 1:
             st.session_state.current_page -= 1
 
-    # Crear el enlace de descarga
-    download_link = get_download_link(pdf_path)
-
     # Mostrar el botón de descarga
-    col2.markdown(f'<div class="download-button">{download_link}</div>', unsafe_allow_html=True)
-    #col2.download_button('Descargar', pdf_path)
+    col2.download_button('Descargar', pdf_path)
     
     if col3.button("Siguiente Página"):
         # Establece el número total de páginas aquí
