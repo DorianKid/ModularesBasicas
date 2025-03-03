@@ -165,7 +165,6 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *linea
     </div>
     """
     st.markdown(html, unsafe_allow_html=True)
-    st.write(html)
 
 st.title("Profesores")
 st.header("Licenciatura en Física")
