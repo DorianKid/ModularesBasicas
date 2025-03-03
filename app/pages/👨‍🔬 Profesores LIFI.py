@@ -140,8 +140,9 @@ st.markdown("""
 
 .requisitos-content {
     display: none;
-    margin-top: 12px;
-    padding: 14px;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 10px;
     background-color: white;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
