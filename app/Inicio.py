@@ -133,7 +133,7 @@ st.markdown("""
 st.divider()
 
 # Químico Farmacobiólogo
-st.header("💊 Químico Farmacobiólogo")
+st.header("💊 Químico Farmacéutico Biólogo")
 st.markdown("""
 Los proyectos modulares en Químico Farmacéutico Biólogo se enfocan en competencias intermedias y avanzadas:
 """)
