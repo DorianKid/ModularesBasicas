@@ -57,6 +57,7 @@ if img_base64:
 # Estilos CSS
 st.markdown("""
 <style>
+/* Tarjeta principal */
 .profesor-card {
     display: flex;
     flex-direction: row;
@@ -66,46 +67,63 @@ st.markdown("""
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.2s;
+    align-items: center; /* Centra verticalmente todos los elementos */
 }
+
 .profesor-card:hover {
     transform: translateY(-5px);
 }
+
+/* Contenedor de imagen centrado verticalmente */
 .profesor-imagen {
     width: 100px;
-    height: 100px;
+    height: 120px; /* Un poco más alto para fotos de tipo credencial */
     border-radius: 10px;
     margin-right: 20px;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    align-self: center; /* Asegura el centrado vertical */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil */
 }
+
 .profesor-info {
     flex: 1;
+    align-self: stretch; /* Estira para llenar el espacio vertical */
+    display: flex;
+    flex-direction: column;
 }
+
 .profesor-nombre {
     font-size: 24px;
     font-weight: bold;
     color: #1e3d59;
     margin-bottom: 5px;
 }
+
 .profesor-nombre a {
-    text-decoration: none; /* Quitar subrayado */
+    text-decoration: none;
     color: #1e3d59;
-    transition: color 0.3s, text-decoration 0.3s; /* Transición suave */
+    transition: color 0.3s, text-decoration 0.3s;
 }
+
 .profesor-nombre a:hover {
-    color: #3498db; /* Cambia a un color distintivo al pasar el mouse */
-    text-decoration: underline; /* Agrega subrayado solo al hover */
-    cursor: pointer; /* Cambia el cursor a "pointer" para indicar que es un enlace */
+    color: #3498db;
+    text-decoration: underline;
+    cursor: pointer;
 }
+
 .profesor-grado {
     font-size: 16px;
     font-style: italic;
     color: #5e6572;
     margin-bottom: 10px;
 }
+
 .profesor-correo {
     font-size: 14px;
     color: #3498db;
     margin-bottom: 10px;
 }
+
 .profesor-linea {
     font-size: 15px;
     color: #2c3e50;
@@ -115,32 +133,134 @@ st.markdown("""
     display: inline-block;
     margin-bottom: 5px;
 }
+
+/* OPCIÓN 1: Estilo moderno con botón tipo badge */
 .requisitos-container {
     margin-top: 15px;
 }
+
 .requisitos-titulo {
-    font-size: 16px;
-    font-weight: bold;
-    color: #1e3d59;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
     cursor: pointer;
-    background-color: #f8f9fa;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
+    background-color: #3498db;
+    padding: 7px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
 }
+
+.requisitos-titulo:hover {
+    background-color: #2980b9;
+}
+
+.requisitos-content {
+    display: none;
+    margin-top: 12px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid #3498db;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* OPCIÓN 2: Estilo Material Design */
+/*
+.requisitos-container {
+    margin-top: 15px;
+}
+
+.requisitos-titulo {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1976d2;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    border: 1px solid #1976d2;
+}
+
+.requisitos-titulo:hover {
+    background-color: rgba(25, 118, 210, 0.08);
+}
+
+.requisitos-titulo::after {
+    content: "▼";
+    font-size: 10px;
+    margin-left: 6px;
+}
+
+.requisitos-container input[type="checkbox"]:checked ~ .requisitos-titulo::after {
+    content: "▲";
+}
+
+.requisitos-content {
+    display: none;
+    margin-top: 12px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    animation: slideDown 0.2s ease-out;
+}
+*/
+
+/* OPCIÓN 3: Estilo Minimalista */
+/*
+.requisitos-container {
+    margin-top: 15px;
+}
+
+.requisitos-titulo {
+    display: inline-block;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 5px 0;
+    position: relative;
+    border-bottom: 1px dotted #888;
+}
+
+.requisitos-titulo:hover {
+    color: #000;
+}
+
 .requisitos-content {
     display: none;
     margin-top: 10px;
-    padding: 10px;
-    background-color: #f0f4f8;
-    border: 1px solid #d1e6f7;
-    border-radius: 5px;
+    padding: 15px;
+    background-color: #fafafa;
+    border-radius: 0;
+    border: none;
+    border-left: 2px solid #ddd;
 }
+*/
+
+/* Animación para el contenido */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .requisitos-container input[type="checkbox"] {
     display: none;
 }
+
 .requisitos-container input[type="checkbox"]:checked ~ .requisitos-content {
     display: block;
+}
+
+/* Mejora para la visualización de aptitudes */
+.alumno-aptitudes {
+    line-height: 1.6;
+    color: #333;
 }
 </style>
 """, unsafe_allow_html=True)
