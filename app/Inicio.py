@@ -75,7 +75,7 @@ st.warning("⚠️ Importante: Los requerimientos y modalidades de presentación
 st.divider()
 
 # Física
-st.header("🔭 Modulares en Física")
+st.header("🔭 Modulares en Física [aqui](https://www.cucei.udg.mx/carreras/fisica/proyectos-modulares)")
 st.markdown("""
 Los proyectos modulares en Física evalúan progresivamente habilidades metodológicas, analíticas y creativas:
 """)
