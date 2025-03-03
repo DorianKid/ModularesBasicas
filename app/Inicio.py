@@ -152,7 +152,7 @@ with col1:
 
 with col2:
     st.markdown("""
-    **Proyectos Modulares de Competencias Avanzadas**
+    #### **Proyectos Modulares de Competencias Avanzadas**
     - Desarrollo de habilidades avanzadas en investigación farmacéutica y biológica
     - Aplicación de conocimientos especializados en situaciones profesionales
     - Integración de fundamentos teóricos con aplicaciones prácticas
