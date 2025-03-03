@@ -156,5 +156,5 @@ pdf_path = '/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investiga
 
 # Contenedor expandible para el PDF
 with st.expander("Ver PDF", expanded=False):
-    pdf_viewer(pdf_path)
+    pdf_viewer(pdf_path, pages_to_render= 1)
 
