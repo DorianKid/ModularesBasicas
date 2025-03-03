@@ -170,23 +170,28 @@ with col2:
 pdf_files = {
     "Trabajo de Investigación": {
         "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf",
-        "pages": 11  # Cambia esto al número real de páginas
+        "pages": 11,  # Cambia esto al número real de páginas
+        "description": "Desarrollo de proyectos con método científico, hipótesis y resultados analíticos."
     },
     "Materiales Educativos": {
         "path": "/mount/src/modularesbasicas/app/files/Materiales_Educativos.pdf",
-        "pages": 10  # Cambia esto al número real de páginas
+        "pages": 10,  # Cambia esto al número real de páginas
+        "description": "Creación de recursos didácticos para el aprendizaje en ciencias farmacéuticas."
     },
     "Prototipo": {
         "path": "/mount/src/modularesbasicas/app/files/Prototipo.pdf",
-        "pages": 8  # Cambia esto al número real de páginas
+        "pages": 8,  # Cambia esto al número real de páginas
+        "description": "Desarrollo de modelos físicos o funcionales de productos farmacéuticos o biológicos."
     },
     "Reporte": {
         "path": "/mount/src/modularesbasicas/app/files/Reporte.pdf",
-        "pages": 15  # Cambia esto al número real de páginas
+        "pages": 15,  # Cambia esto al número real de páginas
+        "description": "Documentación técnica de procesos o investigaciones específicas."
     },
     "Vinculación Social": {
         "path": "/mount/src/modularesbasicas/app/files/Vinculacion_Social.pdf",
-        "pages": 12  # Cambia esto al número real de páginas
+        "pages": 12,  # Cambia esto al número real de páginas
+        "description": "Proyectos con impacto en comunidades o sectores específicos."
     }
 }
 
@@ -197,73 +202,46 @@ if 'current_page' not in st.session_state:
 if 'current_pdf' not in st.session_state:
     st.session_state.current_pdf = list(pdf_files.values())[0]["path"]  # Primer PDF por defecto
 
-# Descripciones de las modalidades
-modalidades = list(pdf_files.keys())
+# Selección de modalidad
+selected_modalidad = st.selectbox("Selecciona una modalidad:", list(pdf_files.keys()))
 
-# Mostrar cada modalidad con su selectbox
-for modalidad in modalidades:
-    st.markdown(f"### {modalidad}")
-    st.write(f"Descripción de {modalidad}.")
+# Actualizar el PDF actual y la descripción según la modalidad seleccionada
+st.session_state.current_pdf = pdf_files[selected_modalidad]["path"]
+description = pdf_files[selected_modalidad]["description"]
+total_pages = pdf_files[selected_modalidad]["pages"]
 
-    # Selectbox para seleccionar el PDF correspondiente
-    pdf_selection = st.selectbox(f"Selecciona el PDF para {modalidad}:", [modalidad], key=modalidad)
+# Mostrar la descripción de la modalidad
+st.markdown(f"### {selected_modalidad}")
+st.write(description)
 
-    # Actualizar el PDF actual según la selección
-    st.session_state.current_pdf = pdf_files[modalidad]["path"]
+# Contenedor expandible para el PDF
+with st.expander("Ver PDF", expanded=True):
+    # Aquí deberías implementar tu función pdf_viewer
+    pdf_viewer(
+        input=st.session_state.current_pdf,
+        pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
+    )
 
-    # Contenedor expandible para el PDF
-    with st.expander("Ver PDF", expanded=False):
-        # Aquí deberías implementar tu función pdf_viewer
-        pdf_viewer(
-            input=st.session_state.current_pdf,
-            pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
-        )
+    # Botones para navegar entre las páginas
+    col1, col2, col3 = st.columns([11, 11, 4])
+    
+    if col1.button("Página Anterior"):
+        if st.session_state.current_page > 1:
+            st.session_state.current_page -= 1
 
-        # Botones para navegar entre las páginas
-        col1, col2, col3 = st.columns([11, 11, 4])
+    # Leer el contenido del PDF para el botón de descarga
+    with open(st.session_state.current_pdf, "rb") as f:
+        pdf_data = f.read()
         
-        if col1.button("Página Anterior"):
-            if st.session_state.current_page > 1:
-                st.session_state.current_page -= 1
-
-        # Leer el contenido del PDF para el botón de descarga
-        with open(st.session_state.current_pdf, "rb") as f:
-            pdf_data = f.read()
-            
-        # Mostrar el botón de descarga
-        col2.download_button(
-            'Descargar',
-            pdf_data,
-            file_name=modalidad + '.pdf',
-            mime='application/pdf',
-            help=f"Haz clic para descargar el PDF de {modalidad}."
-        )
-        
-        if col3.button("Siguiente Página"):
-            total_pages = pdf_files[modalidad]["pages"]  # Obtener el total de páginas del PDF actual
-            if st.session_state.current_page < total_pages:
-                st.session_state.current_page += 1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    # Mostrar el botón de descarga
+    col2.download_button(
+        'Descargar',
+        pdf_data,
+        file_name=selected_modalidad + '.pdf',
+        mime='application/pdf',
+        help=f"Haz clic para descargar el PDF de {selected_modalidad}."
+    )
+    
+    if col3.button("Siguiente Página"):
+        if st.session_state.current_page < total_pages:
+            st.session_state.current_page += 1
