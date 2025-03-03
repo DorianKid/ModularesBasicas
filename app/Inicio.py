@@ -111,13 +111,11 @@ with col1:
     - **Metodológicas:** Aplicación del método científico en planteamiento y resolución de problemas
     - **Capacidad Analítica:** Obtención de resultados con fundamentos científicos
     - **Creatividad:** Soluciones innovadoras al problema planteado
-    - **Formato:** Póster de máximo 90x120 cm, legible a 2 metros de distancia
     
     #### **Modular 3: Habilidades Especializantes** *(Presentación Oral)*
     - **Metodológicas:** Aplicación en áreas de física contemporánea con métodos matemáticos
     - **Capacidad Analítica:** Resultados con amplia discusión teórica y experimental
     - **Creatividad:** Originalidad en contenido teórico o desarrollo experimental
-    - **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
     """)
 
 with col2:
@@ -126,13 +124,11 @@ with col2:
     - **Metodológicas:** Disertación y fundamentación de temas específicos de física
     - **Capacidad Analítica:** Resultados analíticamente fundamentados con interpretación teórica
     - **Creatividad:** Originalidad en la resolución y discusión
-    - **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
     
     #### **Modular 4: Habilidad Inter o Multidisciplinar** *(Presentación Oral)*
     - **Metodológicas:** Aplicación de la física en otras ciencias o disciplinas
     - **Capacidad Analítica:** Resultados con perspectiva interdisciplinar
     - **Creatividad:** Contenido original o reportes técnicos/servicio social
-    - **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
     """)
 
 st.subheader("📑 Modalidades")
@@ -141,7 +137,7 @@ selected_modalidad = st.selectbox("Selecciona una modalidad:", ["Presentación O
 
 if selected_modalidad == "Presentación Oral":    
     st.markdown("""
-        #### Presentación Oral
+        #### Instrucciones: Presentación Oral
         - **Duración**: Las presentaciones orales deben durar 20 minutos, seguidos de 5 minutos para preguntas.
         - **Formato**: Se aceptan únicamente presentaciones en formato PowerPoint o PDF. Si planeas incluir animaciones, verifica su compatibilidad y consulta en el área de registro si será posible visualizarlas en la sala.
         - **Envío de Presentaciones**: Envía tu presentación por correo a la Coordinación o entrégala personalmente para que se suba al sistema. Esto ayudará a evitar contratiempos durante las presentaciones.
@@ -149,35 +145,35 @@ if selected_modalidad == "Presentación Oral":
 else:
     # Sección de Presentación Poster
     st.markdown("""
-    #### Presentación Poster
-    - **Descripción General**: El póster debe ser una representación visual de tu trabajo.
-    
-    - **Título**: 
-      - Debe coincidir con el título del proyecto presentado.
-      - El tamaño de fuente recomendado es de 48 puntos.
-      - Incluye los nombres de los autores y la universidad de adscripción, con un tamaño de fuente de 48 a 60 puntos para los encabezados.
-    
-    - **Tamaño**: El tamaño máximo del póster debe ser de 90 x 120 cm.
-    
-    - **Tipografía**: 
-      - Asegúrate de que el contenido sea legible desde una distancia de dos metros.
-      - Utiliza una combinación de letras MAYÚSCULAS y minúsculas; evita el uso exclusivo de mayúsculas, ya que es difícil de leer.
-      - No combines diferentes estilos de tipo o fuente.
-    
-    - **Contenido**:
-      - El tamaño de fuente sugerido es de 24 a 32 puntos a espacio simple.
-      - El texto debe ser conciso y de fácil lectura.
-      - El mensaje del póster debe ser claro y comprensible sin requerir explicación oral. Presenta los métodos de manera simple y directa.
-    
-    - **Estructura**:
-      - Los paneles más importantes son la Introducción y las Conclusiones. Estos deben ser simples, concisos y visualmente atractivos.
-      - Los resultados deben presentarse gráficamente siempre que sea posible; evita grandes tablas de datos. Los resultados deben ser consistentes con los presentados en la propuesta de proyecto.
-    
-    - **Visuales**:
-      - Utiliza dibujos, símbolos y colores. Las leyendas de las figuras son esenciales y deben ser breves pero informativas.
-      - Si usas gráficos, asegúrate de que tengan un encabezado corto.
-      - Los gráficos y fotografías no deben ser más pequeños que 12 cm x 18 cm.
-      - Utiliza el espacio del póster para atraer a tu audiencia hacia la discusión, evitando detalles complejos de métodos y resultados.
+        #### Intrucciones: Presentación Poster
+        - **Descripción General**: El póster debe ser una representación visual de tu trabajo.
+        
+        - **Título**: 
+          - Debe coincidir con el título del proyecto presentado.
+          - El tamaño de fuente recomendado es de 48 puntos.
+          - Incluye los nombres de los autores y la universidad de adscripción, con un tamaño de fuente de 48 a 60 puntos para los encabezados.
+        
+        - **Tamaño**: El tamaño máximo del póster debe ser de 90 x 120 cm.
+        
+        - **Tipografía**: 
+          - Asegúrate de que el contenido sea legible desde una distancia de dos metros.
+          - Utiliza una combinación de letras MAYÚSCULAS y minúsculas; evita el uso exclusivo de mayúsculas, ya que es difícil de leer.
+          - No combines diferentes estilos de tipo o fuente.
+        
+        - **Contenido**:
+          - El tamaño de fuente sugerido es de 24 a 32 puntos a espacio simple.
+          - El texto debe ser conciso y de fácil lectura.
+          - El mensaje del póster debe ser claro y comprensible sin requerir explicación oral. Presenta los métodos de manera simple y directa.
+        
+        - **Estructura**:
+          - Los paneles más importantes son la Introducción y las Conclusiones. Estos deben ser simples, concisos y visualmente atractivos.
+          - Los resultados deben presentarse gráficamente siempre que sea posible; evita grandes tablas de datos. Los resultados deben ser consistentes con los presentados en la propuesta de proyecto.
+        
+        - **Visuales**:
+          - Utiliza dibujos, símbolos y colores. Las leyendas de las figuras son esenciales y deben ser breves pero informativas.
+          - Si usas gráficos, asegúrate de que tengan un encabezado corto.
+          - Los gráficos y fotografías no deben ser más pequeños que 12 cm x 18 cm.
+          - Utiliza el espacio del póster para atraer a tu audiencia hacia la discusión, evitando detalles complejos de métodos y resultados.
     """)
     
 
