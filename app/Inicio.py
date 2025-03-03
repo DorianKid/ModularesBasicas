@@ -162,6 +162,6 @@ st.markdown("""
 
 # Contenedor expandible para el PDF
 with st.expander("Ver PDF", expanded=False):
-    st.pdf('/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf')
+    mostrar_pdf('/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf')
 
 
