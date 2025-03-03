@@ -52,7 +52,7 @@ with col2:
     - **Asesoría especializada** por parte de profesores.
     """)
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
     st.subheader(" Otras")
