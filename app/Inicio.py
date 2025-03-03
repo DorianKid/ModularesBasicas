@@ -13,6 +13,28 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"}
 )
 
+######################## ESTILOS CSS ########################################
+# Aplicar estilos CSS para cambiar el color del botón
+st.markdown(
+    """
+    <style>
+    .stButton>button {
+        background-color: #4CAF50;  /* Color de fondo */
+        color: white;  /* Color del texto */
+        border: none;  /* Sin borde */
+        padding: 10px 20px;  /* Espaciado interno */
+        text-align: center;  /* Alinear texto */
+        text-decoration: none;  /* Sin subrayado */
+        display: inline-block;  /* Mostrar en línea */
+        font-size: 16px;  /* Tamaño de fuente */
+        margin: 4px 2px;  /* Margen */
+        cursor: pointer;  /* Cursor de puntero */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # Título principal con icono
 st.title("📚 Proyectos Modulares: Evaluación Integral en CUCEI")
 
