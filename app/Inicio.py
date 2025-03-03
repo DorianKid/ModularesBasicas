@@ -88,7 +88,7 @@ st.warning("⚠️ Importante: Los requerimientos y modalidades de presentación
 
 st.divider()
 
-Copy# Adaptación por disciplina
+# Adaptación por disciplina
 st.header("⚙️ Adaptación por Disciplina")
 
 # Física
