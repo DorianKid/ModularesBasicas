@@ -185,3 +185,16 @@ with col1:
             "Miembro del Sistema Nacional de Investigadores Nivel II",
             "Modelación matemática y simulación en problemas medioambientales"
         )
+
+    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Néstor García Chan",
+            "Profesor Investigador Titular B",
+            "nestor.gchan@academicos.udg.mx",
+            "EDP, Programación, Métodos Numéricos",
+            "Miembro del Sistema Nacional de Investigadores Nivel II",
+            "Modelación matemática y simulación en problemas medioambientales"
+        )
