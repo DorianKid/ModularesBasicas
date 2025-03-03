@@ -250,8 +250,8 @@ with col1:
             "Profesor de Asignatura",
             "alejandro.espinosa@academicos.udg.mx",
             "Haber cursado la asignatura de Mecánica del Medio Contínuo",
-            "",
-            "",
+            " ",
+            " ",
             "Oceanografía y Modelación Numérica de Fluidos"
             )
 
@@ -294,7 +294,7 @@ with col2:
             "Profesor Docente Titular A",
             "hector.gochoa@academicos.udg.mx",
             "Amable y Responsable",
-            "No SNI",
+            " ",
             "https://academicos.cucei.udg.mx/academicos/2955330",
             "Física Estadística"
             )
@@ -308,7 +308,7 @@ with col2:
             "Profesor de Asignatura",
             "liliana.vmercado@academicos.udg.mx",
             "Ninguno",
-            "",
+            " ",
             "https://academicos.cucei.udg.mx/academicos/2003058",
             "Didáctica de la física y Cursos Adaptativos de Física"
             )
