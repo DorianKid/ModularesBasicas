@@ -533,7 +533,7 @@ with col2:
         mostrar_profesor(
             "",
             "Dra. Susana Muñóz Villegas",
-            "Profesor de Asignatura B",
+            "Profesora de Asignatura B",
             "susana.munoz@academicos.udg.mx",
             "Gusto por las matemáticas y programación",
             " ",
