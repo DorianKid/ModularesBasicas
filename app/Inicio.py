@@ -107,7 +107,7 @@ with col1:
     - **Creatividad:** Soluciones innovadoras al problema planteado
     - **Formato:** Póster de máximo 90x120 cm, legible a 2 metros de distancia
     
-    **Modular 3: Habilidades Especializantes** *(Presentación Oral)*
+    #### **Modular 3: Habilidades Especializantes** *(Presentación Oral)*
     - **Metodológicas:** Aplicación en áreas de física contemporánea con métodos matemáticos
     - **Capacidad Analítica:** Resultados con amplia discusión teórica y experimental
     - **Creatividad:** Originalidad en contenido teórico o desarrollo experimental
@@ -116,13 +116,13 @@ with col1:
 
 with col2:
     st.markdown("""
-    **Modular 2: Habilidades Fundamentales** *(Presentación Oral)*
+    #### **Modular 2: Habilidades Fundamentales** *(Presentación Oral)*
     - **Metodológicas:** Disertación y fundamentación de temas específicos de física
     - **Capacidad Analítica:** Resultados analíticamente fundamentados con interpretación teórica
     - **Creatividad:** Originalidad en la resolución y discusión
     - **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
     
-    **Modular 4: Habilidad Inter o Multidisciplinar** *(Presentación Oral)*
+    #### **Modular 4: Habilidad Inter o Multidisciplinar** *(Presentación Oral)*
     - **Metodológicas:** Aplicación de la física en otras ciencias o disciplinas
     - **Capacidad Analítica:** Resultados con perspectiva interdisciplinar
     - **Creatividad:** Contenido original o reportes técnicos/servicio social
