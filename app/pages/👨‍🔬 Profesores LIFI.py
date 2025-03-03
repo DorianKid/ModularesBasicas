@@ -12,8 +12,7 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"}
 )
 
-############################ BACKGROUND ##############################################
-# Definir una función para cargar la imagen como base64
+# Función para convertir imagen a base64
 def get_base64_from_file(file_path):
     try:
         with open(file_path, "rb") as f:
@@ -23,40 +22,39 @@ def get_base64_from_file(file_path):
         st.error(f"Error al leer la imagen: {e}")
         return None
 
-# Intentar encontrar la imagen relativa al directorio del script
+# Cargar imagen de fondo
 file_path = '/mount/src/modularesbasicas/app/maestros_bg.jpg'
-# Obtener la imagen en base64
 img_base64 = get_base64_from_file(file_path)
 
-st.markdown(
-    f"""
-    <style>
-    /* Fondo */
-    [data-testid="stAppViewContainer"]::before {{
-        content: "";
-        background-image: url("data:image/jpg;base64,{img_base64}");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 0.4;
-        z-index: 0;
-    }}
-    [data-testid="stAppViewContainer"] > * {{
-        position: relative;
-        z-index: 1;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+if img_base64:
+    st.markdown(
+        f"""
+        <style>
+        [data-testid="stAppViewContainer"]::before {{
+            content: "";
+            background-image: url("data:image/jpg;base64,{img_base64}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0.4;
+            z-index: 0;
+        }}
+        [data-testid="stAppViewContainer"] > * {{
+            position: relative;
+            z-index: 1;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-################################# Estilos CSS ################################
+# Estilos CSS
 st.markdown("""
 <style>
 .profesor-card {
@@ -128,21 +126,18 @@ st.markdown("""
     border: 1px solid #d1e6f7;
     border-radius: 5px;
 }
-.requisitos-container input[type="checkbox"] {{
+.requisitos-container input[type="checkbox"] {
     display: none;
-}}
+}
 .requisitos-container input[type="checkbox"]:checked ~ .requisitos-content {
     display: block;
 }
 </style>
 """, unsafe_allow_html=True)
 
-# Función para crear la tarjeta de un profesor
+# Función para mostrar un profesor
 def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *lineas):
-    # Crear spans para cada línea
     lineas_html = ''.join([f'<span class="profesor-linea">📑 {linea}</span><br>' for linea in lineas])
-
-    # HTML para los requisitos (con interacción basada en CSS)
     requisitos_html = f"""
     <div class="requisitos-container">
         <label class="requisitos-titulo" for="requisitos-{nombre}">Mostrar Requisitos</label>
@@ -150,16 +145,9 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *linea
         <div class="requisitos-content">
             <div class="alumno-aptitudes">{aptitudes}</div>
         </div>
-    
+    </div>
     """
-
-    # HTML para el SNI si está disponible
-    sni_html = f"""
-    <div class="profesor-sni" style="font-size: 14px; color: #5e6572;">
-        {SNI}
-    
-    """ if SNI else ""
-
+    sni_html = f"<div class='profesor-sni' style='font-size: 14px; color: #5e6572;'>{SNI}</div>" if SNI else ""
     html = f"""
     <div class="profesor-card">
         <img src="data:image/jpeg;base64,{imagen}" class="profesor-imagen">
@@ -168,31 +156,28 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *linea
             <div class="profesor-grado">{puesto}</div>
             {sni_html}
             <div class="profesor-correo"><a href="mailto:{correo}">{correo}</a></div>
-            <div>
-                {lineas_html}
-            </div>
+            <div>{lineas_html}</div>
             {requisitos_html}
         </div>
     </div>
     """
     st.markdown(html, unsafe_allow_html=True)
 
-#########################################################
 st.title("Profesores")
 st.header("Licenciatura en Física")
 
 col1, col2 = st.columns(2)
 
-###################### Columna 1 ###################################
 with col1:
     foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
     foto_base64 = get_base64_from_file(foto_path)
-    mostrar_profesor(
-        foto_base64,
-        "Dr. Néstor García Chan",
-        "Profesor Investigador Titular B",
-        "nestor.gchan@academicos.udg.mx",
-        "EDP, Programación, Métodos Numéricos",
-        "Miembro del Sistema Nacional de Investigadores Nivel II",
-        "Modelación matemática y simulación en problemas medioambientales"
-    )
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Néstor García Chan",
+            "Profesor Investigador Titular B",
+            "nestor.gchan@academicos.udg.mx",
+            "EDP, Programación, Métodos Numéricos",
+            "Miembro del Sistema Nacional de Investigadores Nivel II",
+            "Modelación matemática y simulación en problemas medioambientales"
+        )
