@@ -14,7 +14,11 @@ st.set_page_config(
 )
 
 ######################## FUNCIONES ##########################################
-
+# Función para leer el archivo .tex
+def read_tex_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        return f.read()
+        
 ######################## ESTILOS CSS ########################################
 # Aplicar estilos CSS para cambiar el color del botón normal
 st.markdown("""
@@ -176,7 +180,10 @@ else:
     """)
 
 with st.expander('Ver plantilla', expanded=False):
-    st.write("Aqui va el latex")
+    col1, col2 = st.columns([1,2])
+    with col1:
+        contenido_tex = read_tex_file("/mount/src/modularesbasicas/app/files/Plantilla_Modulares-tex")
+        st.write(conetido_tex)
 
 
 st.divider()
@@ -215,22 +222,22 @@ pdf_files = {
     },
     "🖍️ Materiales Educativos": {
         "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Materiales_Educativos.pdf",
-        "pages": 10,  # Cambia esto al número real de páginas
+        "pages": 2,  # Cambia esto al número real de páginas
         "description": "Creación de recursos didácticos para el aprendizaje en ciencias farmacéuticas."
     },
     "🔧 Prototipo": {
         "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Prototipo.pdf",
-        "pages": 8,  # Cambia esto al número real de páginas
+        "pages": 4,  # Cambia esto al número real de páginas
         "description": "Desarrollo de modelos físicos o funcionales de productos farmacéuticos o biológicos."
     },
     "📋 Reporte": {
         "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Reporte.pdf",
-        "pages": 15,  # Cambia esto al número real de páginas
+        "pages": 3,  # Cambia esto al número real de páginas
         "description": "Documentación técnica de procesos o investigaciones específicas."
     },
     "🫂 Vinculación Social": {
         "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Vinculacion_Social.pdf",
-        "pages": 12,  # Cambia esto al número real de páginas
+        "pages": 3,  # Cambia esto al número real de páginas
         "description": "Proyectos con impacto en comunidades o sectores específicos."
     }
 }
