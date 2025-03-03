@@ -160,7 +160,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, enlace
     """
     sni_html = f"<div class='profesor-sni' style='font-size: 14px; color: #5e6572;'>{SNI}</div>" if SNI else ""
 
-    html_nombre = f'<div class="profesor-nombre"><a href="{enlace}">{nombre}</a></div>' if enlace else f'<div class="profesor-nombre">{nombre}</div>'
+    html_nombre = f'<div><a href="{enlace}" class="profesor-nombre">{nombre}</a></div>' if enlace else f'<div class="profesor-nombre">{nombre}</div>'
     
     html = f"""
     <div class="profesor-card">
