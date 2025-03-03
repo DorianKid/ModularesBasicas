@@ -69,27 +69,17 @@ st.markdown("""
     transition: transform 0.2s;
     align-items: center; /* Centra verticalmente todos los elementos */
 }
-
 .profesor-card:hover {
     transform: translateY(-5px);
 }
-
-/* Contenedor de imagen centrado verticalmente */
 .profesor-imagen {
     width: 100px;
-    height: 120px; /* Un poco más alto para fotos de tipo credencial */
+    height: 100px;
     border-radius: 10px;
     margin-right: 20px;
-    object-fit: cover; /* Mantiene la proporción de la imagen */
-    align-self: center; /* Asegura el centrado vertical */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil */
 }
-
 .profesor-info {
     flex: 1;
-    align-self: stretch; /* Estira para llenar el espacio vertical */
-    display: flex;
-    flex-direction: column;
 }
 
 .profesor-nombre {
