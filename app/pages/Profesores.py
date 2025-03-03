@@ -3,7 +3,7 @@ import base64
 from pathlib import Path
 
 st.set_page_config(
-    page_title="Modulares",
+    page_title="Profesores",
     page_icon=":microscope:",
     layout="wide",    
     initial_sidebar_state="expanded",
