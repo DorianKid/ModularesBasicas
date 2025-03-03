@@ -181,10 +181,6 @@ else:
 # Ruta del archivo PDF
 pdf_path = "/mount/src/modularesbasicas/app/files/Plantilla_Modulares.pdf"  # Reemplaza con la ruta a tu archivo PDF
 
-# Inicializa el número de página
-if 'current_page' not in st.session_state:
-    st.session_state.current_page = 1
-
 # Contenedor expandible para el PDF
 with st.expander("Ver Plantilla", expanded=True):
 
@@ -193,29 +189,12 @@ with st.expander("Ver Plantilla", expanded=True):
         contenido_tex = read_tex_file("/mount/src/modularesbasicas/app/files/Plantilla_Modulares.tex")
 
         # Mostrar el contenido con desplazamiento
-        st.text_area("Código LaTeX", value=contenido_tex, height=700, disabled=True)
+        st.text_area("Código LaTeX", value=contenido_tex, height=1400, disabled=True)
         #st.code(contenido_tex)
     
     with col2:
         # Aquí deberías implementar tu función pdf_viewer
-        pdf_viewer(
-            input=pdf_path,
-            pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
-        )
-    
-        # Botones para navegar entre las páginas
-        col1, col2 = st.columns([1,1])
-        
-        if col1.button("Página Anterior", key="plantillaatras"):
-            if st.session_state.current_page > 1:
-                st.session_state.current_page -= 1
-
-        # Establece el número total de páginas aquí
-        total_pages = 2  # Cambia esto al número real de páginas
-        if col2.button("Siguiente Página", key="plantillasig"):
-            if st.session_state.current_page < total_pages:
-                st.session_state.current_page += 1
-    
+        pdf_viewer(input=pdf_path)    
 
 st.divider()
 
