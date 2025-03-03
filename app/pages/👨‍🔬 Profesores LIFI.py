@@ -138,7 +138,7 @@ st.markdown("""
     margin-top: 15px;
 }
 .requisitos-titulo {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: #1e3d59;
     cursor: pointer;
