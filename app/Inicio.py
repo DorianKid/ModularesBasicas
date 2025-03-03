@@ -18,7 +18,9 @@ def mostrar_pdf(pdf_path):
     with open(pdf_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode("utf-8")
 
-    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
+    pdf_display = f"""
+    <embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">
+    """
     st.markdown(pdf_display, unsafe_allow_html=True)
 
 # Título principal con icono
@@ -160,8 +162,10 @@ st.markdown("""
 5. **Vinculación Social:** Proyectos con impacto en comunidades o sectores específicos
 """)
 
-# Contenedor expandible para el PDF
-with st.expander("Ver PDF", expanded=False):
-    mostrar_pdf('/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf')
+pdf_file = st.file_uploader("Sube un archivo PDF", type=["pdf"])
 
+if pdf_file is not None:
+    with open("temp.pdf", "wb") as f:
+        f.write(pdf_file.getbuffer())
+    mostrar_pdf("temp.pdf")
 
