@@ -143,8 +143,6 @@ st.markdown("""
     margin-top: 10px;
     padding: 10px;
     background-color: #f0f4f8;
-    border: 1px solid #d1e6f7;
-    border-radius: 5px;
 }
 .requisitos-container input[type="checkbox"] {
     display: none;
