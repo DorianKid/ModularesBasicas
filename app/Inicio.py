@@ -189,13 +189,9 @@ col1, col2 = st.columns(2)
 
 with col1:
     contenido_tex = read_tex_file("/mount/src/modularesbasicas/app/files/Plantilla_Modulares.tex")
-    # Mostrar solo las primeras 20 líneas y permitir desplazamiento
-    lineas = contenido_tex.splitlines()
-    lineas_a_mostrar = lineas[:50]  # Cambia el número para mostrar más o menos líneas
-    contenido_mostrado = "\n".join(lineas_a_mostrar)
 
     # Mostrar el contenido con desplazamiento
-    st.text_area("Código LaTeX", value=contenido_mostrado, height=300, disabled=True)
+    st.text_area("Código LaTeX", value=contenido_tex, height=600)
     #st.code(contenido_tex)
 
 with col2:
