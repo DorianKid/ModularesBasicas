@@ -151,7 +151,7 @@ st.markdown("""
 5. **Vinculación Social:** Proyectos con impacto en comunidades o sectores específicos
 """)
 
-pdf_path = '/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf')
+pdf_path = '/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf'
 
 # Contenedor expandible para el PDF
 with st.expander("Ver PDF", expanded=False):
