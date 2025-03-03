@@ -15,8 +15,27 @@ st.set_page_config(
 
 ######################## ESTILOS CSS ########################################
 # Aplicar estilos CSS para cambiar el color del botón
-st.markdown(
-    """
+st.markdown("""
+    <style>
+    .stButton>button {
+        background-color: #4CAF50;  /* Color de fondo */
+        color: white;  /* Color del texto */
+        border: none;  /* Sin borde */
+        padding: 8px 13px;  /* Espaciado interno */
+        text-align: center;  /* Alinear texto */
+        text-decoration: none;  /* Sin subrayado */
+        display: inline-block;  /* Mostrar en línea */
+        font-size: 16px;  /* Tamaño de fuente */
+        margin: 4px 2px;  /* Margen */
+        cursor: pointer;  /* Cursor de puntero */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Aplicar estilos CSS para cambiar el color del botón de descarga
+st.markdown("""
     <style>
     .stButton>button {
         background-color: #4CAF50;  /* Color de fondo */
