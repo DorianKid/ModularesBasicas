@@ -101,7 +101,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("""
-    #### Modular 1: Habilidades Básicas *(Presentación en Póster)*
+    #### **Modular 1: Habilidades Básicas** *(Presentación en Póster)*
     - **Metodológicas:** Aplicación del método científico en planteamiento y resolución de problemas
     - **Capacidad Analítica:** Obtención de resultados con fundamentos científicos
     - **Creatividad:** Soluciones innovadoras al problema planteado
