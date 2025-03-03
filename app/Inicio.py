@@ -143,9 +143,9 @@ if selected_modalidad == "Presentación Oral":
         - **Envío de Presentaciones**: Envía tu presentación por correo a la Coordinación o entrégala personalmente para que se suba al sistema. Esto ayudará a evitar contratiempos durante las presentaciones.
     """)
 else:
-    # Sección de Presentación Poster
+    # Sección de Presentación en Poster
     st.markdown("""
-        #### Intrucciones: Presentación Poster        
+        #### Intrucciones: Presentación en Póster        
         - **Título**: 
           - Debe coincidir con el título del proyecto presentado.
           - El tamaño de fuente recomendado es de 48 puntos.
