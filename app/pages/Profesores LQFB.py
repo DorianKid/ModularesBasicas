@@ -186,7 +186,7 @@ col1, col2 = st.columns(2)
 
 ###################### Columna 1 ###################################
 with col1:
-    foto_path = Path(__file__).parent / "Fotos_QFB" / "uscanga.jpg"
+    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
     foto_base64 = get_base64_from_file(foto_path)
     mostrar_profesor(
         foto_base64,
