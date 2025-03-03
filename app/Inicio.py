@@ -162,10 +162,6 @@ st.markdown("""
 5. **Vinculación Social:** Proyectos con impacto en comunidades o sectores específicos
 """)
 
-pdf_file = '/mount/src/modularesbasicas/app/Lineamientos_Trabajo_Investigacion.pdf'
 
-if pdf_file is not None:
-    with open("temp.pdf", "wb") as f:
-        f.write(pdf_file.getbuffer())
-    mostrar_pdf("temp.pdf")
+mostrar_pdf('/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf')
 
