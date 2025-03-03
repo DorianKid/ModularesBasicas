@@ -169,10 +169,6 @@ with col2:
 st.markdown("""
 #### **Modalidades disponibles:**
 1. **Trabajo de Investigación:** Desarrollo de proyectos con método científico, hipótesis y resultados analíticos
-2. **Materiales Educativos:** Creación de recursos didácticos para el aprendizaje en ciencias farmacéuticas
-3. **Prototipo:** Desarrollo de modelos físicos o funcionales de productos farmacéuticos o biológicos
-4. **Reporte:** Documentación técnica de procesos o investigaciones específicas
-5. **Vinculación Social:** Proyectos con impacto en comunidades o sectores específicos
 """)
 
 pdf_path = '/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf'
@@ -214,3 +210,12 @@ with st.expander("Ver PDF", expanded=False):
         total_pages = 11  # Cambia esto al número real de páginas
         if st.session_state.current_page < total_pages:
             st.session_state.current_page += 1
+
+
+st.markdown("""
+2. **Materiales Educativos:** Creación de recursos didácticos para el aprendizaje en ciencias farmacéuticas
+3. **Prototipo:** Desarrollo de modelos físicos o funcionales de productos farmacéuticos o biológicos
+4. **Reporte:** Documentación técnica de procesos o investigaciones específicas
+5. **Vinculación Social:** Proyectos con impacto en comunidades o sectores específicos
+""")
+
