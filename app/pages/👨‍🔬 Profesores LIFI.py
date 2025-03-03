@@ -265,7 +265,7 @@ with col1:
             "jaimer.gonzalezr@academicos.udg.mx",
             "De 2do semestre en adelante, con la posibilidad de tésis para los modulares II y III",
             "Candidato a Miembro del Sistema Nacional de Investigadores",
-            "https://academicos.cucei.udg.mx/academicos/2003058",
+            "https://academicos.cucei.udg.mx/academicos/2955571",
             "Detección de Ondas de Choque por Medios Ópticos",
             "Simulaciones FEM y Tratamiento LSP", 
             "Espectroscopía e Instrumentación Óptica"
