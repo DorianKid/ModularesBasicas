@@ -25,7 +25,7 @@ def get_download_link(file_path):
 # Aplicar estilos CSS para cambiar el color del botón
 st.markdown("""
     <style>
-    .stdownload-button > button {
+    .stDownload-Button > Button {
         background-color: #4CAF50;  /* Color de fondo */
         color: white;  /* Color del texto */
         border: none;  /* Sin borde */
