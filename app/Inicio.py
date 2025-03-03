@@ -43,7 +43,7 @@ st.title("📚 Proyectos Modulares: Evaluación Integral en CUCEI")
 st.header("🔍 ¿Qué son los modulares?")
 # Descripción inicial
 st.markdown("""
-Los **Proyectos Modulares** son una estrategia educativa clave en el modelo académico del 
+Los [**Proyectos Modulares**](http://proyectosciencia.cucei.udg.mx) son una estrategia educativa clave en el modelo académico del 
 Centro Universitario de Ciencias Exactas e Ingenierías (**CUCEI**) de la **Universidad de Guadalajara**. Estos proyectos constituyen un **sistema de evaluación integral** que permite a los estudiantes demostrar la adquisición y aplicación de competencias específicas en diversas etapas de su formación profesional.
 
 Son actividades académicas estructuradas que evalúan la integración de **conocimientos, habilidades y actitudes** adquiridas durante un período determinado. Más que simples trabajos finales, representan **evidencias concretas** del desarrollo de competencias profesionales y metodológicas necesarias para el ejercicio de su profesión.
@@ -135,9 +135,7 @@ with col2:
     - **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
     """)
 
-st.markdown("""
-**Requisitos generales:** Documento de máximo 10 páginas, manejo adecuado de conceptos físicos y modelos matemáticos, dominio de herramientas computacionales e instrumentos de laboratorio cuando sea necesario.
-""")
+
 
 st.divider()
 
