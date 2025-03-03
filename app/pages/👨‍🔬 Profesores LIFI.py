@@ -161,7 +161,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *linea
             <div class="profesor-correo"><a href="mailto:{correo}">{correo}</a></div>
             <div>{lineas_html}</div>
             {requisitos_html}
-        </div>
+        
     </div>
     """
     st.markdown(html, unsafe_allow_html=True)
