@@ -88,11 +88,8 @@ st.warning("⚠️ Importante: Los requerimientos y modalidades de presentación
 
 st.divider()
 
-# Adaptación por disciplina
-st.header("⚙️ Adaptación por Disciplina")
-
 # Física
-st.subheader("🔭 Física")
+st.header("🔭 Física")
 st.markdown("""
 Los proyectos modulares en Física evalúan progresivamente habilidades metodológicas, analíticas y creativas:
 """)
@@ -133,8 +130,10 @@ st.markdown("""
 **Requisitos generales:** Documento de máximo 10 páginas, manejo adecuado de conceptos físicos y modelos matemáticos, dominio de herramientas computacionales e instrumentos de laboratorio cuando sea necesario.
 """)
 
+st.divider()
+
 # Químico Farmacobiólogo
-st.subheader("💊 Químico Farmacobiólogo")
+st.header("💊 Químico Farmacobiólogo")
 st.markdown("""
 Los proyectos modulares en Químico Farmacéutico Biólogo se enfocan en competencias intermedias y avanzadas:
 """)
