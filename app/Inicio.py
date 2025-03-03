@@ -195,11 +195,19 @@ with st.expander("Ver Plantilla", expanded=True):
     with col2:
         annotations = [
                 {
+                "page": 1,
+                "x": 0,
+                "y": 842,
+                "height": 1,
+                "width": 595,
+                "color": "red"
+                },
+                {
                 "page": 2,
                 "x": 0,
-                "y": 0,
+                "y": 842,
                 "height": 1,
-                "width": 600,
+                "width": 595,
                 "color": "red"
                 }
             ]
