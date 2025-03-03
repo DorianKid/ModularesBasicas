@@ -170,7 +170,6 @@ st.markdown("""
     margin-top: 10px;
     padding: 12px 2px 12px 10px;
     background-color: transparent;
-    border-left: 3px solid #3498db;
     animation: fadeIn 0.2s ease-out;
 }
 </style>
