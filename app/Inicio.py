@@ -136,7 +136,7 @@ st.markdown("""
 # Químico Farmacobiólogo
 st.subheader("💊 Químico Farmacobiólogo")
 st.markdown("""
-Los proyectos modulares en QFB se enfocan en competencias intermedias y avanzadas:
+Los proyectos modulares en Químico Farmacéutico Biólogo se enfocan en competencias intermedias y avanzadas:
 """)
 col1, col2 = st.columns(2)
 
