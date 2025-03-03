@@ -18,7 +18,6 @@ def mostrar_pdf(pdf_path):
     archivo =  pdf_path.split("/")[-1]
     with open(pdf_path, "rb") as pdf_file:
         PDFbyte = pdf_file.read()
-    st.download_button(label="Descargar PDF", data=PDFbyte, file_name=archivo, mime='application/pdf')
     st.markdown(f'<iframe src="data:application/pdf;base64,{base64.b64encode(PDFbyte).decode()}" width="700" height="500" frameborder="0"></iframe>', unsafe_allow_html=True)
 
 # Título principal con icono
