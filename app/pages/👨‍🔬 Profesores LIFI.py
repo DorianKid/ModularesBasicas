@@ -193,7 +193,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Función para crear la tarjeta de un profesor
-def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *lineas):
+# Función para crear la tarjeta de un profesor
+def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes=None, SNI=None, *lineas):
     # Crear spans para cada línea
     lineas_html = ''.join([f'<span class="profesor-linea">📑 {linea}</span><br>' for linea in lineas])
 
@@ -222,14 +223,13 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *linea
         <div class="profesor-info">
             <div class="profesor-nombre">{nombre}</div>
             <div class="profesor-grado">{puesto}</div>
-            <div class="profesor-correo"><a href="mailto:{correo}">{correo}</a></div>
-            {requisitos_html}
-        </div>
             {sni_html}  <!-- Mostrar SNI si existe -->
+            <div class="profesor-correo"><a href="mailto:{correo}">{correo}</a></div>
             <div>
                 {lineas_html}
             </div>
-
+            {requisitos_html}
+        </div>
     </div>
     <script>
     function toggleRequisitos(element) {{
@@ -260,9 +260,9 @@ with col1:
         foto_base64,
         "Dr. Néstor García Chan",
         "Profesor Investigador Titular B",
-        "Miembro del Sistema Nacional de Investigadores Nivel II",
         "nestor.gchan@academicos.udg.mx",
         "EDP, Programación, Métodos Numéricos",
+        "Miembro del Sistema Nacional de Investigadores Nivel II",
         "Modelación matemática y simulación en problemas medioambientales"
         )
 
