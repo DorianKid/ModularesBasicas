@@ -26,6 +26,9 @@ Centro Universitario de Ciencias Exactas e Ingenierías (**CUCEI**) de la **Univ
 Son actividades académicas estructuradas que evalúan la integración de **conocimientos, habilidades y actitudes** adquiridas durante un período determinado. Más que simples trabajos finales, representan **evidencias concretas** del desarrollo de competencias profesionales y metodológicas necesarias para el ejercicio de su profesión.
 """)
 
+# Importancia educativa con resaltado
+st.success("📢 **Importancia Educativa:** Los Proyectos Modulares desempeñan un papel crucial en la formación académica, asegurando que los estudiantes adquieran competencias aplicables al mundo real.")
+
 st.divider()
 
 # Características comunes con diseño de columnas
@@ -47,9 +50,6 @@ with col2:
     - **Evaluación integral**: se consideran proceso, metodología y competencias adquiridas.
     - **Asesoría especializada** por parte de profesores.
     """)
-
-# Importancia educativa con resaltado
-st.success("📢 **Importancia Educativa:** Los Proyectos Modulares desempeñan un papel crucial en la formación académica, asegurando que los estudiantes adquieran competencias aplicables al mundo real.")
 
 st.divider()
 
