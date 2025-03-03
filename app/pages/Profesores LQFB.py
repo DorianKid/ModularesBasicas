@@ -1,6 +1,5 @@
 import streamlit as st
 import base64
-from pathlib import Path
 
 st.set_page_config(
     page_title="Profesores",
@@ -236,7 +235,7 @@ with col1:
 ######################### Columna 2 #################################
 
 with col2:
-    foto_path = Path(__file__).parent / "Fotos_QFB" / "uscanga.jpg"
+    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
     foto_base64 = get_base64_from_file(foto_path)
     mostrar_profesor(
         foto_base64,
