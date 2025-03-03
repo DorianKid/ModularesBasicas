@@ -198,6 +198,6 @@ with col1:
             "jose.quinones@academicos.udg.mx",
             "EDP, Programación, Métodos Numéricos",
             "Miembro del Sistema Nacional de Investigadores Nivel II",
-            "https://academicos.cucei.udg.mx/academicos/2306093",
+            enlace="https://academicos.cucei.udg.mx/academicos/2306093",
             "Síntesis de materiales por técnicas físicas y químicas"
         )
