@@ -76,7 +76,7 @@ st.markdown("""
     width: 150px;
     height: 150px;
     border-radius: 10px;
-    margin-right: 25px;
+    margin-right: 20px;
 }
 .profesor-info {
     flex: 1;
