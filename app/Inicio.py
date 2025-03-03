@@ -151,7 +151,8 @@ else:
           - El tamaño de fuente recomendado es de 48 puntos.
           - Incluye los nombres de los autores y la universidad de adscripción, con un tamaño de fuente de 48 a 60 puntos para los encabezados.
         
-        - **Tamaño**: El tamaño máximo del póster debe ser de 90 x 120 cm.
+        - **Tamaño**: 
+            - El tamaño máximo del póster debe ser de 90 x 120 cm.
         
         - **Tipografía**: 
           - Asegúrate de que el contenido sea legible desde una distancia de dos metros.
