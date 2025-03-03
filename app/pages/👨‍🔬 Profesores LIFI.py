@@ -210,7 +210,7 @@ with col1:
             "EDP, Programación, Métodos Numéricos",
             "Miembro del Sistema Nacional de Investigadores Nivel II",
             "https://academicos.cucei.udg.mx/academicos/2306093",
-            "Modelación matemática y simulación en problemas medioambientales"
+            "Modelación Matemática y Simulación en Problemas Medioambientales"
             )
 
     foto_path = '/mount/src/modularesbasicas/app/LIFI/quiñones.jpg'
@@ -224,7 +224,35 @@ with col1:
             "Electromagnetismo",
             "Miembro del Sistema Nacional de Investigadores Nivel II",
             "https://academicos.cucei.udg.mx/academicos/2955507",
-            "Síntesis de materiales por técnicas físicas y químicas"
+            "Síntesis de Materiales por Técnicas Físicoquímicas"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/zamudio.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Adalberto Zamudio Ojeda",
+            "Profesor Investigador Titular A",
+            "adalberto.zojeda@academicos.udg.mx",
+            "Ganas de aprender",
+            "Miembro del Sistema Nacional de Investigadores Nivel II",
+            "https://academicos.cucei.udg.mx/academicos/2724499",
+            "Síntesis de Nanomateriales"
+            )
+        
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/espinosa_ramirez.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Alejandro Camilo Espinosa Ramírez",
+            "Profesor de Asignatura",
+            "alejandro.espinosa@academicos.udg.mx",
+            "Haber cursado la asignatura de Mecánica del Medio Contínuo",
+            "",
+            "",
+            "Oceanografía y Modelación Numérica de Fluidos"
             )
 
 with col2:
@@ -253,7 +281,34 @@ with col2:
             "Interés por la física educativa, apertura para la interdisciplinariedad entre ciencias sociales y ciencias físicas.",
             "Candidato a Miembro del Sistema Nacional de Investigadores",
             "https://academicos.cucei.udg.mx/academicos/2405512",
-            "Desarrollo y evaluación de aprendizajes y competencias en física",
-            "Formación docente",
-            "Didáctica de la física"
+            "Desarrollo y Evaluación de Competencias en Física",
+            "Formación docente y Didáctica de la Física"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/gonzalez_ochoa.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Héctor Octavio González Ochoa",
+            "Profesor Docente Titular A",
+            "hector.gochoa@academicos.udg.mx",
+            "Amable y Responsable",
+            "",
+            "https://academicos.cucei.udg.mx/academicos/2955330",
+            "Física Estadística"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/mercado.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dra. Liliana Vázquez Mercado",
+            "Profesor de Asignatura",
+            "liliana.vmercado@academicos.udg.mx",
+            "Ninguno",
+            "",
+            "https://academicos.cucei.udg.mx/academicos/2003058",
+            "Didáctica de la física y Cursos Adaptativos de Física"
             )
