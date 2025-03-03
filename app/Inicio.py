@@ -174,22 +174,22 @@ pdf_files = {
         "description": "Desarrollo de proyectos con método científico, hipótesis y resultados analíticos."
     },
     "Materiales Educativos": {
-        "path": "/mount/src/modularesbasicas/app/files/Materiales_Educativos.pdf",
+        "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Materiales_Educativos.pdf",
         "pages": 10,  # Cambia esto al número real de páginas
         "description": "Creación de recursos didácticos para el aprendizaje en ciencias farmacéuticas."
     },
     "Prototipo": {
-        "path": "/mount/src/modularesbasicas/app/files/Prototipo.pdf",
+        "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Prototipo.pdf",
         "pages": 8,  # Cambia esto al número real de páginas
         "description": "Desarrollo de modelos físicos o funcionales de productos farmacéuticos o biológicos."
     },
     "Reporte": {
-        "path": "/mount/src/modularesbasicas/app/files/Reporte.pdf",
+        "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Reporte.pdf",
         "pages": 15,  # Cambia esto al número real de páginas
         "description": "Documentación técnica de procesos o investigaciones específicas."
     },
     "Vinculación Social": {
-        "path": "/mount/src/modularesbasicas/app/files/Vinculacion_Social.pdf",
+        "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Vinculacion_Social.pdf",
         "pages": 12,  # Cambia esto al número real de páginas
         "description": "Proyectos con impacto en comunidades o sectores específicos."
     }
