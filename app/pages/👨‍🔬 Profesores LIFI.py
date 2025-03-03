@@ -3,7 +3,7 @@ import base64
 
 st.set_page_config(
     page_title="Profesores LQFB",
-    page_icon=":microscope:",
+    page_icon=":telescope:",
     layout="wide",    
     initial_sidebar_state="collapsed",
     menu_items={
