@@ -193,7 +193,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, enlace
     st.markdown(html, unsafe_allow_html=True)
 
     
-st.title("Profesores")
+st.title("Profesores para Modulares")
 st.header("Licenciatura en Física")
 
 col1, col2 = st.columns(2)
