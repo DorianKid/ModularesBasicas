@@ -161,14 +161,16 @@ if 'current_page' not in st.session_state:
 # Contenedor expandible para el PDF
 with st.expander("Ver PDF", expanded=True):
     # Botones para navegar entre las páginas
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(2)
     if col1.button("Página Anterior"):
         if st.session_state.current_page > 1:
             st.session_state.current_page -= 1
+
+    col2.st.download_button('Descargar', pdf_path)
     
-    if col2.button("Siguiente Página"):
+    if col3.button("Siguiente Página"):
         # Establece el número total de páginas aquí
-        total_pages = 5  # Cambia esto al número real de páginas
+        total_pages = 11  # Cambia esto al número real de páginas
         if st.session_state.current_page < total_pages:
             st.session_state.current_page += 1
     
