@@ -255,6 +255,36 @@ with col1:
             "Oceanografía y Modelación Numérica de Fluidos"
             )
 
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/gonzalez_romero.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Jaime Ricardo González Romero",
+            "Técnico Académico Asociado B",
+            "jaimer.gonzalezr@academicos.udg.mx",
+            "De 2do semestre en adelante, con la posibilidad de tésis para los modulares II y III",
+            "Candidato a Miembro del Sistema Nacional de Investigadores",
+            "https://academicos.cucei.udg.mx/academicos/2003058",
+            "Detección de Ondas de Choque por Medios Ópticos",
+            "Simulaciones FEM y Tratamiento LSP", 
+            "Espectroscopía e Instrumentación Óptica"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/marquez_lugo.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Ramón Alejandro Márquez Lugo",
+            "Profesor Investigador Titular A",
+            "alejandro.marquez@academicos.udg.mx",
+            "Tiene mucha chamba",
+            "Miembro del Sistema Nacional de Investigadores Nivel I",
+            "http://iam.cucei.udg.mx/marquez-lugo",
+            "Astrofísica Estelar"
+            )
+
 with col2:
     foto_path = '/mount/src/modularesbasicas/app/LIFI/romero_ibarra.jpg'
     foto_base64 = get_base64_from_file(foto_path)
@@ -310,5 +340,33 @@ with col2:
             "Ninguno",
             " ",
             "https://academicos.cucei.udg.mx/academicos/2003058",
-            "Didáctica de la física y Cursos Adaptativos de Física"
+            "Didáctica de la Física y Cursos Adaptativos de Física"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/michel_uribe.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Carlos Rafael Michel Uribe",
+            "Profesor Investigador Titular A",
+            "carlos.muribe@academicos.udg.mx",
+            "Comporometidos con los objetivos de su trabajo",
+            "Miembro del Sistema Nacional de Investigadores Nivel II",
+            "https://depfisica.cucei.udg.mx/dr-michel-uribe-carlos-rafael",
+            "Sensores de luz y Fotocatálisis"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/ceballos.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Oscar Ceballos Sánchez",
+            "Profesor Investigador Asociado C",
+            "oscar.ceballos@academicos.udg.mx",
+            "Gusto por el laboratorio de síntesis química",
+            "Miembro del Sistema Nacional de Investigadores Nivel I",
+            "https://academicos.cucei.udg.mx/academicos/2960285",
+            "Semiconductores"
             )
