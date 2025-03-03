@@ -12,9 +12,9 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"}
 )
 
-st.title("Proyectos Modulares")
+st.title("Proyectos Modulares: Evaluación Integral en CUCEI")
 st.markdown("""
-#### Los Proyectos Modulares constituyen una estrategia educativa fundamental dentro del modelo académico del Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI) de la Universidad de Guadalajara. Estos proyectos representan un sistema de evaluación integral que permite a los estudiantes demostrar la adquisición y aplicación de competencias específicas en diferentes etapas de su formación profesional.
+###### Los Proyectos Modulares constituyen una estrategia educativa fundamental dentro del modelo académico del Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI) de la Universidad de Guadalajara. Estos proyectos representan un sistema de evaluación integral que permite a los estudiantes demostrar la adquisición y aplicación de competencias específicas en diferentes etapas de su formación profesional.
 """)
 st.header("¿Qué son los modulares?") 
 st.markdown("""
