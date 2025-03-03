@@ -265,49 +265,6 @@ with col1:
         "Modelación matemática y simulación en problemas medioambientales"
         )
 
-    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
-    foto_base64 = get_base64_from_file(foto_path)
-    mostrar_profesor(
-        foto_base64,
-        "Dra. Aguilar Uscanga Blanca Rosa",
-        "Profesor Investigador Titular B",
-        "blanca.aguilar@academicos.udg.mx",
-        "Fenómenos Químicos AHDV",
-        "Ayuda Comunitaria",
-        "Microbiologia Industrial")
-
-    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
-    foto_base64 = get_base64_from_file(foto_path)
-    mostrar_profesor(
-        foto_base64,
-        "Dra. Aguilar Uscanga Blanca Rosa",
-        "Profesor Investigador Titular B",
-        "blanca.aguilar@academicos.udg.mx",
-        "Fenómenos Químicos AHDV",
-        "Ayuda Comunitaria",
-        "Microbiologia Industrial")
-
-    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
-    foto_base64 = get_base64_from_file(foto_path)
-    mostrar_profesor(
-        foto_base64,
-        "Dra. Aguilar Uscanga Blanca Rosa",
-        "Profesor Investigador Titular B",
-        "blanca.aguilar@academicos.udg.mx",
-        "Fenómenos Químicos AHDV",
-        "Ayuda Comunitaria",
-        "Microbiologia Industrial")
-
-    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
-    foto_base64 = get_base64_from_file(foto_path)
-    mostrar_profesor(
-        foto_base64,
-        "Dra. Aguilar Uscanga Blanca Rosa",
-        "Profesor Investigador Titular B",
-        "blanca.aguilar@academicos.udg.mx",
-        "Fenómenos Químicos AHDV",
-        "Ayuda Comunitaria",
-        "Microbiologia Industrial")
 
 ######################### Columna 2 #################################
 
@@ -316,48 +273,12 @@ with col2:
     foto_base64 = get_base64_from_file(foto_path)
     mostrar_profesor(
         foto_base64,
-        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Dr. Néstor García Chan",
         "Profesor Investigador Titular B",
-        "blanca.aguilar@academicos.udg.mx",
-        "Fenómenos Químicos AHDV",
-        "Ayuda Comunitaria",
-        "Microbiologia Industrial")
-
-    mostrar_profesor(
-        foto_base64,
-        "Dra. Aguilar Uscanga Blanca Rosa",
-        "Profesor Investigador Titular B",
-        "blanca.aguilar@academicos.udg.mx",
-        "Fenómenos Químicos AHDV",
-        "Ayuda Comunitaria",
-        "Microbiologia Industrial")
-
-    mostrar_profesor(
-        foto_base64,
-        "Dra. Aguilar Uscanga Blanca Rosa",
-        "Profesor Investigador Titular B",
-        "blanca.aguilar@academicos.udg.mx",
-        "Fenómenos Químicos AHDV",
-        "Ayuda Comunitaria",
-        "Microbiologia Industrial")
-
-    mostrar_profesor(
-        foto_base64,
-        "Dra. Aguilar Uscanga Blanca Rosa",
-        "Profesor Investigador Titular B",
-        "blanca.aguilar@academicos.udg.mx",
-        "Fenómenos Químicos AHDV",
-        "Ayuda Comunitaria",
-        "Microbiologia Industrial")
-
-    mostrar_profesor(
-        foto_base64,
-        "Dra. Aguilar Uscanga Blanca Rosa",
-        "Profesor Investigador Titular B",
-        "blanca.aguilar@academicos.udg.mx",
-        "Fenómenos Químicos AHDV",
-        "Ayuda Comunitaria",
-        "Microbiologia Industrial")
-
+        "Miembro del Sistema Nacional de Investigadores Nivel II"
+        "nestor.gchan@academicos.udg.mx",
+        "EDP, Programación, Métodos Numéricos",
+        "Modelación matemática y simulación en problemas medioambientales"
+        )
 
 #    .sidebar .sidebar-content {{background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})}} para el sidebar
