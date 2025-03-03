@@ -294,7 +294,7 @@ with col2:
             "Profesor Docente Titular A",
             "hector.gochoa@academicos.udg.mx",
             "Amable y Responsable",
-            "",
+            "No SNI",
             "https://academicos.cucei.udg.mx/academicos/2955330",
             "Física Estadística"
             )
