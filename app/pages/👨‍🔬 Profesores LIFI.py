@@ -193,7 +193,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Función para crear la tarjeta de un profesor
-def mostrar_profesor(imagen, nombre, puesto, SNI=None, correo, aptitudes, *lineas):
+def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *lineas):
     # Crear spans para cada línea
     lineas_html = ''.join([f'<span class="profesor-linea">📑 {linea}</span><br>' for linea in lineas])
 
