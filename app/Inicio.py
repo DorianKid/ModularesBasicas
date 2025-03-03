@@ -145,9 +145,7 @@ if selected_modalidad == "Presentación Oral":
 else:
     # Sección de Presentación Poster
     st.markdown("""
-        #### Intrucciones: Presentación Poster
-        - **Descripción General**: El póster debe ser una representación visual de tu trabajo.
-        
+        #### Intrucciones: Presentación Poster        
         - **Título**: 
           - Debe coincidir con el título del proyecto presentado.
           - El tamaño de fuente recomendado es de 48 puntos.
