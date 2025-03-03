@@ -66,10 +66,6 @@ st.success("📢 **Importancia Educativa:** Los Proyectos Modulares desempeñan 
 
 st.divider()
 
-
-
-st.divider()
-
 # Modalidades de presentación con diseño en columnas
 st.header("📑 Modalidades de Presentación")
 col1, col2 = st.columns(2)
