@@ -187,16 +187,17 @@ if 'current_page' not in st.session_state:
 
 col1, col2 = st.columns(2)
 
-with col1:
-    contenido_tex = read_tex_file("/mount/src/modularesbasicas/app/files/Plantilla_Modulares.tex")
-
-    # Mostrar el contenido con desplazamiento
-    st.text_area("Código LaTeX", value=contenido_tex, height=600)
-    #st.code(contenido_tex)
-
-with col2:
     # Contenedor expandible para el PDF
-    with st.expander("Ver Plantilla", expanded=True):
+with st.expander("Ver Plantilla", expanded=True):
+    with col1:
+        contenido_tex = read_tex_file("/mount/src/modularesbasicas/app/files/Plantilla_Modulares.tex")
+
+        # Mostrar el contenido con desplazamiento
+        st.text_area("Código LaTeX", value=contenido_tex, height=700, disabled=True)
+        #st.code(contenido_tex)
+    
+    with col2:
+
         # Aquí deberías implementar tu función pdf_viewer
         pdf_viewer(
             input=pdf_path,
