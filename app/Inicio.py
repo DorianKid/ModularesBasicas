@@ -15,10 +15,11 @@ st.set_page_config(
 ################### FUNCIONES ############################
 # Función para mostrar el PDF
 def mostrar_pdf(pdf_path):
-    archivo =  pdf_path.split("/")[-1]
-    with open(pdf_path, "rb") as pdf_file:
-        PDFbyte = pdf_file.read()
-    st.markdown(f'<iframe src="data:application/pdf;base64,{base64.b64encode(PDFbyte).decode()}" width="700" height="500" frameborder="0"></iframe>', unsafe_allow_html=True)
+    with open(pdf_path, "rb") as f:
+        base64_pdf = base64.b64encode(f.read()).decode("utf-8")
+
+    pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
+    st.markdown(pdf_display, unsafe_allow_html=True)
 
 # Título principal con icono
 st.title("📚 Proyectos Modulares: Evaluación Integral en CUCEI")
