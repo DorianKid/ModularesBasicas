@@ -174,7 +174,9 @@ else:
           - Los gráficos y fotografías no deben ser más pequeños que 12 cm x 18 cm.
           - Utiliza el espacio del póster para atraer a tu audiencia hacia la discusión, evitando detalles complejos de métodos y resultados.
     """)
-    
+
+with st.expander('Ver plantilla', expanded=False):
+    st.write("Aqui va el latex")
 
 
 st.divider()
