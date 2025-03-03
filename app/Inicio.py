@@ -52,17 +52,16 @@ with col2:
     - **Asesoría especializada** por parte de profesores.
     """)
 
-col1, col2, col3 = st.columns([1,2,1])
+st.divider()
 
-with col2:
-    st.subheader(" Otras")
-    st.markdown("""
-    - **Vinculación teórico-práctica**: Aplicación de conocimientos a situaciones concretas.
-    - **Desarrollo de competencias profesionales**: Investigación, análisis, resolución de problemas y comunicación.
-    - **Evaluación auténtica**: Simulación de contextos profesionales.
-    - **Preparación para el campo laboral**: Desarrollo de habilidades clave para el ejercicio profesional.
-    - **Fomento a la creatividad e innovación**: Creación de soluciones originales a problemas específicos.
-    """)
+st.header("❗ Importancia")
+st.markdown("""
+- **Vinculación teórico-práctica**: Aplicación de conocimientos a situaciones concretas.
+- **Desarrollo de competencias profesionales**: Investigación, análisis, resolución de problemas y comunicación.
+- **Evaluación auténtica**: Simulación de contextos profesionales.
+- **Preparación para el campo laboral**: Desarrollo de habilidades clave para el ejercicio profesional.
+- **Fomento a la creatividad e innovación**: Creación de soluciones originales a problemas específicos.
+""")
 
 # Importancia educativa con resaltado
 st.success("📢 **Importancia Educativa:** Los Proyectos Modulares desempeñan un papel crucial en la formación académica, asegurando que los estudiantes adquieran competencias aplicables al mundo real.")
@@ -85,7 +84,7 @@ with col2:
     - 📄 **Reportes técnicos**: Documentos detallados del proceso y resultados.
     - 📰 **Artículos científicos**: Trabajos estructurados según estándares académicos.
     """)
-st.warning("⚠️ Importante: Los requerimientos y modalidades de evaluación pueden variar según la carrera. Es recomendable revisar las especificaciones particulares de cada programa académico.")
+st.warning("⚠️ Importante: Los requerimientos y modalidades de presentación pueden variar según la carrera. Es recomendable revisar las especificaciones particulares de cada programa académico.")
 
 st.divider()
 
