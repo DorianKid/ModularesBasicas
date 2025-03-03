@@ -141,11 +141,11 @@ st.markdown("""
 .requisitos-content {
     display: none;
     margin-top: 12px;
-    padding: 16px;
+    padding: 14px;
     background-color: white;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    animation: slideDown 0.5s ease-out;
+    animation: slideDown 1s ease-out;
 }
 .requisitos-container input[type="checkbox"] {
     display: none;
