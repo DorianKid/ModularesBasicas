@@ -384,20 +384,6 @@ with col1:
             "Historia de la Física y la Astronomía en México"
             )
 
-    foto_path = '/mount/src/modularesbasicas/app/LIFI/madriz.jpg'
-    foto_base64 = get_base64_from_file(foto_path)
-    if foto_base64:
-        mostrar_profesor(
-            foto_base64,
-            "Dr. José Edgar Madriz Aguilar",
-            "Profesor Investigador Titular B",
-            "jose.madriz@academicos.udg.mx",
-            "Responsable y seguro del área que trabajará",
-            "Miembro del Sistema Nacional de Investigadores Nivel II",
-            "https://academicos.cucei.udg.mx/academicos/2947728",
-            "Estudio de modelos teóricos sobre la evolución del universo en diferentes teorías de gravitación"
-            )
-
 ############################# COLUMNA 2 ##################################
 with col2:
     foto_path = '/mount/src/modularesbasicas/app/LIFI/romero_ibarra.jpg'
@@ -567,4 +553,18 @@ with col2:
             "Miembro del Sistema Nacional de Investigadores Nivel II",
             "https://www.cucei.udg.mx/maestrias/fisica/es/miguel-angel-santana-aranda",
             "Desarrollo de nuevos materiales para el aprovechamiento de la energía solar y otras fuentes renovables"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/madriz.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. José Edgar Madriz Aguilar",
+            "Profesor Investigador Titular B",
+            "jose.madriz@academicos.udg.mx",
+            "Responsable y seguro del área que trabajará",
+            "Miembro del Sistema Nacional de Investigadores Nivel II",
+            "https://academicos.cucei.udg.mx/academicos/2947728",
+            "Estudio de modelos teóricos sobre la evolución del universo en diferentes teorías de gravitación"
             )
