@@ -183,7 +183,7 @@ with st.expander('Ver plantilla', expanded=False):
     col1, col2 = st.columns([1,2])
     with col1:
         contenido_tex = read_tex_file("/mount/src/modularesbasicas/app/files/Plantilla_Modulares.tex")
-        st.latex(contenido_tex)
+        st.markdown(contenido_tex)
 
 
 st.divider()
