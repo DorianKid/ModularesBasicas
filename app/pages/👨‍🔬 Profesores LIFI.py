@@ -285,6 +285,120 @@ with col1:
             "Astrofísica Estelar"
             )
 
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/cros.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dra. Anne Cros",
+            "Profesora Investigadora Titular B",
+            "anne.cros@academicos.udg.mx",
+            "Autodidácta y autónomo",
+            "Miembro del Sistema Nacional de Investigadores Nivel II",
+            "https://www.cucei.udg.mx/maestrias/fisica/es/anne-cros",
+            "Interacción Fluido-Estructura"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/alcala.png'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Jaime Alcalá Gutiérrez",
+            "Profesor Investigador Titular C",
+            "jaime.alcala@academicos.udg.mx",
+            "Ninguno",
+            " ",
+            "https://academicos.cucei.udg.mx/academicos/9427112",
+            "Agrometeorología, Agroclimatología y Bioclimática"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/herminio.png'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Luis José Herminio Corral Escobedo",
+            "Profesor Investigador Titular C",
+            "Chambeador",
+            "Gusto por el laboratorio",
+            "Miembro del Sistema Nacional de Investigadores Nivel I",
+            "http://iam.cucei.udg.mx/dr-luis-jose-herminio-corral-escobedo",
+            "Estrellas masivas y Cúmulos abiertos",
+            "Técnicas de IA para Astrofísica"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/ramirez_ortega.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Jorge Alberto Ramírez Ortega",
+            "Profesor Investigador Asociado A",
+            "jorge.rortega@academicos.udg.mx",
+            "Excelente actitud y disposición por estar en el laboratorio",
+            "Miembro del Sistema Nacional de Investigadores Nivel I",
+            "https://scholar.google.com.mx/citations?user=dhmtSJcAAAAJ&hl=es",
+            "Síntesis de Nanopartículas de Semiconductores Ternarios y su plicación"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/garcia_luna.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Jose Luis Garcia Luna",
+            "Profesor Investigador Titular C",
+            "jose.gluna@academicos.udg.mx",
+            "Ninguno",
+            "Miembro del Sistema Nacional de Investigadores Nivel I",
+            "https://academicos.cucei.udg.mx/academicos/8802629",
+            "Física de Partículas"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/pantoja.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Diego Armando Pantoja González",
+            "Profesor Investigador Asociado B",
+            "diego.pantoja@academicos.udg.mx",
+            "Saber MATLAB",
+            "Miembro del Sistema Nacional de Investigadores Nivel I",
+            "https://academicos.cucei.udg.mx/academicos/2828367",
+            "Modelación Numérica de Oceanografía y Limnología Física."
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/durruty.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Durruty Jesus De Alba Martínez",
+            "Profesor de Asignatura B y Técnico Acádemico Titular A",
+            "durruty.dealba@academicos.udg.mx",
+            "Comprensión lectora en inglés",
+            " ",
+            "http://iam.cucei.udg.mx/directorio/durruty-jesus-de-alba-martinez",
+            "Historia de la Física y la Astronomía en México"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/madriz.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. José Edgar Madriz Aguilar",
+            "Profesor Investigador Titular B",
+            "jose.madriz@academicos.udg.mx",
+            "Responsable y seguro del área que trabajará",
+            "Miembro del Sistema Nacional de Investigadores Nivel II",
+            "https://academicos.cucei.udg.mx/academicos/2947728",
+            "Estudio de modelos teóricos sobre la evolución del universo en diferentes teorías de gravitación"
+            )
+
+############################# COLUMNA 2 ##################################
 with col2:
     foto_path = '/mount/src/modularesbasicas/app/LIFI/romero_ibarra.jpg'
     foto_base64 = get_base64_from_file(foto_path)
@@ -335,7 +449,7 @@ with col2:
         mostrar_profesor(
             foto_base64,
             "Dra. Liliana Vázquez Mercado",
-            "Profesor Investigador Asociado B",
+            "Profesora Investigadora Asociado B",
             "liliana.vmercado@academicos.udg.mx",
             "Ninguno",
             " ",
@@ -369,4 +483,88 @@ with col2:
             "Miembro del Sistema Nacional de Investigadores Nivel I",
             "https://academicos.cucei.udg.mx/academicos/2960285",
             "Semiconductores"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/kemp.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Simon Nicholas Kemp",
+            "Profesor Investigador Titular C",
+            "simon.kemp@academicos.udg.mx",
+            "Disponibilidad de ir al IAM y trabajar con IRAF/Linux",
+            "Miembro del Sistema Nacional de Investigadores Nivel II",
+            "https://www.cucei.udg.mx/maestrias/fisica/?q=simon-nicholas-kemp",
+            "Galaxias y Cúmulos de Galaxias"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/moreno.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dra. Claudia Moreno González",
+            "Profesor Investigador Titular C",
+            "claudia.moreno@academico.udg.mx",
+            "Ninguno",
+            "Miembro del Sistema Nacional de Investigadores Nivel III",
+            "https://depfisica.cucei.udg.mx/dra-moreno-gonzalez-claudia",
+            "Ondas gravitacionales (Teoría, Experimentación, Análisis de Datos)"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/santiago_hernandez.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Alberto Santiago Hernández",
+            "Profesor de Asignatura B",
+            "alberto.santiago@academicos.udg.mx",
+            "Haber cursado electromagnetismo, óptica, algún tópico de partículas",
+            "Miembro del Sistema Nacional de Investigadores Nivel I",
+            "alberto.santiago@academicos.udg.mx",
+            "Ciencias Espaciales (Física Solar)"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/bravo_barcenas.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. David Israel Bravo Barcenas",
+            " ",
+            "david.bravo@academicos.udg.mx",
+            "Interés por aprender temas relacionados con Ciencia de Materiales e Ingeniería de Superficies ,
+            "Miembro del Sistema Nacional de Investigadores Nivel I",
+            "https://scholar.google.es/citations?user=Koyy3S8AAAAJ&hl=es",
+            "Ingeniería de Biomateriales Metálicos "
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/cros.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            "",
+            "Dra. Susana Muñóz Villegas",
+            "Profesor de Asignatura B",
+            "susana.munoz@academicos.udg.mx",
+            "Gusto por las matemáticas y programación",
+            " ",
+            "",
+            "Modelado matemático"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/santana_aranda.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. Miguel Angel Santana Aranda",
+            "Profesor Investigador Titular B",
+            "msantana.aranda@academicos.udg.mx",
+            "Disposición a aprender y recibir retroalimentación del grupo de trabajo",
+            "Miembro del Sistema Nacional de Investigadores Nivel II",
+            "https://www.cucei.udg.mx/maestrias/fisica/es/miguel-angel-santana-aranda",
+            "Desarrollo de nuevos materiales para el aprovechamiento de la energía solar y otras fuentes renovables"
             )
