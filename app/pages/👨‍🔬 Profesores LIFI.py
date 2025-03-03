@@ -247,7 +247,7 @@ with col1:
         mostrar_profesor(
             foto_base64,
             "Dr. Alejandro Camilo Espinosa Ramírez",
-            "Profesor de Asignatura",
+            " ",
             "alejandro.espinosa@academicos.udg.mx",
             "Haber cursado la asignatura de Mecánica del Medio Contínuo",
             " ",
@@ -261,7 +261,7 @@ with col1:
         mostrar_profesor(
             foto_base64,
             "Dr. Jaime Ricardo González Romero",
-            "Técnico Académico Asociado B",
+            "Profesor de Asignatura B y Técnico Académico Asociado B",
             "jaimer.gonzalezr@academicos.udg.mx",
             "De 2do semestre en adelante, con la posibilidad de tésis para los modulares II y III",
             "Candidato a Miembro del Sistema Nacional de Investigadores",
@@ -321,7 +321,7 @@ with col2:
         mostrar_profesor(
             foto_base64,
             "Dr. Héctor Octavio González Ochoa",
-            "Profesor Docente Titular A",
+            "Profesor Investigador Titular A",
             "hector.gochoa@academicos.udg.mx",
             "Amable y Responsable",
             " ",
@@ -335,7 +335,7 @@ with col2:
         mostrar_profesor(
             foto_base64,
             "Dra. Liliana Vázquez Mercado",
-            "Profesor de Asignatura",
+            "Profesor Investigador Asociado B",
             "liliana.vmercado@academicos.udg.mx",
             "Ninguno",
             " ",
@@ -349,7 +349,7 @@ with col2:
         mostrar_profesor(
             foto_base64,
             "Dr. Carlos Rafael Michel Uribe",
-            "Profesor Investigador Titular A",
+            "Profesor Investigador Titular B",
             "carlos.muribe@academicos.udg.mx",
             "Comporometidos con los objetivos de su trabajo",
             "Miembro del Sistema Nacional de Investigadores Nivel II",
