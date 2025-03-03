@@ -148,30 +148,104 @@ st.markdown("""
     border-radius: 5px;
     display: inline-block;
 }
+
+.alumno-aptitudes {
+    font-size: 16px; /* Aumento del tamaño de fuente para mejor legibilidad */
+    color: #34495e; /* Color de texto más oscuro para un contraste mejorado */
+    padding: 10px 15px; /* Espaciado interno ajustado */
+    background-color: #dff9fb; /* Color de fondo suave para resaltar */
+    border: 1px solid #aed6f1; /* Borde sutil para definir el área */
+    border-radius: 8px; /* Bordes más redondeados */
+    display: inline-block; /* Mantiene la alineación en línea */
+    margin-bottom: 10px; /* Espacio entre las aptitudes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+    transition: transform 0.2s; /* Transición suave al pasar el mouse */
+}
+
+.alumno-aptitudes:hover {
+    transform: translateY(-2px); /* Efecto de elevar el elemento al pasar el mouse */
+}
+
+.requisitos-container {
+    margin-top: 15px; /* Espacio superior */
+}
+
+.requisitos-titulo {
+    font-size: 18px; /* Tamaño del título */
+    color: #1e3d59; /* Color del título */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el título */
+    transition: color 0.2s; /* Transición de color */
+}
+
+.requisitos-titulo:hover {
+    color: #3498db; /* Color al pasar el mouse */
+}
+
+.requisitos-content {
+    display: none; /* Oculta el contenido inicialmente */
+    margin-top: 10px; /* Espacio superior para el contenido */
+    padding: 10px;
+    background-color: #f0f4f8; /* Color de fondo del contenido */
+    border: 1px solid #d1e6f7; /* Borde del contenido */
+    border-radius: 5px; /* Bordes redondeados */
+}
 </style>
 """, unsafe_allow_html=True)
 
 # Función para crear la tarjeta de un profesor
-def mostrar_profesor(imagen, nombre, puesto, correo, *lineas):
+def mostrar_profesor(imagen, nombre, puesto, SNI=None, correo, aptitudes, *lineas):
     # Crear spans para cada línea
     lineas_html = ''.join([f'<span class="profesor-linea">📑 {linea}</span><br>' for linea in lineas])
-    
+
+    # HTML para los requisitos
+    requisitos_html = f"""
+    <div class="requisitos-container">
+        <div class="requisitos-titulo" onclick="toggleRequisitos(this)">
+            Mostrar Requisitos
+        </div>
+        <div class="requisitos-content">
+            <div class="alumno-aptitudes">{aptitudes}</div>
+        </div>
+    </div>
+    """
+
+    # HTML para el SNI si está disponible
+    sni_html = f"""
+    <div class="profesor-sni" style="font-size: 14px; color: #5e6572;">
+        {SNI}
+    </div>
+    """ if SNI else ""
+
     html = f"""
     <div class="profesor-card">
         <img src="data:image/jpeg;base64,{imagen}" class="profesor-imagen">
         <div class="profesor-info">
             <div class="profesor-nombre">{nombre}</div>
             <div class="profesor-grado">{puesto}</div>
+            {sni_html}  <!-- Mostrar SNI si existe -->
             <div class="profesor-correo"><a href="mailto:{correo}">{correo}</a></div>
             <div>
                 {lineas_html}
             </div>
+            {requisitos_html}
         </div>
     </div>
+    <script>
+    function toggleRequisitos(element) {{
+        var content = element.nextElementSibling;
+        if (content.style.display === "block") {{
+            content.style.display = "none";
+            element.innerHTML = "Mostrar Requisitos";
+        }} else {{
+            content.style.display = "block";
+            element.innerHTML = "Ocultar Requisitos";
+        }}
+    }}
+    </script>
     """
     st.markdown(html, unsafe_allow_html=True)
-
-# Texto de la pagina web.
+    
+#########################################################
 st.title("Profesores")
 st.header("Licenciatura en Física")
 
@@ -183,13 +257,16 @@ with col1:
     foto_base64 = get_base64_from_file(foto_path)
     mostrar_profesor(
         foto_base64,
-        "Dra. Aguilar Uscanga Blanca Rosa",
+        "Dr. Néstor García Chan",
         "Profesor Investigador Titular B",
-        "blanca.aguilar@academicos.udg.mx",
-        "Fenómenos Químicos AHDV",
-        "Ayuda Comunitaria",
-        "Microbiologia Industrial")
+        "Miembro del Sistema Nacional de Investigadores Nivel II"
+        "nestor.gchan@academicos.udg.mx",
+        "EDP, Programación, Métodos Numéricos",
+        "Modelación matemática y simulación en problemas medioambientales"
+        )
 
+    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
     mostrar_profesor(
         foto_base64,
         "Dra. Aguilar Uscanga Blanca Rosa",
@@ -199,6 +276,8 @@ with col1:
         "Ayuda Comunitaria",
         "Microbiologia Industrial")
 
+    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
     mostrar_profesor(
         foto_base64,
         "Dra. Aguilar Uscanga Blanca Rosa",
@@ -208,6 +287,8 @@ with col1:
         "Ayuda Comunitaria",
         "Microbiologia Industrial")
 
+    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
     mostrar_profesor(
         foto_base64,
         "Dra. Aguilar Uscanga Blanca Rosa",
@@ -217,6 +298,8 @@ with col1:
         "Ayuda Comunitaria",
         "Microbiologia Industrial")
 
+    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
     mostrar_profesor(
         foto_base64,
         "Dra. Aguilar Uscanga Blanca Rosa",
