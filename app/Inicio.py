@@ -215,6 +215,8 @@ with st.expander("Ver Plantilla", expanded=False):
         # Aquí deberías implementar tu función pdf_viewer
         pdf_viewer(input=pdf_path, annotations=annotations)    
 
+st.info("Convocatoria en el siguiente [link](https://sites.google.com/academicos.udg.mx/convocatoria-modulares-lifi/convocatoria-pm)")
+
 st.divider()
 
 # Químico Farmacobiólogo
