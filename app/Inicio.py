@@ -160,6 +160,12 @@ if 'current_page' not in st.session_state:
 
 # Contenedor expandible para el PDF
 with st.expander("Ver PDF", expanded=False):
+    
+    pdf_viewer(
+        input=pdf_path,
+        pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
+    )
+
     # Botones para navegar entre las páginas
     col1, col2, col3 = st.columns([11,11,4])
     
@@ -174,8 +180,3 @@ with st.expander("Ver PDF", expanded=False):
         total_pages = 11  # Cambia esto al número real de páginas
         if st.session_state.current_page < total_pages:
             st.session_state.current_page += 1
-    
-    pdf_viewer(
-        input=pdf_path,
-        pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
-    )
