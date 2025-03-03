@@ -75,7 +75,7 @@ st.warning("⚠️ Importante: Los requerimientos y modalidades de presentación
 st.divider()
 
 # Física
-st.header("🔭 Física")
+st.header("🔭 Modulares en Física")
 st.markdown("""
 Los proyectos modulares en Física evalúan progresivamente habilidades metodológicas, analíticas y creativas:
 """)
@@ -119,7 +119,7 @@ st.markdown("""
 st.divider()
 
 # Químico Farmacobiólogo
-st.header("💊 Químico Farmacéutico Biólogo")
+st.header("💊 Modulares en Químico Farmacéutico Biólogo")
 st.markdown("""
 Los proyectos modulares en Químico Farmacéutico Biólogo se enfocan en competencias intermedias y avanzadas:
 """)
