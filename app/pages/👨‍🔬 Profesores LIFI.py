@@ -222,13 +222,14 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *linea
         <div class="profesor-info">
             <div class="profesor-nombre">{nombre}</div>
             <div class="profesor-grado">{puesto}</div>
-            {sni_html}  <!-- Mostrar SNI si existe -->
             <div class="profesor-correo"><a href="mailto:{correo}">{correo}</a></div>
+            {requisitos_html}
+        </div>
+            {sni_html}  <!-- Mostrar SNI si existe -->
             <div>
                 {lineas_html}
             </div>
-            {requisitos_html}
-        </div>
+
     </div>
     <script>
     function toggleRequisitos(element) {{
