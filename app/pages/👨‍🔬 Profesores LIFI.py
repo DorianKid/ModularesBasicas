@@ -147,12 +147,10 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, enlace
         <label class="requisitos-titulo" for="requisitos-{profesor_id}">Mostrar Requisitos</label>
         <input type="checkbox" id="requisitos-{profesor_id}">
         <div class="requisitos-content">
-            <div class="alumno-aptitudes">{aptitudes}</div>
-        </div>
-    </div>
+            <div class="alumno-aptitudes">{aptitudes}
     """
-    
     sni_html = f"<div class='profesor-sni' style='font-size: 14px; color: #5e6572;'>{SNI}</div>" if SNI else ""
+
     html_nombre = f'<div class="profesor-nombre"><a href="{enlace}">{nombre}</a></div>' if enlace else f'<div class="profesor-nombre">{nombre}</div>'
     
     html = f"""
@@ -165,11 +163,11 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, enlace
             <div class="profesor-correo"><a href="mailto:{correo}">{correo}</a></div>
             <div>{lineas_html}</div>
             {requisitos_html}
-        </div>
+
     </div>
     """
-    
     st.markdown(html, unsafe_allow_html=True)
+
     
 st.title("Profesores")
 st.header("Licenciatura en Física")
