@@ -33,7 +33,7 @@ Más que simples trabajos finales, estos proyectos representan **evidencias conc
 st.divider()
 
 # Características comunes con diseño de columnas
-st.header("📌 Características Comunes")
+st.header("📌 Características")
 col1, col2 = st.columns(2)
 
 with col1:
@@ -52,11 +52,7 @@ with col2:
     - **Asesoría especializada** por parte de profesores.
     """)
 
-st.divider()
-
-# Importancia educativa con resaltado
-st.success("📢 **Importancia Educativa:** Los Proyectos Modulares desempeñan un papel crucial en la formación académica, asegurando que los estudiantes adquieran competencias aplicables al mundo real.")
-
+st.subheader(" Otras")
 st.markdown("""
 - **Vinculación teórico-práctica**: Aplicación de conocimientos a situaciones concretas.
 - **Desarrollo de competencias profesionales**: Investigación, análisis, resolución de problemas y comunicación.
@@ -64,6 +60,13 @@ st.markdown("""
 - **Preparación para el campo laboral**: Desarrollo de habilidades clave para el ejercicio profesional.
 - **Fomento a la creatividad e innovación**: Creación de soluciones originales a problemas específicos.
 """)
+
+# Importancia educativa con resaltado
+st.success("📢 **Importancia Educativa:** Los Proyectos Modulares desempeñan un papel crucial en la formación académica, asegurando que los estudiantes adquieran competencias aplicables al mundo real.")
+
+st.divider()
+
+
 
 st.divider()
 
