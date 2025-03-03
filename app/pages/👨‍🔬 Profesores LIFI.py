@@ -256,17 +256,5 @@ with col1:
 
 ######################### Columna 2 #################################
 
-with col2:
-    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
-    foto_base64 = get_base64_from_file(foto_path)
-    mostrar_profesor(
-        foto_base64,
-        "Dr. Néstor García Chan",
-        "Profesor Investigador Titular B",
-        "Miembro del Sistema Nacional de Investigadores Nivel II"
-        "nestor.gchan@academicos.udg.mx",
-        "EDP, Programación, Métodos Numéricos",
-        "Modelación matemática y simulación en problemas medioambientales"
-        )
 
 #    .sidebar .sidebar-content {{background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})}} para el sidebar
