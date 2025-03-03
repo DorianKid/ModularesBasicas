@@ -70,7 +70,6 @@ st.markdown(
 # Estilo para las tarjeta de profesores
 st.markdown("""
 <style>
-
 .profesor-card {
     display: flex;
     flex-direction: row; /* Cambiar a columna en móviles */
@@ -98,22 +97,6 @@ st.markdown("""
         margin-right: 0; /* Eliminar margen en móviles */
         margin-bottom: 10px; /* Espacio entre imagen y texto */
     }
-    
-    .profesor-nombre {
-        font-size: 20px; /* Ajustar tamaño de fuente */
-    }
-
-    .profesor-grado {
-        font-size: 14px; /* Ajustar tamaño de fuente */
-    }
-
-    .profesor-correo {
-        font-size: 12px; /* Ajustar tamaño de fuente */
-    }
-
-    .profesor-linea {
-        font-size: 14px; /* Ajustar tamaño de fuente */
-    }
 }
 
 .profesor-info {
@@ -135,9 +118,14 @@ st.markdown("""
 }
 
 .profesor-correo {
-    font-size: 14px;
+    font-size: 14px; /* Ajustar tamaño de fuente */
     color: #3498db;
     margin-bottom: 10px;
+    transition: color 0.2s; /* Agregar transición */
+}
+
+.profesor-correo:hover {
+    color: #2980b9; /* Color al pasar el mouse */
 }
 
 .profesor-linea {
@@ -147,6 +135,11 @@ st.markdown("""
     background-color: #e9ecef;
     border-radius: 5px;
     display: inline-block;
+    transition: transform 0.2s; /* Agregar transición */
+}
+
+.profesor-linea:hover {
+    transform: scale(1.05); /* Efecto de hover */
 }
 
 .alumno-aptitudes {
