@@ -81,8 +81,8 @@ with col1:
 
 with col2:
     st.markdown("""
-    - 📄 **Reportes técnicos**: Documentos detallados del proceso y resultados.
-    - 📰 **Artículos científicos**: Trabajos estructurados según estándares académicos.
+    - 📋 **Reportes técnicos**: Documentos detallados del proceso y resultados.
+    - 📄 **Artículos científicos**: Trabajos estructurados según estándares académicos.
     - 🖍️ **Materiales Educativos**: Creación de recursos didácticos para el aprendizaje
     """)
 st.warning("⚠️ Importante: Los requerimientos y modalidades de presentación pueden variar según la carrera. Es recomendable revisar las especificaciones particulares de cada programa académico.")
