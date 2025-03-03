@@ -198,15 +198,15 @@ with st.expander("Ver Plantilla", expanded=True):
                 "page": 2,
                 "x": 0,
                 "y": 0,
-                "height": 1,
+                "height": .5,
                 "width": 595,
                 "color": "red"
                 },
                 {
                 "page": 1,
                 "x": 0,
-                "y": 800,
-                "height": 1,
+                "y": 805,
+                "height": .5,
                 "width": 595,
                 "color": "red"
                 }
