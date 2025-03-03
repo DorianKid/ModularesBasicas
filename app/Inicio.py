@@ -196,8 +196,18 @@ with st.expander("Ver PDF", expanded=False):
         if st.session_state.current_page > 1:
             st.session_state.current_page -= 1
 
+    # Asegúrate de que el archivo exista y sea accesible
+    with open(pdf_path, "rb") as f:
+        # Leer el contenido del archivo
+        pdf_data = f.read()
+        
     # Mostrar el botón de descarga
-    col2.download_button('Descargar', pdf_path)
+    col2.download_button('Descargar', 
+                         pdf_data, 
+                         file_name='Lineamientos_Trabajo_Investigacion.pdf', 
+                         mime='application/pdf',
+                         help="Haz clic para descargar el PDF de Lineamientos de Trabajo de Investigación."
+)
     
     if col3.button("Siguiente Página"):
         # Establece el número total de páginas aquí
