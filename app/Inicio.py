@@ -1,5 +1,6 @@
 import streamlit as st
 import base64
+from streamlit_pdf_viewer import pdf_viewer
 
 st.set_page_config(
     page_title="Modulares",
@@ -155,12 +156,5 @@ pdf_path = '/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investiga
 
 # Contenedor expandible para el PDF
 with st.expander("Ver PDF", expanded=False):
-    # Leer el PDF y convertirlo a base64
-    with open(pdf_path, "rb") as pdf_file:
-        PDFbyte = pdf_file.read()
-    
-    # Generar el iframe para visualizar el PDF
-    st.markdown(
-        f'<iframe src="data:application/pdf;base64,{base64.b64encode(PDFbyte).decode()}" width="700" height="500" frameborder="0"></iframe>',
-        unsafe_allow_html=True
-    )
+    pdf_viewer(pdf_path)
+
