@@ -162,10 +162,6 @@ st.markdown("""
     transition: transform 0.2s; /* Transición suave al pasar el mouse */
 }
 
-.alumno-aptitudes:hover {
-    transform: translateY(-2px); /* Efecto de elevar el elemento al pasar el mouse */
-}
-
 .requisitos-container {
     margin-top: 15px; /* Espacio superior */
 }
@@ -192,7 +188,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Función para crear la tarjeta de un profesor
 # Función para crear la tarjeta de un profesor
 def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes=None, SNI=None, *lineas):
     # Crear spans para cada línea
