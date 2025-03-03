@@ -22,14 +22,15 @@ def get_download_link(file_path):
     return f'<a href="data:file/txt;base64,{b64}" download="{file_path}">Descargar archivo</a>'
 
 ######################## ESTILOS CSS ########################################
-# Aplicar estilos CSS para cambiar el color del botón
-st.markdown("""
+# Estilo CSS para el botón de descarga
+st.markdown(
+    """
     <style>
-    .stDownload-Button > Button {
+    .download-button > button {
         background-color: #4CAF50;  /* Color de fondo */
         color: white;  /* Color del texto */
         border: none;  /* Sin borde */
-        padding: 8px 13px;  /* Espaciado interno */
+        padding: 10px 20px;  /* Espaciado interno */
         text-align: center;  /* Alinear texto */
         text-decoration: none;  /* Sin subrayado */
         display: inline-block;  /* Mostrar en línea */
