@@ -187,7 +187,7 @@ with col1:
             "nestor.gchan@academicos.udg.mx",
             "EDP, Programación, Métodos Numéricos",
             "Miembro del Sistema Nacional de Investigadores Nivel II",
-            enlace=None,
+            "",
             "Modelación matemática y simulación en problemas medioambientales"
             )
 
@@ -201,6 +201,6 @@ with col1:
             "jose.quinones@academicos.udg.mx",
             "EDP, Programación, Métodos Numéricos",
             "Miembro del Sistema Nacional de Investigadores Nivel II",
-            enlace="https://academicos.cucei.udg.mx/academicos/2306093",
+            "https://academicos.cucei.udg.mx/academicos/2306093",
             "Síntesis de materiales por técnicas físicas y químicas"
             )
