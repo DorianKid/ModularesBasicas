@@ -182,8 +182,8 @@ else:
 pdf_path = "/mount/src/modularesbasicas/app/files/Plantilla_Modulares.pdf"  # Reemplaza con la ruta a tu archivo PDF
 
 # Inicializa el número de página
-if 'current_pagex' not in st.session_state:
-    st.session_state.current_pagex = 1
+if 'current_page' not in st.session_state:
+    st.session_state.current_page = 1
 
 # Contenedor expandible para el PDF
 with st.expander("Ver Plantilla", expanded=True):
@@ -200,21 +200,21 @@ with st.expander("Ver Plantilla", expanded=True):
         # Aquí deberías implementar tu función pdf_viewer
         pdf_viewer(
             input=pdf_path,
-            pages_to_render=[st.session_state.current_pagex],  # Renderiza solo la página actual
+            pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
         )
     
         # Botones para navegar entre las páginas
         col1, col2, col3 = st.columns([11, 11, 4])
         
-        if col1.button("Página Anterior"):
-            if st.session_state.current_pagex > 1:
-                st.session_state.current_pagex -= 1
+        if col1.button("Página Anterior", key="plantillaatras"):
+            if st.session_state.current_page > 1:
+                st.session_state.current_page -= 1
 
         # Establece el número total de páginas aquí
         total_pages = 2  # Cambia esto al número real de páginas
-        if col3.button("Siguiente Página"):
-            if st.session_state.current_pagex < total_pages:
-                st.session_state.current_pagex += 1
+        if col3.button("Siguiente Página", key="plantillasig"):
+            if st.session_state.current_page < total_pages:
+                st.session_state.current_page += 1
     
 
 st.divider()
