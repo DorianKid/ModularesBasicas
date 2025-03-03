@@ -302,9 +302,9 @@ with st.expander("Ver PDF", expanded=True):
     )
 
     # Botones para navegar entre las páginas
-    col1, col2, col3 = st.columns([11, 11, 4])
+    col_1, col_2, col_3 = st.columns([11, 11, 4])
     
-    if col1.button("Página Anterior"):
+    if col_1.button("Página Anterior"):
         if st.session_state.current_page > 1:
             st.session_state.current_page -= 1
 
@@ -313,7 +313,7 @@ with st.expander("Ver PDF", expanded=True):
         pdf_data = f.read()
         
     # Mostrar el botón de descarga
-    col2.download_button(
+    col_2.download_button(
         'Descargar',
         pdf_data,
         file_name=selected_modalidad + '.pdf',
@@ -321,6 +321,6 @@ with st.expander("Ver PDF", expanded=True):
         help=f"Haz clic para descargar el PDF de {selected_modalidad}."
     )
     
-    if col3.button("Siguiente Página"):
+    if col_3.button("Siguiente Página"):
         if st.session_state.current_page < total_pages:
             st.session_state.current_page += 1
