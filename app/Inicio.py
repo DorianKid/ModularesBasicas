@@ -189,7 +189,7 @@ with st.expander("Ver Plantilla", expanded=True):
         contenido_tex = read_tex_file("/mount/src/modularesbasicas/app/files/Plantilla_Modulares.tex")
 
         # Mostrar el contenido con desplazamiento
-        st.text_area("Código LaTeX", value=contenido_tex, height=1200, disabled=True)
+        st.text_area("Código LaTeX", value=contenido_tex, height=1000, disabled=True)
         #st.code(contenido_tex)
     
     with col2:
