@@ -66,7 +66,7 @@ st.markdown("""
 """)
 
 st.divider()
-st.warning("⚠️ Importante: Los requerimientos y criterios de evaluación pueden variar según la carrera. Es recomendable revisar las especificaciones particulares de cada programa académico.")
+st.warning("⚠️ Importante: Los requerimientos y modalidades de evaluación pueden variar según la carrera. Es recomendable revisar las especificaciones particulares de cada programa académico.")
 
 # Modalidades de presentación con diseño en columnas
 st.header("📑 Modalidades de Presentación")
