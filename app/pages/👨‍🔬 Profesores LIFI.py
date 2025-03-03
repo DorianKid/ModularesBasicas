@@ -136,7 +136,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Función para mostrar un profesor
-def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *lineas):
+def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, enlace=None, *lineas):
     # Crear un ID único basado en el nombre (sin espacios ni caracteres especiales para HTML)
     profesor_id = "".join(c for c in nombre if c.isalnum()).lower()
     
@@ -155,7 +155,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *linea
     <div class="profesor-card">
         <img src="data:image/jpeg;base64,{imagen}" class="profesor-imagen">
         <div class="profesor-info">
-            <div class="profesor-nombre">{nombre}</div>
+            <div class="profesor-nombre"><a href="{enlace}">{nombre}</a></div>
             <div class="profesor-grado">{puesto}</div>
             {sni_html}
             <div class="profesor-correo"><a href="mailto:{correo}">{correo}</a></div>
@@ -192,8 +192,9 @@ with col1:
             foto_base64,
             "Dr. José Guadalupe Quiñones Galván",
             "Profesor Investigador Titular B",
-            "nestor.gchan@academicos.udg.mx",
+            "jose.quinones@academicos.udg.mx",
             "EDP, Programación, Métodos Numéricos",
             "Miembro del Sistema Nacional de Investigadores Nivel II",
-            "Modelación matemática y simulación en problemas medioambientales"
+            "https://academicos.cucei.udg.mx/academicos/2306093",
+            "Síntesis de materiales por técnicas físicas y químicas"
         )
