@@ -193,8 +193,19 @@ with st.expander("Ver Plantilla", expanded=True):
         #st.code(contenido_tex)
     
     with col2:
+        annotations = [
+                {
+                "page": 2,
+                "x": 0,
+                "y": 0,
+                "height": 2,
+                "width": 180,
+                "color": "red"
+                }
+            ]
+        
         # Aquí deberías implementar tu función pdf_viewer
-        pdf_viewer(input=pdf_path)    
+        pdf_viewer(input=pdf_path, annotations=annotations)    
 
 st.divider()
 
