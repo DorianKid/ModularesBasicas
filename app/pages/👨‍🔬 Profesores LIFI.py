@@ -70,6 +70,7 @@ st.markdown(
 # Estilo para las tarjeta de profesores
 st.markdown("""
 <style>
+
 .profesor-card {
     display: flex;
     flex-direction: row; /* Cambiar a columna en móviles */
@@ -97,6 +98,22 @@ st.markdown("""
         margin-right: 0; /* Eliminar margen en móviles */
         margin-bottom: 10px; /* Espacio entre imagen y texto */
     }
+    
+    .profesor-nombre {
+        font-size: 20px; /* Ajustar tamaño de fuente */
+    }
+
+    .profesor-grado {
+        font-size: 14px; /* Ajustar tamaño de fuente */
+    }
+
+    .profesor-correo {
+        font-size: 12px; /* Ajustar tamaño de fuente */
+    }
+
+    .profesor-linea {
+        font-size: 14px; /* Ajustar tamaño de fuente */
+    }
 }
 
 .profesor-info {
@@ -118,14 +135,9 @@ st.markdown("""
 }
 
 .profesor-correo {
-    font-size: 14px; /* Ajustar tamaño de fuente */
+    font-size: 14px;
     color: #3498db;
     margin-bottom: 10px;
-    transition: color 0.2s; /* Agregar transición */
-}
-
-.profesor-correo:hover {
-    color: #2980b9; /* Color al pasar el mouse */
 }
 
 .profesor-linea {
@@ -135,11 +147,6 @@ st.markdown("""
     background-color: #e9ecef;
     border-radius: 5px;
     display: inline-block;
-    transition: transform 0.2s; /* Agregar transición */
-}
-
-.profesor-linea:hover {
-    transform: scale(1.05); /* Efecto de hover */
 }
 
 .alumno-aptitudes {
@@ -153,6 +160,10 @@ st.markdown("""
     margin-bottom: 10px; /* Espacio entre las aptitudes */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
     transition: transform 0.2s; /* Transición suave al pasar el mouse */
+}
+
+.alumno-aptitudes:hover {
+    transform: translateY(-2px); /* Efecto de elevar el elemento al pasar el mouse */
 }
 
 .requisitos-container {
@@ -182,83 +193,30 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Función para crear la tarjeta de un profesor
-def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes=None, SNI=None, *lineas):
-    # Generar un ID único para cada profesor (para que el JavaScript funcione con múltiples profesores)
-    import random
-    profesor_id = f"profesor_{random.randint(10000, 99999)}"
-    
+def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *lineas):
     # Crear spans para cada línea
     lineas_html = ''.join([f'<span class="profesor-linea">📑 {linea}</span><br>' for linea in lineas])
-    
+
+    # HTML para los requisitos
+    requisitos_html = f"""
+    <div class="requisitos-container">
+        <div class="requisitos-titulo" onclick="toggleRequisitos(this)">
+            Mostrar Requisitos
+        </div>
+        <div class="requisitos-content">
+            <div class="alumno-aptitudes">{aptitudes}</div>
+        </div>
+    </div>
+    """
+
     # HTML para el SNI si está disponible
     sni_html = f"""
     <div class="profesor-sni" style="font-size: 14px; color: #5e6572;">
         {SNI}
     </div>
     """ if SNI else ""
-    
-    # HTML para los requisitos desplegables si existen
-    aptitudes_html = f"""
-    <div class="requisitos-container">
-        <button id="btn_{profesor_id}" class="requisitos-btn" onclick="toggleRequisitos('{profesor_id}')">Mostrar requisitos</button>
-        <div id="req_{profesor_id}" class="requisitos-content" style="display: none;">
-            <div class="profesor-aptitudes">
-                <div class="alumno-aptitudes">{aptitudes}</div>
-            </div>
-        </div>
-    </div>
-    """ if aptitudes else ""
-    
-    # JavaScript para alternar la visibilidad de los requisitos
-    js_code = f"""
-    <script>
-    function toggleRequisitos(id) {{
-        var content = document.getElementById("req_" + id);
-        var btn = document.getElementById("btn_" + id);
-        
-        if (content.style.display === "none") {{
-            content.style.display = "block";
-            btn.textContent = "Ocultar requisitos";
-        }} else {{
-            content.style.display = "none";
-            btn.textContent = "Mostrar requisitos";
-        }}
-    }}
-    </script>
-    """
-    
-    # CSS para estilizar el botón y contenido de requisitos
-    css = """
-    <style>
-    .requisitos-btn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 8px 15px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        margin-top: 10px;
-        font-size: 14px;
-    }
-    
-    .requisitos-btn:hover {
-        background-color: #45a049;
-    }
-    
-    .requisitos-content {
-        margin-top: 10px;
-        padding: 10px;
-        background-color: #f8f9fa;
-        border-radius: 4px;
-        border-left: 3px solid #4CAF50;
-    }
-    </style>
-    """
-    
-    # Mostrar información del profesor con Markdown, incluyendo el botón desplegable
-    st.markdown(f"""
-    {css}
-    {js_code}
+
+    html = f"""
     <div class="profesor-card">
         <img src="data:image/jpeg;base64,{imagen}" class="profesor-imagen">
         <div class="profesor-info">
@@ -269,10 +227,25 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes=None, SNI=None, *
             <div>
                 {lineas_html}
             </div>
-            {aptitudes_html}  <!-- Mostrar requisitos desplegables si existen -->
+            {requisitos_html}
         </div>
     </div>
-    """, unsafe_allow_html=True)#########################################################
+    <script>
+    function toggleRequisitos(element) {{
+        var content = element.nextElementSibling;
+        if (content.style.display === "block") {{
+            content.style.display = "none";
+            element.innerHTML = "Mostrar Requisitos";
+        }} else {{
+            content.style.display = "block";
+            element.innerHTML = "Ocultar Requisitos";
+        }}
+    }}
+    </script>
+    """
+    st.markdown(html, unsafe_allow_html=True)
+    
+#########################################################
 st.title("Profesores")
 st.header("Licenciatura en Física")
 
@@ -286,13 +259,16 @@ with col1:
         foto_base64,
         "Dr. Néstor García Chan",
         "Profesor Investigador Titular B",
-        "nestor.gchan@academicos.udg.mx",  # Correo
-        "EDP, Programación, Métodos Numéricos",  # Aptitudes
-        "Miembro del Sistema Nacional de Investigadores Nivel II",  # SNI
-        "Modelación matemática y simulación en problemas medioambientales"  # Líneas adicionales
-    )
+        "nestor.gchan@academicos.udg.mx",
+        "EDP, Programación, Métodos Numéricos",
+        "Miembro del Sistema Nacional de Investigadores Nivel II",
+        "Modelación matemática y simulación en problemas medioambientales"
+        )
+
 
 ######################### Columna 2 #################################
+
+with col2:
 
 
 #    .sidebar .sidebar-content {{background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})}} para el sidebar
