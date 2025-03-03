@@ -148,7 +148,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *linea
         <input type="checkbox" id="requisitos-{profesor_id}">
         <div class="requisitos-content">
             <div class="alumno-aptitudes">{aptitudes}
-        </div>
+        
     </div>
     """
     sni_html = f"<div class='profesor-sni' style='font-size: 14px; color: #5e6572;'>{SNI}</div>" if SNI else ""
