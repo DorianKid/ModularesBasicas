@@ -14,7 +14,10 @@ st.set_page_config(
 )
 
 ######################## FUNCIONES ##########################################
-        
+# Función para leer el archivo .tex
+def read_tex_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as f:
+        return f.read()
 ######################## ESTILOS CSS ########################################
 # Aplicar estilos CSS para cambiar el color del botón normal
 st.markdown("""
@@ -182,27 +185,34 @@ pdf_path = "/mount/src/modularesbasicas/app/files/Plantilla_Modulares.pdf"  # Re
 if 'current_page' not in st.session_state:
     st.session_state.current_page = 1
 
-# Contenedor expandible para el PDF
-with st.expander("Ver PDF", expanded=True):
-    # Aquí deberías implementar tu función pdf_viewer
-    pdf_viewer(
-        input=pdf_path,
-        pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
-    )
+col1, col2 = st.columns(2)
 
-    # Botones para navegar entre las páginas
-    col1, col2, col3 = st.columns([11, 11, 4])
-    
-    if col1.button("Página Anterior"):
-        if st.session_state.current_page > 1:
-            st.session_state.current_page -= 1
-    
-    if col3.button("Siguiente Página"):
-        # Establece el número total de páginas aquí
-        total_pages = 2  # Cambia esto al número real de páginas
-        if st.session_state.current_page < total_pages:
-            st.session_state.current_page += 1
+with col1:
+    contenido_tex = read_tex_file("/mount/src/modularesbasicas/app/files/Plantilla_Modulares.tex")
+    st.code(contenido_tex)
 
+with col2:
+    # Contenedor expandible para el PDF
+    with st.expander("Ver Plantilla", expanded=True):
+        # Aquí deberías implementar tu función pdf_viewer
+        pdf_viewer(
+            input=pdf_path,
+            pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
+        )
+    
+        # Botones para navegar entre las páginas
+        col1, col2, col3 = st.columns([11, 11, 4])
+        
+        if col1.button("Página Anterior"):
+            if st.session_state.current_page > 1:
+                st.session_state.current_page -= 1
+        
+        if col3.button("Siguiente Página"):
+            # Establece el número total de páginas aquí
+            total_pages = 2  # Cambia esto al número real de páginas
+            if st.session_state.current_page < total_pages:
+                st.session_state.current_page += 1
+    
 
 st.divider()
 
