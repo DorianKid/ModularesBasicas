@@ -17,7 +17,7 @@ st.set_page_config(
 # Aplicar estilos CSS para cambiar el color del botón
 st.markdown("""
     <style>
-    .stButton>button {
+    .download-button {
         background-color: #4CAF50;  /* Color de fondo */
         color: white;  /* Color del texto */
         border: none;  /* Sin borde */
