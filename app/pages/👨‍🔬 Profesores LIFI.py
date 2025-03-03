@@ -259,7 +259,7 @@ with col1:
         foto_base64,
         "Dr. Néstor García Chan",
         "Profesor Investigador Titular B",
-        "Miembro del Sistema Nacional de Investigadores Nivel II"
+        "Miembro del Sistema Nacional de Investigadores Nivel II",
         "nestor.gchan@academicos.udg.mx",
         "EDP, Programación, Métodos Numéricos",
         "Modelación matemática y simulación en problemas medioambientales"
