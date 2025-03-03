@@ -186,7 +186,7 @@ with col1:
             "Miembro del Sistema Nacional de Investigadores Nivel II",
             enlace=None,
             "Modelación matemática y simulación en problemas medioambientales"
-        )
+            )
 
     foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
     foto_base64 = get_base64_from_file(foto_path)
@@ -200,4 +200,4 @@ with col1:
             "Miembro del Sistema Nacional de Investigadores Nivel II",
             enlace="https://academicos.cucei.udg.mx/academicos/2306093",
             "Síntesis de materiales por técnicas físicas y químicas"
-        )
+            )
