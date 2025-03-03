@@ -26,7 +26,7 @@ def get_download_link(file_path):
 st.markdown(
     """
     <style>
-    .download-button > button {
+    .download-button {
         background-color: #4CAF50;  /* Color de fondo */
         color: white;  /* Color del texto */
         border: none;  /* Sin borde */
@@ -223,7 +223,12 @@ with st.expander("Ver PDF", expanded=False):
         if st.session_state.current_page > 1:
             st.session_state.current_page -= 1
 
-    col2.download_button('Descargar', pdf_path)
+    # Crear el enlace de descarga
+    download_link = get_download_link(pdf_path)
+
+    # Mostrar el botón de descarga
+    col2.markdown(f'<div class="download-button">{download_link}</div>', unsafe_allow_html=True)
+    #col2.download_button('Descargar', pdf_path)
     
     if col3.button("Siguiente Página"):
         # Establece el número total de páginas aquí
