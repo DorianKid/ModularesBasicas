@@ -74,7 +74,7 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("""
-    - 🎤 **Presentaciones orales**: Exposiciones formales ante comités evaluadores.
+    - 🗣️ **Presentaciones orales**: Exposiciones formales ante comités evaluadores.
     - 📊 **Pósters científicos**: Presentaciones visuales del trabajo realizado.
     - 🔧 **Prototipos**: Desarrollo de modelos físicos o funcionales.
     """)
