@@ -139,7 +139,7 @@ st.subheader("📑 Modalidades")
 # Selección de modalidad
 selected_modalidad = st.selectbox("Selecciona una modalidad:", ["Presentación Oral", "Presentación Póster"])
 
-if selected_modalidad = "Presentación Oral":    
+if selected_modalidad == "Presentación Oral":    
     st.markdown("""
         #### Presentación Oral
         - **Duración**: Las presentaciones orales deben durar 20 minutos, seguidos de 5 minutos para preguntas.
