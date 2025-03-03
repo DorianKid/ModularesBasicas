@@ -12,9 +12,17 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"}
 )
 
+################### FUNCIONES ############################
+# Función para mostrar el PDF
+def mostrar_pdf(pdf_path):
+    archivo =  pdf_path.split("/")[-1]
+    with open(pdf_path, "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+    st.download_button(label="Descargar PDF", data=PDFbyte, file_name=archivo, mime='application/pdf')
+    st.markdown(f'<iframe src="data:application/pdf;base64,{base64.b64encode(PDFbyte).decode()}" width="700" height="500" frameborder="0"></iframe>', unsafe_allow_html=True)
+
 # Título principal con icono
 st.title("📚 Proyectos Modulares: Evaluación Integral en CUCEI")
-
 
 # Sección: ¿Qué son los modulares?
 st.header("🔍 ¿Qué son los modulares?")
@@ -121,7 +129,7 @@ st.divider()
 # Químico Farmacobiólogo
 st.header("💊 Modulares en Químico Farmacéutico Biólogo")
 st.markdown("""
-Los proyectos modulares en Químico Farmacéutico Biólogo se enfocan en competencias intermedias y avanzadas:
+Los [proyectos modulares](https://www.cucei.udg.mx/carreras/farmaceutica/es/documento/proyectos-modulares) en Químico Farmacéutico Biólogo se enfocan en competencias intermedias y avanzadas:
 """)
 col1, col2 = st.columns(2)
 
@@ -151,5 +159,9 @@ st.markdown("""
 4. **Reporte:** Documentación técnica de procesos o investigaciones específicas
 5. **Vinculación Social:** Proyectos con impacto en comunidades o sectores específicos
 """)
+
+# Contenedor expandible para el PDF
+with st.expander("Ver PDF", expanded=False):
+    mostrar_pdf("ruta/al/archivo.pdf")
 
 
