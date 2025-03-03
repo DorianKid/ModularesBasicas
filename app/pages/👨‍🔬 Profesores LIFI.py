@@ -499,7 +499,7 @@ with col2:
             "Galaxias y Cúmulos de Galaxias"
             )
 
-    foto_path = '/mount/src/modularesbasicas/app/LIFI/moreno.jpg'
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/moreno.jpeg'
     foto_base64 = get_base64_from_file(foto_path)
     if foto_base64:
         mostrar_profesor(
