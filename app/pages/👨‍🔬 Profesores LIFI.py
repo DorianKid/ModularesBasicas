@@ -190,7 +190,7 @@ with col1:
     if foto_base64:
         mostrar_profesor(
             foto_base64,
-            "Dr. Néstor García Chan",
+            "Dr. José Guadalupe Quiñones Galván",
             "Profesor Investigador Titular B",
             "nestor.gchan@academicos.udg.mx",
             "EDP, Programación, Métodos Numéricos",
