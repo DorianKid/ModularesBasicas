@@ -95,31 +95,41 @@ st.header("⚙️ Adaptación por Disciplina")
 st.subheader("🔭 Física")
 st.markdown("""
 Los proyectos modulares en Física evalúan progresivamente habilidades metodológicas, analíticas y creativas:
+""")
 
-**Modular 1: Habilidades Básicas** *(Presentación en Póster)*
-- **Metodológicas:** Aplicación del método científico en planteamiento y resolución de problemas
-- **Capacidad Analítica:** Obtención de resultados con fundamentos científicos
-- **Creatividad:** Soluciones innovadoras al problema planteado
-- **Formato:** Póster de máximo 90x120 cm, legible a 2 metros de distancia
+col1, col2 = st.columns(2)
 
-**Modular 2: Habilidades Fundamentales** *(Presentación Oral)*
-- **Metodológicas:** Disertación y fundamentación de temas específicos de física
-- **Capacidad Analítica:** Resultados analíticamente fundamentados con interpretación teórica
-- **Creatividad:** Originalidad en la resolución y discusión
-- **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
+with col1:
+    st.markdown("""
+    **Modular 1: Habilidades Básicas** *(Presentación en Póster)*
+    - **Metodológicas:** Aplicación del método científico en planteamiento y resolución de problemas
+    - **Capacidad Analítica:** Obtención de resultados con fundamentos científicos
+    - **Creatividad:** Soluciones innovadoras al problema planteado
+    - **Formato:** Póster de máximo 90x120 cm, legible a 2 metros de distancia
+    
+    **Modular 3: Habilidades Especializantes** *(Presentación Oral)*
+    - **Metodológicas:** Aplicación en áreas de física contemporánea con métodos matemáticos
+    - **Capacidad Analítica:** Resultados con amplia discusión teórica y experimental
+    - **Creatividad:** Originalidad en contenido teórico o desarrollo experimental
+    - **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
+    """)
 
-**Modular 3: Habilidades Especializantes** *(Presentación Oral)*
-- **Metodológicas:** Aplicación en áreas de física contemporánea con métodos matemáticos
-- **Capacidad Analítica:** Resultados con amplia discusión teórica y experimental
-- **Creatividad:** Originalidad en contenido teórico o desarrollo experimental
-- **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
+with col2:
+    st.markdown("""
+    **Modular 2: Habilidades Fundamentales** *(Presentación Oral)*
+    - **Metodológicas:** Disertación y fundamentación de temas específicos de física
+    - **Capacidad Analítica:** Resultados analíticamente fundamentados con interpretación teórica
+    - **Creatividad:** Originalidad en la resolución y discusión
+    - **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
+    
+    **Modular 4: Habilidad Inter o Multidisciplinar** *(Presentación Oral)*
+    - **Metodológicas:** Aplicación de la física en otras ciencias o disciplinas
+    - **Capacidad Analítica:** Resultados con perspectiva interdisciplinar
+    - **Creatividad:** Contenido original o reportes técnicos/servicio social
+    - **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
+    """)
 
-**Modular 4: Habilidad Inter o Multidisciplinar** *(Presentación Oral)*
-- **Metodológicas:** Aplicación de la física en otras ciencias o disciplinas
-- **Capacidad Analítica:** Resultados con perspectiva interdisciplinar
-- **Creatividad:** Contenido original o reportes técnicos/servicio social
-- **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
-
+st.markdown("""
 **Requisitos generales:** Documento de máximo 10 páginas, manejo adecuado de conceptos físicos y modelos matemáticos, dominio de herramientas computacionales e instrumentos de laboratorio cuando sea necesario.
 """)
 
