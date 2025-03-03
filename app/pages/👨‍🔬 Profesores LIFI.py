@@ -87,6 +87,7 @@ st.markdown("""
 }
 .profesor-nombre a {
     text-decoration: none; /* Quitar subrayado */
+    color: #1e3d59;
     transition: color 0.3s, text-decoration 0.3s; /* Transición suave */
 }
 .profesor-nombre a:hover {
