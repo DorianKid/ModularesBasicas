@@ -198,8 +198,8 @@ with st.expander("Ver Plantilla", expanded=True):
                 "page": 2,
                 "x": 0,
                 "y": 0,
-                "height": 2,
-                "width": 180,
+                "height": 1,
+                "width": 600,
                 "color": "red"
                 }
             ]
