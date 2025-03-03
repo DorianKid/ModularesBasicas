@@ -140,9 +140,12 @@ st.markdown("""
 
 .requisitos-content {
     display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f0f4f8;
+    margin-top: 12px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    animation: slideDown 0.5s ease-out;
 }
 .requisitos-container input[type="checkbox"] {
     display: none;
@@ -151,14 +154,6 @@ st.markdown("""
     display: block;
 }.requisitos-container input[type="checkbox"]:checked ~ .requisitos-titulo::after {
     content: "▲";
-}
-
-.requisitos-content {
-    display: none;
-    margin-top: 10px;
-    padding: 12px 2px 12px 10px;
-    background-color: transparent;
-    animation: fadeIn 0.2s ease-out;
 }
 </style>
 """, unsafe_allow_html=True)
