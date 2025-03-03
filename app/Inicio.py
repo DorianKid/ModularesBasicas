@@ -12,17 +12,6 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"}
 )
 
-################### FUNCIONES ############################
-# Función para mostrar el PDF
-def mostrar_pdf(pdf_path):
-    with open(pdf_path, "rb") as f:
-        base64_pdf = base64.b64encode(f.read()).decode("utf-8")
-
-    pdf_display = f"""
-    <embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">
-    """
-    st.markdown(pdf_display, unsafe_allow_html=True)
-
 # Título principal con icono
 st.title("📚 Proyectos Modulares: Evaluación Integral en CUCEI")
 
@@ -162,6 +151,16 @@ st.markdown("""
 5. **Vinculación Social:** Proyectos con impacto en comunidades o sectores específicos
 """)
 
+pdf_path = '/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf')
 
-mostrar_pdf('/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf')
-
+# Contenedor expandible para el PDF
+with st.expander("Ver PDF", expanded=False):
+    # Leer el PDF y convertirlo a base64
+    with open(pdf_path, "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+    
+    # Generar el iframe para visualizar el PDF
+    st.markdown(
+        f'<iframe src="data:application/pdf;base64,{base64.b64encode(PDFbyte).decode()}" width="700" height="500" frameborder="0"></iframe>',
+        unsafe_allow_html=True
+    )
