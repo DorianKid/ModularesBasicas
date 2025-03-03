@@ -140,7 +140,7 @@ st.markdown("""
 
 .requisitos-content {
     display: none;
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 10px;
     padding: 10px;
     background-color: white;
