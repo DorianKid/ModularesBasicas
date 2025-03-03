@@ -148,7 +148,7 @@ if selected_modalidad == "Presentación Oral":
     """)
 else:
     # Sección de Presentación Poster
-st.markdown("""
+    st.markdown("""
     #### Presentación Poster
     - **Descripción General**: El póster debe ser una representación visual de tu trabajo.
     
