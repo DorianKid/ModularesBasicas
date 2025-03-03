@@ -218,8 +218,10 @@ with st.expander("Ver Plantilla", expanded=False):
         # Aquí deberías implementar tu función pdf_viewer
         pdf_viewer(input=pdf_path, annotations=annotations)    
 
-
 st.divider()
+
+tab1, tab2 = st.tabs(["Ejemplo 1", "Ejemplo 2"])
+
 
 # Químico Farmacobiólogo
 st.header("💊 Modulares en Químico Farmacéutico Biólogo")
