@@ -157,7 +157,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *linea
     sni_html = f"""
     <div class="profesor-sni" style="font-size: 14px; color: #5e6572;">
         {SNI}
-    </div>
+    
     """ if SNI else ""
 
     html = f"""
