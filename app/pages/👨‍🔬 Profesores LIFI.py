@@ -86,8 +86,13 @@ st.markdown("""
     margin-bottom: 5px;
 }
 .profesor-nombre a {
-    text-decoration: none; /* Elimina el subrayado */
-    color: inherit; /* Hereda el color del contenedor */
+    text-decoration: none; /* Quitar subrayado */
+    transition: color 0.3s, text-decoration 0.3s; /* Transición suave */
+}
+.profesor-nombre a:hover {
+    color: #3498db; /* Cambia a un color distintivo al pasar el mouse */
+    text-decoration: underline; /* Agrega subrayado solo al hover */
+    cursor: pointer; /* Cambia el cursor a "pointer" para indicar que es un enlace */
 }
 .profesor-grado {
     font-size: 16px;
@@ -155,7 +160,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, enlace
     """
     sni_html = f"<div class='profesor-sni' style='font-size: 14px; color: #5e6572;'>{SNI}</div>" if SNI else ""
 
-    html_nombre = f'<div class="profesor-nombre"><a href="{enlace}" class="profesor-nombre">{nombre}</a></div>' if enlace else f'<div class="profesor-nombre">{nombre}</div>'
+    html_nombre = f'<div class="profesor-nombre"><a href="{enlace}">{nombre}</a></div>' if enlace else f'<div class="profesor-nombre">{nombre}</div>'
     
     html = f"""
     <div class="profesor-card">
