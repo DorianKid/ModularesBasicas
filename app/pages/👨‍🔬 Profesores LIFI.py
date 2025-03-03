@@ -182,21 +182,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Función para crear la tarjeta de un profesor
+import streamlit as st
+import base64
+
 def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes=None, SNI=None, *lineas):
     # Crear spans para cada línea
     lineas_html = ''.join([f'<span class="profesor-linea">📑 {linea}</span><br>' for linea in lineas])
-
-    # HTML para los requisitos
-    requisitos_html = f"""
-    <div class="requisitos-container">
-        <div class="requisitos-titulo" onclick="toggleRequisitos(this)">
-            Mostrar Requisitos
-        </div>
-        <div class="requisitos-content">
-            <div class="alumno-aptitudes">{aptitudes}</div>
-        </div>
-    </div>
-    """
 
     # HTML para el SNI si está disponible
     sni_html = f"""
@@ -205,7 +196,8 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes=None, SNI=None, *
     </div>
     """ if SNI else ""
 
-    html = f"""
+    # Mostrar información del profesor con Markdown
+    st.markdown(f"""
     <div class="profesor-card">
         <img src="data:image/jpeg;base64,{imagen}" class="profesor-imagen">
         <div class="profesor-info">
@@ -216,24 +208,16 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes=None, SNI=None, *
             <div>
                 {lineas_html}
             </div>
-            {requisitos_html}
         </div>
     </div>
-    <script>
-    function toggleRequisitos(element) {{
-        var content = element.nextElementSibling;
-        if (content.style.display === "block") {{
-            content.style.display = "none";
-            element.innerHTML = "Mostrar Requisitos";
-        }} else {{
-            content.style.display = "block";
-            element.innerHTML = "Ocultar Requisitos";
-        }}
-    }}
-    </script>
-    """
-    st.markdown(html, unsafe_allow_html=True)
-    
+    """, unsafe_allow_html=True)
+
+    # Uso de st.expander en lugar de JavaScript para mostrar requisitos
+    with st.expander("Mostrar Requisitos"):
+        st.markdown(f"""
+        <div class="alumno-aptitudes">{aptitudes}</div>
+        """, unsafe_allow_html=True)
+
 #########################################################
 st.title("Profesores")
 st.header("Licenciatura en Física")
