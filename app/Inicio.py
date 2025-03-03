@@ -22,7 +22,7 @@ st.markdown(
         background-color: #4CAF50;  /* Color de fondo */
         color: white;  /* Color del texto */
         border: none;  /* Sin borde */
-        padding: 10px 20px;  /* Espaciado interno */
+        padding: 10px 15px;  /* Espaciado interno */
         text-align: center;  /* Alinear texto */
         text-decoration: none;  /* Sin subrayado */
         display: inline-block;  /* Mostrar en línea */
