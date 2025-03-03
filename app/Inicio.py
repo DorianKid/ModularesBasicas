@@ -168,27 +168,27 @@ with col2:
 
 # Diccionario de archivos PDF con sus descripciones y número de páginas
 pdf_files = {
-    "Trabajo de Investigación": {
+    "📄 Trabajo de Investigación": {
         "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf",
         "pages": 11,  # Cambia esto al número real de páginas
         "description": "Desarrollo de proyectos con método científico, hipótesis y resultados analíticos."
     },
-    "Materiales Educativos": {
+    "🖍️ Materiales Educativos": {
         "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Materiales_Educativos.pdf",
         "pages": 10,  # Cambia esto al número real de páginas
         "description": "Creación de recursos didácticos para el aprendizaje en ciencias farmacéuticas."
     },
-    "Prototipo": {
+    "🔧 Prototipo": {
         "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Prototipo.pdf",
         "pages": 8,  # Cambia esto al número real de páginas
         "description": "Desarrollo de modelos físicos o funcionales de productos farmacéuticos o biológicos."
     },
-    "Reporte": {
+    "📋 Reporte": {
         "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Reporte.pdf",
         "pages": 15,  # Cambia esto al número real de páginas
         "description": "Documentación técnica de procesos o investigaciones específicas."
     },
-    "Vinculación Social": {
+    "🫂 Vinculación Social": {
         "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Vinculacion_Social.pdf",
         "pages": 12,  # Cambia esto al número real de páginas
         "description": "Proyectos con impacto en comunidades o sectores específicos."
@@ -202,7 +202,7 @@ if 'current_page' not in st.session_state:
 if 'current_pdf' not in st.session_state:
     st.session_state.current_pdf = list(pdf_files.values())[0]["path"]  # Primer PDF por defecto
 
-st.subheader("Modalidades")
+st.subheader("📑 Modalidades")
 # Selección de modalidad
 selected_modalidad = st.selectbox("Selecciona una modalidad:", list(pdf_files.keys()))
 
@@ -212,7 +212,7 @@ description = pdf_files[selected_modalidad]["description"]
 total_pages = pdf_files[selected_modalidad]["pages"]
 
 # Mostrar la descripción de la modalidad
-st.markdown(f"### {selected_modalidad}")
+st.markdown(f"#### {selected_modalidad}")
 st.write(description)
 
 # Contenedor expandible para el PDF
