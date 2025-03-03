@@ -71,10 +71,17 @@ st.markdown("""
     transform: translateY(-5px);
 }
 .profesor-imagen {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    margin-right: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin: 0 auto; /* Centra horizontalmente si el contenedor tiene `text-align: center` */
+  display: block; /* Asegura que `margin: auto` funcione */
+}
+.contenedor-imagen {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100%; /* Aseg
 }
 .profesor-info {
     flex: 1;
@@ -195,7 +202,7 @@ with col1:
             "nestor.gchan@academicos.udg.mx",
             "EDP, Programación, Métodos Numéricos",
             "Miembro del Sistema Nacional de Investigadores Nivel II",
-            "",
+            "https://academicos.cucei.udg.mx/academicos/2306093",
             "Modelación matemática y simulación en problemas medioambientales"
             )
 
@@ -205,10 +212,10 @@ with col1:
         mostrar_profesor(
             foto_base64,
             "Dr. José Guadalupe Quiñones Galván",
-            "Profesor Investigador Titular B",
+            "Profesor Investigador Titular A",
             "jose.quinones@academicos.udg.mx",
-            "EDP, Programación, Métodos Numéricos",
+            "Electromagnetismo",
             "Miembro del Sistema Nacional de Investigadores Nivel II",
-            "https://academicos.cucei.udg.mx/academicos/2306093",
+            "",
             "Síntesis de materiales por técnicas físicas y químicas"
             )
