@@ -136,7 +136,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Función para mostrar un profesor
-def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *lineas, enlace=None):
+def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, enlace=None, *lineas ):
     # Crear un ID único basado en el nombre (sin espacios ni caracteres especiales para HTML)
     profesor_id = "".join(c for c in nombre if c.isalnum()).lower()
     
@@ -184,6 +184,7 @@ with col1:
             "nestor.gchan@academicos.udg.mx",
             "EDP, Programación, Métodos Numéricos",
             "Miembro del Sistema Nacional de Investigadores Nivel II",
+            enlace=None,
             "Modelación matemática y simulación en problemas medioambientales"
         )
 
