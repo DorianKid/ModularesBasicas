@@ -147,7 +147,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *linea
         <label class="requisitos-titulo" for="requisitos-{profesor_id}">Mostrar Requisitos</label>
         <input type="checkbox" id="requisitos-{profesor_id}">
         <div class="requisitos-content">
-            <div class="alumno-aptitudes">{aptitudes}</div>
+            <div class="alumno-aptitudes">{aptitudes}
         </div>
     </div>
     """
