@@ -85,6 +85,10 @@ st.markdown("""
     color: #1e3d59;
     margin-bottom: 5px;
 }
+.profesor-nombre a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del contenedor */
+}
 .profesor-grado {
     font-size: 16px;
     font-style: italic;
