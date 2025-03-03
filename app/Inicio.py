@@ -3,7 +3,7 @@ import base64
 
 st.set_page_config(
     page_title="Modulares",
-    page_icon=":memo:",
+    page_icon=":pencil    :",
     layout="wide",    
     initial_sidebar_state="expanded",
     menu_items={
