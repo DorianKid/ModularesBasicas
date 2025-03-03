@@ -14,10 +14,6 @@ st.set_page_config(
 )
 
 ######################## FUNCIONES ##########################################
-# Función para leer el archivo .tex
-def read_tex_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
-        return f.read()
         
 ######################## ESTILOS CSS ########################################
 # Aplicar estilos CSS para cambiar el color del botón normal
