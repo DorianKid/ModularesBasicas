@@ -166,7 +166,7 @@ with st.expander("Ver PDF", expanded=True):
         if st.session_state.current_page > 1:
             st.session_state.current_page -= 1
 
-    col2.st.download_button('Descargar', pdf_path)
+    col2.download_button('Descargar', pdf_path)
     
     if col3.button("Siguiente Página"):
         # Establece el número total de páginas aquí
