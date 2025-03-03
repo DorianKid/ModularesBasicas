@@ -202,6 +202,7 @@ if 'current_page' not in st.session_state:
 if 'current_pdf' not in st.session_state:
     st.session_state.current_pdf = list(pdf_files.values())[0]["path"]  # Primer PDF por defecto
 
+st.subheader("Modalidades")
 # Selección de modalidad
 selected_modalidad = st.selectbox("Selecciona una modalidad:", list(pdf_files.keys()))
 
