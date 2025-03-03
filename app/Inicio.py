@@ -52,17 +52,6 @@ with col2:
     - **Asesoría especializada** por parte de profesores.
     """)
 
-st.divider()
-
-st.header("❗ Importancia")
-st.markdown("""
-- **Vinculación teórico-práctica**: Aplicación de conocimientos a situaciones concretas.
-- **Desarrollo de competencias profesionales**: Investigación, análisis, resolución de problemas y comunicación.
-- **Evaluación auténtica**: Simulación de contextos profesionales.
-- **Preparación para el campo laboral**: Desarrollo de habilidades clave para el ejercicio profesional.
-- **Fomento a la creatividad e innovación**: Creación de soluciones originales a problemas específicos.
-""")
-
 # Importancia educativa con resaltado
 st.success("📢 **Importancia Educativa:** Los Proyectos Modulares desempeñan un papel crucial en la formación académica, asegurando que los estudiantes adquieran competencias aplicables al mundo real.")
 
