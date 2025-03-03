@@ -150,7 +150,7 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes, SNI=None, *linea
         <div class="requisitos-content">
             <div class="alumno-aptitudes">{aptitudes}</div>
         </div>
-    </div>
+    
     """
 
     # HTML para el SNI si está disponible
