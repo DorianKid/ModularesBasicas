@@ -179,11 +179,31 @@ else:
           - Utiliza el espacio del póster para atraer a tu audiencia hacia la discusión, evitando detalles complejos de métodos y resultados.
     """)
 
-with st.expander('Ver plantilla', expanded=False):
-    col1, col2 = st.columns([1,2])
-    with col1:
-        contenido_tex = read_tex_file("/mount/src/modularesbasicas/app/files/Plantilla_Modulares.tex")
-        st.markdown(contenido_tex)
+# Ruta del archivo PDF
+pdf_path = "/mount/src/modularesbasicas/app/files/Plantilla_Modulares.pdf"  # Reemplaza con la ruta a tu archivo PDF
+
+# Inicializa el número de página
+if 'current_page' not in st.session_state:
+    st.session_state.current_page = 1
+
+# Contenedor expandible para el PDF
+with st.expander("Ver PDF", expanded=True):
+    # Aquí deberías implementar tu función pdf_viewer
+    pdf_viewer(
+        input=pdf_path,
+        pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
+    )
+
+    # Botones para navegar entre las páginas
+    col1, col2, col3 = st.columns([11, 11, 4])
+    
+    if col1.button("Página Anterior"):
+        if st.session_state.current_page > 1:
+            st.session_state.current_page -= 1
+    
+    if col3.button("Siguiente Página"):
+        if st.session_state.current_page < total_pages:
+            st.session_state.current_page += 1
 
 
 st.divider()
