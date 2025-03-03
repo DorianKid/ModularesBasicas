@@ -222,6 +222,7 @@ st.divider()
 
 tab1, tab2 = st.tabs(["Ejemplo 1", "Ejemplo 2"])
 
+st.divider()
 
 # Químico Farmacobiólogo
 st.header("💊 Modulares en Químico Farmacéutico Biólogo")
@@ -328,3 +329,9 @@ with st.expander("Ver Lineamientos", expanded=False):
     if col3.button("Siguiente Página"):
         if st.session_state.current_page < total_pages:
             st.session_state.current_page += 1
+            
+st.divider()
+
+tab1, tab2 = st.tabs(["Ejemplo 1", "Ejemplo 2"])
+
+st.divider()
