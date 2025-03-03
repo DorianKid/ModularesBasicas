@@ -175,6 +175,4 @@ with st.expander("Ver PDF", expanded=True):
     pdf_viewer(
         input=pdf_path,
         pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
-        width=700,
-        height=600
     )
