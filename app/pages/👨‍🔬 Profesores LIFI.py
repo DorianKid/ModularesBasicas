@@ -182,22 +182,83 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Función para crear la tarjeta de un profesor
-import streamlit as st
-import base64
-
 def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes=None, SNI=None, *lineas):
+    # Generar un ID único para cada profesor (para que el JavaScript funcione con múltiples profesores)
+    import random
+    profesor_id = f"profesor_{random.randint(10000, 99999)}"
+    
     # Crear spans para cada línea
     lineas_html = ''.join([f'<span class="profesor-linea">📑 {linea}</span><br>' for linea in lineas])
-
+    
     # HTML para el SNI si está disponible
     sni_html = f"""
     <div class="profesor-sni" style="font-size: 14px; color: #5e6572;">
         {SNI}
     </div>
     """ if SNI else ""
-
-    # Mostrar información del profesor con Markdown
+    
+    # HTML para los requisitos desplegables si existen
+    aptitudes_html = f"""
+    <div class="requisitos-container">
+        <button id="btn_{profesor_id}" class="requisitos-btn" onclick="toggleRequisitos('{profesor_id}')">Mostrar requisitos</button>
+        <div id="req_{profesor_id}" class="requisitos-content" style="display: none;">
+            <div class="profesor-aptitudes">
+                <div class="alumno-aptitudes">{aptitudes}</div>
+            </div>
+        </div>
+    </div>
+    """ if aptitudes else ""
+    
+    # JavaScript para alternar la visibilidad de los requisitos
+    js_code = f"""
+    <script>
+    function toggleRequisitos(id) {{
+        var content = document.getElementById("req_" + id);
+        var btn = document.getElementById("btn_" + id);
+        
+        if (content.style.display === "none") {{
+            content.style.display = "block";
+            btn.textContent = "Ocultar requisitos";
+        }} else {{
+            content.style.display = "none";
+            btn.textContent = "Mostrar requisitos";
+        }}
+    }}
+    </script>
+    """
+    
+    # CSS para estilizar el botón y contenido de requisitos
+    css = """
+    <style>
+    .requisitos-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    
+    .requisitos-btn:hover {
+        background-color: #45a049;
+    }
+    
+    .requisitos-content {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        border-left: 3px solid #4CAF50;
+    }
+    </style>
+    """
+    
+    # Mostrar información del profesor con Markdown, incluyendo el botón desplegable
     st.markdown(f"""
+    {css}
+    {js_code}
     <div class="profesor-card">
         <img src="data:image/jpeg;base64,{imagen}" class="profesor-imagen">
         <div class="profesor-info">
@@ -208,17 +269,10 @@ def mostrar_profesor(imagen, nombre, puesto, correo, aptitudes=None, SNI=None, *
             <div>
                 {lineas_html}
             </div>
+            {aptitudes_html}  <!-- Mostrar requisitos desplegables si existen -->
         </div>
     </div>
-    """, unsafe_allow_html=True)
-
-    # Uso de st.expander en lugar de JavaScript para mostrar requisitos
-    with st.expander("Mostrar Requisitos"):
-        st.markdown(f"""
-        <div class="alumno-aptitudes">{aptitudes}</div>
-        """, unsafe_allow_html=True)
-
-#########################################################
+    """, unsafe_allow_html=True)#########################################################
 st.title("Profesores")
 st.header("Licenciatura en Física")
 
