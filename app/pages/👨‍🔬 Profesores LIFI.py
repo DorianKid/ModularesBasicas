@@ -73,10 +73,10 @@ st.markdown("""
     transform: translateY(-5px);
 }
 .profesor-imagen {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 10px;
-    margin-right: 25px;
+    margin-right: 35px;
 }
 .profesor-info {
     flex: 1;
