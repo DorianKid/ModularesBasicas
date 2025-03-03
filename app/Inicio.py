@@ -198,6 +198,8 @@ with st.expander("Ver PDF", expanded=True):
             st.session_state.current_page -= 1
     
     if col3.button("Siguiente Página"):
+        # Establece el número total de páginas aquí
+        total_pages = 3  # Cambia esto al número real de páginas
         if st.session_state.current_page < total_pages:
             st.session_state.current_page += 1
 
