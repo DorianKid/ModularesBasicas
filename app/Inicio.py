@@ -161,7 +161,7 @@ if 'current_page' not in st.session_state:
 # Contenedor expandible para el PDF
 with st.expander("Ver PDF", expanded=True):
     # Botones para navegar entre las páginas
-    col1, col2, col3 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
     if col1.button("Página Anterior"):
         if st.session_state.current_page > 1:
             st.session_state.current_page -= 1
