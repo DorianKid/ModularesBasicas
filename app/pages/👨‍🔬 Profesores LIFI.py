@@ -167,12 +167,11 @@ st.markdown("""
 
 .requisitos-content {
     display: none;
-    margin-top: 12px;
-    padding: 16px;
-    background-color: white;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    animation: slideDown 0.2s ease-out;
+    margin-top: 10px;
+    padding: 12px 2px 12px 10px;
+    background-color: transparent;
+    border-left: 3px solid #3498db;
+    animation: fadeIn 0.2s ease-out;
 }
 </style>
 """, unsafe_allow_html=True)
