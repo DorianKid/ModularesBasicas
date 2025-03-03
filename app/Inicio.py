@@ -155,6 +155,30 @@ st.markdown("""
 pdf_path = '/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf'
 
 # Contenedor expandible para el PDF
-with st.expander("Ver PDF", expanded=False):
-    pdf_viewer(pdf_path, pages_to_render= 1)
+#with st.expander("Ver PDF", expanded=False):
+#    pdf_viewer(pdf_path, pages_to_render= 1)
 
+# Inicializa el número de página
+if 'current_page' not in st.session_state:
+    st.session_state.current_page = 1
+
+# Botones para navegar entre las páginas
+col1, col2 = st.columns(2)
+if col1.button("Página Anterior"):
+    if st.session_state.current_page > 1:
+        st.session_state.current_page -= 1
+
+if col2.button("Siguiente Página"):
+    # Establece el número total de páginas aquí
+    total_pages = 5  # Cambia esto al número real de páginas
+    if st.session_state.current_page < total_pages:
+        st.session_state.current_page += 1
+
+# Contenedor expandible para el PDF
+with st.expander("Ver PDF", expanded=True):
+    pdf_viewer(
+        input=pdf_path,
+        pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
+        width=700,
+        height=600
+    )
