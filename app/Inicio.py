@@ -182,7 +182,7 @@ else:
 pdf_path = "/mount/src/modularesbasicas/app/files/Plantilla_Modulares.pdf"  # Reemplaza con la ruta a tu archivo PDF
 
 # Contenedor expandible para el PDF
-with st.expander("Ver Plantilla", expanded=True):
+with st.expander("Ver Plantilla", expanded=False):
 
     col1, col2 = st.columns(2)    
     with col1:
