@@ -165,7 +165,108 @@ with col2:
     - Aplicación de conocimientos especializados en situaciones profesionales
     - Integración de fundamentos teóricos con aplicaciones prácticas
     """)
-    
+
+# Diccionario de archivos PDF con sus descripciones y número de páginas
+pdf_files = {
+    "Trabajo de Investigación": {
+        "path": "/mount/src/modularesbasicas/app/files/Lineamientos_Trabajo_Investigacion.pdf",
+        "pages": 11  # Cambia esto al número real de páginas
+    },
+    "Materiales Educativos": {
+        "path": "/mount/src/modularesbasicas/app/files/Materiales_Educativos.pdf",
+        "pages": 10  # Cambia esto al número real de páginas
+    },
+    "Prototipo": {
+        "path": "/mount/src/modularesbasicas/app/files/Prototipo.pdf",
+        "pages": 8  # Cambia esto al número real de páginas
+    },
+    "Reporte": {
+        "path": "/mount/src/modularesbasicas/app/files/Reporte.pdf",
+        "pages": 15  # Cambia esto al número real de páginas
+    },
+    "Vinculación Social": {
+        "path": "/mount/src/modularesbasicas/app/files/Vinculacion_Social.pdf",
+        "pages": 12  # Cambia esto al número real de páginas
+    }
+}
+
+# Inicializa el estado de la página y el PDF actual
+if 'current_page' not in st.session_state:
+    st.session_state.current_page = 1
+
+if 'current_pdf' not in st.session_state:
+    st.session_state.current_pdf = list(pdf_files.values())[0]["path"]  # Primer PDF por defecto
+
+# Descripciones de las modalidades
+modalidades = list(pdf_files.keys())
+
+# Mostrar cada modalidad con su selectbox
+for modalidad in modalidades:
+    st.markdown(f"### {modalidad}")
+    st.write(f"Descripción de {modalidad}.")
+
+    # Selectbox para seleccionar el PDF correspondiente
+    pdf_selection = st.selectbox(f"Selecciona el PDF para {modalidad}:", [modalidad], key=modalidad)
+
+    # Actualizar el PDF actual según la selección
+    st.session_state.current_pdf = pdf_files[modalidad]["path"]
+
+    # Contenedor expandible para el PDF
+    with st.expander("Ver PDF", expanded=False):
+        # Aquí deberías implementar tu función pdf_viewer
+        pdf_viewer(
+            input=st.session_state.current_pdf,
+            pages_to_render=[st.session_state.current_page],  # Renderiza solo la página actual
+        )
+
+        # Botones para navegar entre las páginas
+        col1, col2, col3 = st.columns([11, 11, 4])
+        
+        if col1.button("Página Anterior"):
+            if st.session_state.current_page > 1:
+                st.session_state.current_page -= 1
+
+        # Leer el contenido del PDF para el botón de descarga
+        with open(st.session_state.current_pdf, "rb") as f:
+            pdf_data = f.read()
+            
+        # Mostrar el botón de descarga
+        col2.download_button(
+            'Descargar',
+            pdf_data,
+            file_name=modalidad + '.pdf',
+            mime='application/pdf',
+            help=f"Haz clic para descargar el PDF de {modalidad}."
+        )
+        
+        if col3.button("Siguiente Página"):
+            total_pages = pdf_files[modalidad]["pages"]  # Obtener el total de páginas del PDF actual
+            if st.session_state.current_page < total_pages:
+                st.session_state.current_page += 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 st.markdown("""
 #### **Modalidades disponibles:**
 1. **Trabajo de Investigación:** Desarrollo de proyectos con método científico, hipótesis y resultados analíticos
@@ -218,4 +319,5 @@ st.markdown("""
 4. **Reporte:** Documentación técnica de procesos o investigaciones específicas
 5. **Vinculación Social:** Proyectos con impacto en comunidades o sectores específicos
 """)
+"""
 
