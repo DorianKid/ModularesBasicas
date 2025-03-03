@@ -261,7 +261,6 @@ with col1:
         "Modelación matemática y simulación en problemas medioambientales"  # Líneas adicionales
     )
 
-
 ######################### Columna 2 #################################
 
 with col2:
