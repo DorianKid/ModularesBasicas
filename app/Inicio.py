@@ -296,7 +296,7 @@ st.markdown(f"#### {selected_modalidad}")
 st.write(description)
 
 # Contenedor expandible para el PDF
-with st.expander("Ver PDF", expanded=True):
+with st.expander("Ver Lineamientos", expanded=False):
     # Aquí deberías implementar tu función pdf_viewer
     pdf_viewer(
         input=st.session_state.current_pdf,
