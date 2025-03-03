@@ -199,7 +199,7 @@ st.header("Licenciatura en Física")
 col1, col2 = st.columns(2)
 
 with col1:
-    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/chan.jpg'
     foto_base64 = get_base64_from_file(foto_path)
     if foto_base64:
         mostrar_profesor(
@@ -213,7 +213,7 @@ with col1:
             "Modelación matemática y simulación en problemas medioambientales"
             )
 
-    foto_path = '/mount/src/modularesbasicas/app/LQFB/uscanga.jpg'
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/quiñones.jpg'
     foto_base64 = get_base64_from_file(foto_path)
     if foto_base64:
         mostrar_profesor(
