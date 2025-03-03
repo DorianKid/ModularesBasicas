@@ -24,52 +24,47 @@ def get_base64_from_file(file_path):
         return None
 
 # Intentar encontrar la imagen relativa al directorio del script
-file_path = Path(__file__).parent / "maestros_bg.jpg"
-
+file_path = '/mount/src/modularesbasicas/app/maestros_bg.jpg'
 # Obtener la imagen en base64
 img_base64 = get_base64_from_file(file_path)
 
-if img_base64:
-    # Aplicar un pseudo-elemento para el fondo
-    st.markdown(
-        f"""
-        <style>
-        /* Crear un pseudo-elemento para el fondo */
-        [data-testid="stAppViewContainer"]::before {{
-            content: "";
-            background-image: url("data:image/jpg;base64,{img_base64}");
-            background-size: 50% auto;
-            background-position: center; /* Hay top right, center, top left, bottom right, bottom, etc  */
-            background-repeat: repeat;
-            background-attachment: fixed;
-            
-            /* Posicionamiento para cubrir todo */
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 0.5;  /* De 0 a 1 siendo % de opacidad */ 
-            z-index: 0;  /* Coloca el fondo detrás del contenido */
-        }}
+st.markdown(
+    f"""
+    <style>
+    /* Crear un pseudo-elemento para el fondo */
+    [data-testid="stAppViewContainer"]::before {{
+        content: "";
+        background-image: url("data:image/jpg;base64,{img_base64}");
+        background-size: 50% auto;
+        background-position: center; /* Hay top right, center, top left, bottom right, bottom, etc  */
+        background-repeat: repeat;
+        background-attachment: fixed;
         
-        /* Asegura que el contenedor principal tenga posición relativa */
-        [data-testid="stAppViewContainer"] {{
-            position: relative;
-            overflow: auto !important;
-            height: 100vh;
-        }}
-        
-        /* Asegura que el texto tenga la opacidad completa */
-        [data-testid="stAppViewContainer"] > * {{
-            opacity: 1 !important;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
+        /* Posicionamiento para cubrir todo */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0.5;  /* De 0 a 1 siendo % de opacidad */ 
+        z-index: 0;  /* Coloca el fondo detrás del contenido */
+    }}
+    
+    /* Asegura que el contenedor principal tenga posición relativa */
+    [data-testid="stAppViewContainer"] {{
+        position: relative;
+        overflow: auto !important;
+        height: 100vh;
+    }}
+    
+    /* Asegura que el texto tenga la opacidad completa */
+    [data-testid="stAppViewContainer"] > * {{
+        opacity: 1 !important;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
 )
-else:
-    st.warning("No se pudo cargar la imagen de fondo.")
 
 ################################# Estilos CSS ################################
 # Estilo para las tarjeta de profesores
