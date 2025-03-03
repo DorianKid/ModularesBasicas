@@ -88,15 +88,64 @@ st.warning("⚠️ Importante: Los requerimientos y modalidades de presentación
 
 st.divider()
 
-# Adaptación por disciplina
+Copy# Adaptación por disciplina
 st.header("⚙️ Adaptación por Disciplina")
+
+# Física
+st.subheader("🔭 Física")
 st.markdown("""
-Los **Proyectos Modulares** mantienen una estructura común pero se adaptan a las particularidades de cada carrera:
+Los proyectos modulares en Física evalúan progresivamente habilidades metodológicas, analíticas y creativas:
 
-- **🔭 Física:** Desarrollo de habilidades metodológicas, capacidad analítica y resolución de problemas científicos.
-- **💊 Químico Farmacobiólogo:** Enfoque en parámetros físicos, químicos, biológicos y farmacéuticos.
-- **🛠️ Ingenierías:** Diseño y desarrollo de soluciones tecnológicas a problemas específicos.
+**Modular 1: Habilidades Básicas** *(Presentación en Póster)*
+- **Metodológicas:** Aplicación del método científico en planteamiento y resolución de problemas
+- **Capacidad Analítica:** Obtención de resultados con fundamentos científicos
+- **Creatividad:** Soluciones innovadoras al problema planteado
+- **Formato:** Póster de máximo 90x120 cm, legible a 2 metros de distancia
 
-Los **Proyectos Modulares** representan un componente distintivo de la formación académica en **CUCEI**, proporcionando un mecanismo efectivo para evaluar el progreso de los estudiantes y prepararlos para los desafíos profesionales que enfrentarán al egresar.
+**Modular 2: Habilidades Fundamentales** *(Presentación Oral)*
+- **Metodológicas:** Disertación y fundamentación de temas específicos de física
+- **Capacidad Analítica:** Resultados analíticamente fundamentados con interpretación teórica
+- **Creatividad:** Originalidad en la resolución y discusión
+- **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
+
+**Modular 3: Habilidades Especializantes** *(Presentación Oral)*
+- **Metodológicas:** Aplicación en áreas de física contemporánea con métodos matemáticos
+- **Capacidad Analítica:** Resultados con amplia discusión teórica y experimental
+- **Creatividad:** Originalidad en contenido teórico o desarrollo experimental
+- **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
+
+**Modular 4: Habilidad Inter o Multidisciplinar** *(Presentación Oral)*
+- **Metodológicas:** Aplicación de la física en otras ciencias o disciplinas
+- **Capacidad Analítica:** Resultados con perspectiva interdisciplinar
+- **Creatividad:** Contenido original o reportes técnicos/servicio social
+- **Formato:** Presentación oral de 20 minutos + 5 minutos para preguntas
+
+**Requisitos generales:** Documento de máximo 10 páginas, manejo adecuado de conceptos físicos y modelos matemáticos, dominio de herramientas computacionales e instrumentos de laboratorio cuando sea necesario.
 """)
+
+# Químico Farmacobiólogo
+st.subheader("💊 Químico Farmacobiólogo")
+st.markdown("""
+Los proyectos modulares en QFB se enfocan en competencias intermedias y avanzadas:
+
+**Proyectos Modulares de Competencias Intermedias**
+- Determinación de parámetros físicos, químicos, biológicos y farmacéuticos
+- Análisis de componentes y factores en procesos biológicos e industriales
+- Aplicación de conocimientos para estrategias y productos innovadores
+- Análisis y procesamiento de datos con herramientas estadísticas
+- Comparación de referencias mediante uso adecuado de información
+
+**Proyectos Modulares de Competencias Avanzadas**
+- Desarrollo de habilidades avanzadas en investigación farmacéutica y biológica
+- Aplicación de conocimientos especializados en situaciones profesionales
+- Integración de fundamentos teóricos con aplicaciones prácticas
+
+**Modalidades disponibles:**
+1. **Trabajo de Investigación:** Desarrollo de proyectos con método científico, hipótesis y resultados analíticos
+2. **Materiales Educativos:** Creación de recursos didácticos para el aprendizaje en ciencias farmacéuticas
+3. **Prototipo:** Desarrollo de modelos físicos o funcionales de productos farmacéuticos o biológicos
+4. **Reporte:** Documentación técnica de procesos o investigaciones específicas
+5. **Vinculación Social:** Proyectos con impacto en comunidades o sectores específicos
+""")
+
 
