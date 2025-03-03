@@ -422,7 +422,7 @@ with col2:
             "Dr. José Luis Santana Fajardo",
             "Profesor Investigador Titular A",
             "jose.sfajardo@academicos.udg.mx",
-            "Interés por la física educativa, apertura para la interdisciplinariedad entre ciencias sociales y ciencias físicas.",
+            "Interés por la física educativa, apertura para la interdisciplinariedad entre ciencias sociales y ciencias físicas",
             "Candidato a Miembro del Sistema Nacional de Investigadores",
             "https://academicos.cucei.udg.mx/academicos/2405512",
             "Desarrollo y Evaluación de Competencias en Física",
@@ -535,7 +535,7 @@ with col2:
             "Dr. David Israel Bravo Barcenas",
             " ",
             "david.bravo@academicos.udg.mx",
-            "Interés por aprender temas relacionados con Ciencia de Materiales e Ingeniería de Superficies ,
+            "Interés por aprender temas relacionados con Ciencia de Materiales e Ingeniería de Superficies",
             "Miembro del Sistema Nacional de Investigadores Nivel I",
             "https://scholar.google.es/citations?user=Koyy3S8AAAAJ&hl=es",
             "Ingeniería de Biomateriales Metálicos "
