@@ -185,10 +185,10 @@ pdf_path = "/mount/src/modularesbasicas/app/files/Plantilla_Modulares.pdf"  # Re
 if 'current_page' not in st.session_state:
     st.session_state.current_page = 1
 
-col1, col2 = st.columns(2)
-
-    # Contenedor expandible para el PDF
+# Contenedor expandible para el PDF
 with st.expander("Ver Plantilla", expanded=True):
+
+    col1, col2 = st.columns(2)    
     with col1:
         contenido_tex = read_tex_file("/mount/src/modularesbasicas/app/files/Plantilla_Modulares.tex")
 
@@ -197,7 +197,6 @@ with st.expander("Ver Plantilla", expanded=True):
         #st.code(contenido_tex)
     
     with col2:
-
         # Aquí deberías implementar tu función pdf_viewer
         pdf_viewer(
             input=pdf_path,
