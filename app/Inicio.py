@@ -204,13 +204,13 @@ with st.expander("Ver Plantilla", expanded=True):
         )
     
         # Botones para navegar entre las páginas
-        col1, col2, col3 = st.columns([11, 11, 4])
+        col01, col02, col03 = st.columns([11, 11, 4])
         
-        if col1.button("Página Anterior"):
+        if col01.button("Página Anterior"):
             if st.session_state.current_page > 1:
                 st.session_state.current_page -= 1
         
-        if col3.button("Siguiente Página"):
+        if col03.button("Siguiente Página"):
             # Establece el número total de páginas aquí
             total_pages = 2  # Cambia esto al número real de páginas
             if st.session_state.current_page < total_pages:
