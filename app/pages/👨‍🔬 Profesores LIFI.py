@@ -226,3 +226,34 @@ with col1:
             "https://academicos.cucei.udg.mx/academicos/2955507",
             "Síntesis de materiales por técnicas físicas y químicas"
             )
+
+with col2:
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/romero_ibarra.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. José Luis Romero Ibarra",
+            "Profesor Investigador Titular A",
+            "jose.ribarra@academicos.udg.mx",
+            "Aprobar examen de matemáticas",
+            "Miembro del Sistema Nacional de Investigadores Nivel I",
+            "https://academicos.cucei.udg.mx/academicos/2604817",
+            "Óptica e Información Cuántica"
+            )
+
+    foto_path = '/mount/src/modularesbasicas/app/LIFI/santana.jpg'
+    foto_base64 = get_base64_from_file(foto_path)
+    if foto_base64:
+        mostrar_profesor(
+            foto_base64,
+            "Dr. José Luis Santana Fajardo",
+            "Profesor Investigador Titular A",
+            "jose.sfajardo@academicos.udg.mx",
+            "Interés por la física educativa, apertura para la interdisciplinariedad entre ciencias sociales y ciencias físicas.",
+            "Candidato a Miembro del Sistema Nacional de Investigadores",
+            "https://academicos.cucei.udg.mx/academicos/2405512",
+            "Desarrollo y evaluación de aprendizajes y competencias en física",
+            "Formación docente",
+            "Didáctica de la física"
+            )
