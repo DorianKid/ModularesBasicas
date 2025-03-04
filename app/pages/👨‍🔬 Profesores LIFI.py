@@ -143,7 +143,8 @@ st.markdown("""
     font-size: 13px;
     margin-top: 10px;
     padding: 10px;
-    background-color: white;
+    background-color: #f0f0f0; /* Cambia el color de fondo a un gris claro */
+    color: #333; /* Cambia el color del texto a un gris oscuro para mejor legibilidad */
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     animation: slideDown 1s ease-out;
