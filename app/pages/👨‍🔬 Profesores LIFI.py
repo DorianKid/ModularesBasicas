@@ -156,6 +156,34 @@ st.markdown("""
 }.requisitos-container input[type="checkbox"]:checked ~ .requisitos-titulo::after {
     content: "▲";
 }
+
+/* Diseño para moviles */
+@media (max-width: 768px) {
+    .profesor-card {
+        flex-direction: column; /* Cambiar a columna para móviles */
+        text-align: center; /* Centrar contenido */
+        padding: 15px; /* Reducir padding */
+    }
+    .profesor-imagen {
+        margin-right: 0; /* Eliminar margen derecho */
+        margin-bottom: 15px; /* Añadir margen inferior */
+        width: 120px; /* Ajustar tamaño de imagen */
+        height: 120px;
+    }
+    .profesor-info {
+        width: 100%; /* Ocupar ancho completo */
+    }
+    .profesor-nombre {
+        font-size: 20px; /* Reducir tamaño de fuente */
+    }
+    .profesor-grado {
+        font-size: 14px; /* Reducir tamaño de fuente */
+    }
+    .profesor-linea {
+        display: block; /* Asegurar que ocupe todo el ancho */
+        margin-bottom: 10px;
+    }
+}
 </style>
 """, unsafe_allow_html=True)
 
